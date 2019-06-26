@@ -1,0 +1,28 @@
+@import "~bootstrap/scss/functions";
+//colors
+
+$blue: #0071bc;
+$dark-blue: #1c2e54;
+$dark-grey: #333;
+
+//fonts
+$font-family-sans-serif: Lato, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font-family-thin: latothin, latolight, lato, sans-serif;
+
+$grid-breakpoints: (
+  xs: 0px,
+  sm: 670px,
+  md: 960px,
+  lg: 1200px,
+  xl: 1366px
+);
+
+$container-max-widths: (
+  xs: 100%,
+  sm: 100%,
+  md: 990px,
+  lg: 1230px,
+  xl: 1396px
+);
+
+@import "~bootstrap/scss/variables";
