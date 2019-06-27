@@ -26,7 +26,7 @@
       height: 100%;
       background-image: radial-gradient(60% 116%, #50f8ab 15%, #042217 100%);
       border-radius: 8px;
-      opacity: .8;
+      opacity: 0.8;
     }
 
     .pv-topPartner__wrap {
@@ -61,8 +61,20 @@
           padding: 10px 17px;
           color: #fff;
           font-size: 20px;
-          background-color: rgba(255, 255, 255, .3);
+          background-color: rgba(255, 255, 255, 0.3);
           border-radius: 4px 0 0 4px;
+
+          &::-webkit-input-placeholder {
+            color: #f8f9fa;
+          }
+
+          &:-ms-input-placeholder {
+            color: #f8f9fa;
+          }
+
+          &::placeholder {
+            color: #f8f9fa;
+          }
         }
 
         .pv-topPartner__btn {
@@ -78,6 +90,7 @@
           background-color: #ed1c24;
           border-radius: 0 4px 4px 0;
           cursor: pointer;
+          text-transform: uppercase;
         }
       }
 
@@ -139,7 +152,6 @@
     text-align: center;
   }
 }
-
 
 .pv-ourDiff__wrap {
   margin-top: 50px;
@@ -334,7 +346,6 @@
       max-width: 70%;
       margin: -75px auto 0 auto;
       text-align: center;
-      ;
     }
   }
 }
