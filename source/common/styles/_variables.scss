@@ -6,8 +6,10 @@ $dark-blue: #1c2e54;
 $dark-grey: #333;
 
 //fonts
-$font-family-sans-serif: "Rubik";
-$font-family-thin: "Rubik";
+$font-family-sans-serif: "Rubik",
+sans-serif;
+$font-family-thin: "Rubik",
+sans-serif;
 $grid-breakpoints: (xs: 0,
   sm: 670px,
   md: 960px,

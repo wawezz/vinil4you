@@ -1,1 +1,21 @@
 $fonts-path: "../../common/fonts";
+
+@font-face {
+    font-family: "Trebuchet MS";
+    src: url($fonts-path + "/TrebuchetMS.eot");
+    src: url($fonts-path + "/TrebuchetMS.eot?#iefix") format("embedded-opentype"),
+        url($fonts-path + "/TrebuchetMS.woff") format("woff"),
+        url($fonts-path + "/TrebuchetMS.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Trebuchet MS";
+    src: url($fonts-path + "/TrebuchetMS-Bold.eot");
+    src: url($fonts-path + "/TrebuchetMS-Bold.eot?#iefix") format("embedded-opentype"),
+        url($fonts-path + "/TrebuchetMS-Bold.woff") format("woff"),
+        url($fonts-path + "/TrebuchetMS-Bold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+}
