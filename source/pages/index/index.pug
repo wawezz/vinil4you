@@ -10,7 +10,7 @@ block main
                         h2.pv-topPartner__title Хотите стать #[br]нашим партнёром?
                         .pv-topPartner__text Чтобы ознакомится с нашим предложением и узнать индивидуальные условия сотрудничества, вам просто нужно оставить ваш контактный номер телефона, для обратной связи.
                         .pv-topPartner__form 
-                            input.pv-topPartner__input
+                            input#phone-mask.pv-topPartner__input(placeholder="+7 (495) 556-32-34")
                             .pv-topPartner__btn Оставить заявку
                         .pv-topPartner__info Нажимая кнопку "Оставить заявку" вы соглашаетесь #[a(href="#").pv-topPartner__legacy с пользовательским соглашением].
     
@@ -138,7 +138,7 @@ block main
             .col-12.pv-bap__banner_wrap
                 h2.pv-bap__banner_title Стать партнером
                 form.pv-bap__banner_form 
-                    input(placeholder="+7 (495) 123-45-67").pv-bap__banner_input
+                    input(placeholder="+7 (495) 123-45-67")#phone-mask2.pv-bap__banner_input
                     input(type="submit" value="Оставить заявку").pv-bap__banner_submit
                 .pv-bap__banner_info Нажимая кнопку "Оставить заявку" вы соглашаетесь #[a(href="#").pv-bap__banner_legacy с пользовательским соглашением].
         
