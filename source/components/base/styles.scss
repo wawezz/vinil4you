@@ -11,6 +11,8 @@
 
 .pv-header {
   background-color: #000;
+  z-index: 10;
+  position: relative;
 
   .pv-header__wrap {
     height: 100px;
@@ -34,7 +36,7 @@
 
     .pv-header__cityName {
       font-weight: 300;
-      transition: all .3s ease-in-out;
+      transition: all 0.3s ease-in-out;
     }
 
     .pv-header__cityInfo {
@@ -51,7 +53,7 @@
       background-image: url(images/icon-arrow.svg);
       background-repeat: no-repeat;
       background-position: center;
-      transition: all .3s ease-in-out;
+      transition: all 0.3s ease-in-out;
     }
   }
 
@@ -124,7 +126,7 @@
           height: 2px;
           margin: -1px 0 0 -15px;
           background-color: #fff;
-          transition: all .5s ease-in-out;
+          transition: all 0.5s ease-in-out;
         }
 
         .pv-header__burgerBtn__item_first {
@@ -236,6 +238,8 @@
   color: #fff;
   font-size: 16px;
   background-color: #242424;
+  z-index: 10;
+  position: relative;
 
   .pv-nav__wrap {
     height: 50px;
@@ -291,7 +295,7 @@
       height: 50px;
       padding: 0 17px;
       font-weight: 300;
-      transition: width .3s ease-in-out;
+      transition: width 0.3s ease-in-out;
 
       &:focus {
         width: 100%;
@@ -311,4 +315,9 @@
       cursor: pointer;
     }
   }
+}
+
+.showFade {
+  opacity: 1 !important;
+  transition: all 0.3s ease-in-out;
 }

@@ -4,7 +4,7 @@ block title
 block main
     .container-fluid
         .row.pv-topBanner
-            .col-6.offset-1
+            .col-12
                 .pv-topPartner
                     .pv-topPartner__wrap
                         h2.pv-topPartner__title Хотите стать #[br]нашим партнёром?
@@ -50,19 +50,27 @@ block main
                 h4.pv-about__slogan Широкие возможности для вашего бизнеса 
                 .row.pv-about__wrap
                     .col-3.pv-about__item
-                        .pv-about__item_title 6+
+                        .pv-about__item_title 
+                            span#counter_0.counter-value(data-count="6") 0
+                            | +
                         hr.pv-about__item_hr
                         .pv-about__item_text лет помогаем развитию #[br]вашего бизнеса
                     .col-3.pv-about__item
-                        .pv-about__item_title 2 000+
+                        .pv-about__item_title 
+                            span#counter_1.counter-value(data-count="2000") 0
+                            | +
                         hr.pv-about__item_hr
                         .pv-about__item_text партнеров #[br]сотрудничают с нашей компанией
                     .col-3.pv-about__item
-                        .pv-about__item_title 10 000+
+                        .pv-about__item_title 
+                            span#counter_2.counter-value(data-count="10000") 0
+                            | +
                         hr.pv-about__item_hr
                         .pv-about__item_text рулонов ежегодно поставляем #[br]на территорию РФ и СНГ
                     .col-3.pv-about__item
-                        .pv-about__item_title 100%
+                        .pv-about__item_title 
+                            span#counter_3.counter-value(data-count="100") 0
+                            | %
                         hr.pv-about__item_hr
                         .pv-about__item_text честность и открытость по #[br]отношению к клиентам
 
@@ -108,10 +116,11 @@ block main
                         h4.pv-card__slogan Накопительная система ваших бонусов
                 .row.pv-card__wrap
                     .col-6.pv-card__data
-                        .pv-card__data_title Мы заботимся #[br]о наших партнерах!
-                        .pv-card__data_text Бонусная программа стала проще и удобнее для вас. Помимо индивидуальных условий сотрудничества, мы даем карту партнера. С картой партнера вы становитесь участником бонусной программы Vinyl4You. Узнать подробнее о том, как стать участником и как работает эта система, вы можете у наших менеджеров.
+                        .pv-card__dataWrap.slide
+                            .pv-card__data_title Мы заботимся #[br]о наших партнерах!
+                            .pv-card__data_text Бонусная программа стала проще и удобнее для вас. Помимо индивидуальных условий сотрудничества, мы даем карту партнера. С картой партнера вы становитесь участником бонусной программы Vinyl4You. Узнать подробнее о том, как стать участником и как работает эта система, вы можете у наших менеджеров.
                     .col-6.pv-card__bg
-                        img.pv-card__bg_image(src=require("./images/cardBg.jpg"))
+                        img.pv-card__bg_image.slide(src=require("./images/cardBg.jpg"))
                     .col-12.pv-card__shadow
                         img(src=require("./images/shadow.png"))
 

@@ -6,14 +6,23 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  // background-size: calc(100% + 50px);
+  background-attachment: fixed;
+
+  .pv-topPartner_show {
+    width: 650px !important;
+    height: 450px !important;
+    margin: 100px !important;
+  }
 
   .pv-topPartner {
     position: relative;
     width: 100%;
-    max-width: 650px;
-    height: 450px;
+    height: 100%;
     padding: 45px;
-    margin: 100px 0;
+    margin: 0;
+    transition: all 0.2s ease-in-out;
+    transition-delay: 0.1s;
 
     &::after {
       content: "";
@@ -41,6 +50,7 @@
       .pv-topPartner__title {
         font-family: "Trebuchet MS";
         font-size: 50px;
+        opacity: 0;
       }
 
       .pv-topPartner__text {
@@ -48,12 +58,14 @@
         font-size: 16px;
         font-weight: 300;
         line-height: 1.6;
+        opacity: 0;
       }
 
       .pv-topPartner__form {
         display: flex;
         width: 500px;
         height: 50px;
+        opacity: 0;
 
         .pv-topPartner__input {
           width: 300px;
@@ -98,6 +110,7 @@
         margin-top: 25px;
         color: #c5c5c5;
         font-size: 13px;
+        opacity: 0;
 
         .pv-topPartner__legacy {
           color: #c5c5c5;
@@ -135,6 +148,9 @@
 
 .pv-ourDiff {
   margin: 0 -15px;
+  z-index: 100;
+  position: relative;
+  background-color: #fff;
 
   .pv-ourDiff__title {
     width: 100%;
@@ -160,6 +176,7 @@
     padding: 0 20px;
     margin: 25px 0;
     text-align: center;
+    opacity: 0;
 
     .pv-ourDiff__item_title {
       margin: 25px 0;
@@ -186,6 +203,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  background-attachment: fixed;
 
   .pv-about__title {
     font-family: "Trebuchet MS";
@@ -317,6 +335,11 @@
   .pv-card__wrap {
     margin-top: 50px;
 
+    .pv-card__dataWrap {
+      margin-left: -150%;
+      width: 100%;
+    }
+
     .pv-card__data {
       padding: 0 110px;
 
@@ -336,9 +359,11 @@
 
     .pv-card__bg {
       padding: 0;
+      overflow: hidden;
 
       .pv-card__bg_image {
         width: 100%;
+        margin-left: 100%;
       }
     }
 
@@ -364,6 +389,7 @@
     .pv-bap__step_item {
       display: flex;
       align-items: center;
+      opacity: 0;
 
       &::after {
         content: "";
@@ -409,6 +435,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  background-attachment: fixed;
 
   .pv-bap__banner_wrap {
     .pv-bap__banner_title {
@@ -524,4 +551,9 @@
       }
     }
   }
+}
+
+.mg-l0 {
+  margin-left: 0 !important;
+  transition: all 1s ease-in-out;
 }
