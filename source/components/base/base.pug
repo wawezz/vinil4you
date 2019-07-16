@@ -8,103 +8,208 @@ html
         title
             block title
     body
-        #pvWrapper
-            
-            header.pv-header
-                .container-fluid.custom-container-fluid
-                    .row.pv-header__wrap
-                        .col-2.pv-header__left
-                            a(href="/").pv-header__logo
-                                img(src=require("./images/logo.svg")).pv-header__logoImg
-                            .d-md-none.pv-header__burger
+        #pv-Wrapper
+            .pv-mobileSearch
+                img.pv-mobileCloseBtn.pv-mobileSearchBtn(src=require("./images/icon-close.svg"))
+                input(placeholder="Поиск по каталогу магазина").pv-mobileSearchInput
+                .pv-mobileSearch__searchBtn Поиск
+            .pv-mobileMenu
+                .pv-mobileMenu__auth
+                    .pv-mobileMenu__login.pv-mobileBtn Войти
+                    .pv-mobileMenu__registr.pv-mobileBtn Регистрация
+                .pv-mobileMenu__city
+                    .pv-mobileMenu__cityName.pv-mobileBtn.dropdownBtn Город: Москва  
+                    ul.pv-mobileMenu__citySub
+                        li.pv-mobileMenu__citySub_item
+                            a(href="#").pv-mobileMenu__citySub_itemLink.pv-mobileBtn.pv-mobileBtn__padding Санкт-Питербург
+                        li.pv-mobileMenu__citySub_item
+                            a(href="#").pv-mobileMenu__citySub_itemLink.pv-mobileBtn.pv-mobileBtn__padding Санкт-Питербург
+                .pv-mobileMenu__contacts.pv-mobileBtn__padding
+                    .pv-mobileMenu__contactsItem
+                        .pv-mobileMenu__contactsItem-left
+                            img(src=require("./images/icon-phone_black.svg")).pv-mobileMenu__phoneIcon
+                        .pv-mobileMenu__contactsItem-right
+                            .pv-mobileMenu__contactsPhone 8 (495) 150-22-62
+                            .pv-mobileMenu__contactsDesc Для Москвы
+                    .pv-mobileMenu__contactsItem
+                        .pv-mobileMenu__contactsItem-left
+                            img(src=require("./images/icon-phone_black.svg")).pv-mobileMenu__phoneIcon
+                        .pv-mobileMenu__contactsItem-right
+                            .pv-mobileMenu__contactsPhone 8 (800) 550-22-62
+                            .pv-mobileMenu__contactsDesc Для регионов РФ
+                    .pv-mobileMenu__contactsItem
+                        .pv-mobileMenu__contactsItem-left
+                            img(src=require("./images/icon-phone_black.svg")).pv-mobileMenu__phoneIcon
+                        .pv-mobileMenu__contactsItem-right
+                            .pv-mobileMenu__contactsPhone 8 (499) 288-11-48
+                            .pv-mobileMenu__contactsDesc Оптовый отдел
+                a(href="#").pv-mobileMenu__shops.pv-mobileBtn.pv-mobileBtn__padding Магазины
+                .pv-mobileMenu__catalog
+                    .pv-mobileMenu__catalogBtn.pv-mobileBtn.pv-mobileBtn__padding.dropdownBtn Каталог товаров
+                    ul.pv-mobileMenu__catalogSub
+                        li.pv-mobileMenu__catalogSub_item
+                            a(href="#").pv-mobileMenu__catalogSub_itemLink.pv-mobileBtn.pv-mobileBtn__padding Автомобильные пленки
+                        li.pv-mobileMenu__catalogSub_item
+                            a(href="#").pv-mobileMenu__catalogSub_itemLink.pv-mobileBtn.pv-mobileBtn__padding Тонировочные пленки
+                        li.pv-mobileMenu__catalogSub_item
+                            a(href="#").pv-mobileMenu__catalogSub_itemLink.pv-mobileBtn.pv-mobileBtn__padding Алькантара
+                        li.pv-mobileMenu__catalogSub_item
+                            a(href="#").pv-mobileMenu__catalogSub_itemLink.pv-mobileBtn.pv-mobileBtn__padding Экокожа
+                        li.pv-mobileMenu__catalogSub_item
+                            a(href="#").pv-mobileMenu__catalogSub_itemLink.pv-mobileBtn.pv-mobileBtn__padding Жидкая резина
+                        li.pv-mobileMenu__catalogSub_item
+                            a(href="#").pv-mobileMenu__catalogSub_itemLink.pv-mobileBtn.pv-mobileBtn__padding Самоклеющаяся пленка
+                        li.pv-mobileMenu__catalogSub_item
+                            a(href="#").pv-mobileMenu__catalogSub_itemLink.pv-mobileBtn.pv-mobileBtn__padding Инструменты
+                        li.pv-mobileMenu__catalogSub_item
+                            a(href="#").pv-mobileMenu__catalogSub_itemLink.pv-mobileBtn.pv-mobileBtn__padding Тонировка на фары
+                        li.pv-mobileMenu__catalogSub_item
+                            a(href="#").pv-mobileMenu__catalogSub_itemLink.pv-mobileBtn.pv-mobileBtn__padding Меховые накидки
+                        li.pv-mobileMenu__catalogSub_item
+                            a(href="#").pv-mobileMenu__catalogSub_itemLink.pv-mobileBtn.pv-mobileBtn__padding Шумоизоляция
+                        li.pv-mobileMenu__catalogSub_item
+                            a(href="#").pv-mobileMenu__catalogSub_itemLink.pv-mobileBtn.pv-mobileBtn__padding Аксессуары
+                        li.pv-mobileMenu__catalogSub_item
+                            a(href="#").pv-mobileMenu__catalogSub_itemLink.pv-mobileBtn.pv-mobileBtn__padding Распродажа остатков
+                ul.pv-mobileMenu__nav
+                    li.pv-mobileMenu__navItem
+                        a(href="#").pv-mobileMenu__navLink.pv-mobileBtn.pv-mobileBtn__padding Контакты
+                    li.pv-mobileMenu__navItem
+                        a(href="#").pv-mobileMenu__navLink.pv-mobileBtn.pv-mobileBtn__padding Оплата и доставка
+                    li.pv-mobileMenu__navItem
+                        a(href="#").pv-mobileMenu__navLink.pv-mobileBtn.pv-mobileBtn__padding Условия возврата
+                    li.pv-mobileMenu__navItem
+                        a(href="#").pv-mobileMenu__navLink.pv-mobileBtn.pv-mobileBtn__padding Вопрос ответ
+                    li.pv-mobileMenu__navItem.selected
+                        a(href="#").pv-mobileMenu__navLink.pv-mobileBtn.pv-mobileBtn__padding Оптовикам и дилерам
+                    li.pv-mobileMenu__navItem
+                        a(href="#").pv-mobileMenu__navLink.pv-mobileBtn.pv-mobileBtn__padding О нас
+                    li.pv-mobileMenu__navItem
+                        a(href="#").pv-mobileMenu__navLink.pv-mobileBtn.pv-mobileBtn__padding Отзывы
+                    li.pv-mobileMenu__navItem
+                        a(href="#").pv-mobileMenu__navLink.pv-mobileBtn.pv-mobileBtn__padding Новости
+                    li.pv-mobileMenu__navItem
+                        a(href="#").pv-mobileMenu__navLink.pv-mobileBtn.pv-mobileBtn__padding Блог
+                ul.pv-mobileMenu__social
+                    li.pv-header__socialItem
+                        a(href="#").pv-header__socialLink
+                            img(src=require("./images/icon-vk.svg")).pv-header__socialIcon
+                    li.pv-header__socialItem
+                        a(href="#").pv-header__socialLink
+                            img(src=require("./images/icon-fb.svg")).pv-header__socialIcon
+                    li.pv-header__socialItem
+                        a(href="#").pv-header__socialLink
+                            img(src=require("./images/icon-tw.svg")).pv-header__socialIcon
+                    li.pv-header__socialItem
+                        a(href="#").pv-header__socialLink
+                            img(src=require("./images/icon-ig.svg")).pv-header__socialIcon
+                    li.pv-header__socialItem
+                        a(href="#").pv-header__socialLink
+                            img(src=require("./images/icon-yb.svg")).pv-header__socialIcon
+            .pv-contentWrap
+                header.pv-header
+                    .container
+                        .row.pv-header__wrap
+                            .col-2.d-md-none.pv-header__burger
                                 .pv-header__burgerBtn
                                     .pv-header__burgerBtn__wrap
                                         .pv-header__burgerBtn__item.pv-header__burgerBtn__item_first
                                         .pv-header__burgerBtn__item.pv-header__burgerBtn__item_second
                                         .pv-header__burgerBtn__item.pv-header__burgerBtn__item_third
-                            .pv-header__city
-                                .pv-header__cityInfo
-                                    .pv-header__cityName Москва
-                                    .pv-header__cityArrow
-                        .col-6.pv-header__center
-                            ul.row.pv-header__contacts
-                                li.col-4.pv-header__contact
-                                    .pv-heade__contact-left
-                                        img(src=require("./images/icon-phone.svg")).pv-header__contactIcon
-                                    .pv-heade__contact-right
-                                        .pv-header__phone 8 (495) 150-22-62
-                                        .pv-header__phoneDesc Для Москвы
-                                li.col-4.pv-header__contact
-                                    .pv-heade__contact-left
-                                        img(src=require("./images/icon-phone.svg")).pv-header__contactIcon
-                                    .pv-heade__contact-right
-                                        .pv-header__phone 8 (800) 550-22-62
-                                        .pv-header__phoneDesc Для регионов РФ
-                                li.col-4.pv-header__contact
-                                    .pv-heade__contact-left
-                                        img(src=require("./images/icon-phone.svg")).pv-header__contactIcon
-                                    .pv-heade__contact-right
-                                        .pv-header__phone 8 (499) 288-11-48
-                                        .pv-header__phoneDesc Оптовый отдел
-                        .col-4.pv-header__right
-                            ul.pv-header__social
-                                li.pv-header__socialItem
-                                    a(href="#").pv-header__socialLink
-                                        img(src=require("./images/icon-vk.svg")).pv-header__socialIcon
-                                li.pv-header__socialItem
-                                    a(href="#").pv-header__socialLink
-                                        img(src=require("./images/icon-fb.svg")).pv-header__socialIcon
-                                li.pv-header__socialItem
-                                    a(href="#").pv-header__socialLink
-                                        img(src=require("./images/icon-tw.svg")).pv-header__socialIcon
-                                li.pv-header__socialItem
-                                    a(href="#").pv-header__socialLink
-                                        img(src=require("./images/icon-ig.svg")).pv-header__socialIcon
-                                li.pv-header__socialItem
-                                    a(href="#").pv-header__socialLink
-                                        img(src=require("./images/icon-yb.svg")).pv-header__socialIcon
-                            
-                            ul.pv-header__info
-                                li.pv-header__infoItem
-                                    a(href="#").pv-header__infoLink
-                                        img(src=require("./images/icon-bars.svg")).pv-header__infoIcon
-                                        .pv-header__infoIconCount 2
-                                li.pv-header__infoItem
-                                    a(href="#").pv-header__infoLink
-                                        img(src=require("./images/icon-hurt.svg")).pv-header__infoIcon
-                                        .pv-header__infoIconCount 1
-                                li.pv-header__infoItem
-                                    a(href="#").pv-header__infoLink
-                                        img(src=require("./images/icon-bucket.svg")).pv-header__infoIcon
-                                        .pv-header__infoIconCount 1
-                                li.pv-header__infoItem
-                                    a(href="#").pv-header__infoLink
-                                        img(src=require("./images/icon-logout.svg")).pv-header__infoIcon
-            nav.container-fluid.pv-nav
-                .row.pv-nav__wrap
-                    .col-2.pv-nav__catalog Каталог товаров
-                    .col-10.pv-nav__menu-wrap
-                        ul.pv-nav__menu
-                            li.pv-nav__menuItem 
-                                a(href="#").pv-nav__menuLink О компании
-                            li.pv-nav__menuItem 
-                                a(href="#").pv-nav__menuLink Доставка и оплата
-                            li.pv-nav__menuItem 
-                                a(href="#").pv-nav__menuLink Отзывы
-                            li.pv-nav__menuItem 
-                                a(href="#").pv-nav__menuLink Новости
-                            li.pv-nav__menuItem 
-                                a(href="#").pv-nav__menuLink Блог
-                            li.pv-nav__menuItem 
-                                a(href="#").pv-nav__menuLink Услуги
-                            li.pv-nav__menuItem 
-                                a(href="#").pv-nav__menuLink Вопрос-ответ
-                            li.pv-nav__menuItem 
-                                a(href="#").pv-nav__menuLink Контакты
-                        .pv-nav__search
-                            input(placeholder="Поиск по каталогу магазина").pv-nav__searchInput
-                            .pv-nav__searchBtn
-                                .pv-nav__searchBtn_icon
-                                    img(src=require("./images/icon-search.svg"))
-            block main
-            footer
+                            .col-8.col-md-2.pv-header__left
+                                a(href="/").pv-header__logo
+                                    img(src=require("./images/logo.svg")).pv-header__logoImg
+                                .d-none.d-md-flex.pv-header__city
+                                    .pv-header__cityInfo.dropdownBtn
+                                        .pv-header__cityName Москва
+                                        .pv-header__cityArrow
+                                    ul.pv-header__citySub
+                                        li.pv-header__citySub_item
+                                            a(href="#").pv-header__citySub_itemLink Санкт-Питербург
+                                        li.pv-header__citySub_item
+                                            a(href="#").pv-header__citySub_itemLink Санкт-Питербург
+                            .d-none.d-md-flex.col-6.pv-header__center
+                                ul.row.pv-header__contacts
+                                    li.col-6.col-lg-4.pv-header__contact
+                                        .pv-heade__contact-left
+                                            img(src=require("./images/icon-phone.svg")).pv-header__contactIcon
+                                        .pv-heade__contact-right
+                                            .pv-header__phone 8 (495) 150-22-62
+                                            .pv-header__phoneDesc Для Москвы
+                                    li.col-6.col-lg-4.pv-header__contact
+                                        .pv-heade__contact-left
+                                            img(src=require("./images/icon-phone.svg")).pv-header__contactIcon
+                                        .pv-heade__contact-right
+                                            .pv-header__phone 8 (800) 550-22-62
+                                            .pv-header__phoneDesc Для регионов РФ
+                                    li.col-4.d-none.d-lg-flex.pv-header__contact
+                                        .pv-heade__contact-left
+                                            img(src=require("./images/icon-phone.svg")).pv-header__contactIcon
+                                        .pv-heade__contact-right
+                                            .pv-header__phone 8 (499) 288-11-48
+                                            .pv-header__phoneDesc Оптовый отдел
+                            .col-2.col-md-4.pv-header__right
+                                ul.pv-header__social.d-none.d-md-flex
+                                    li.pv-header__socialItem
+                                        a(href="#").pv-header__socialLink
+                                            img(src=require("./images/icon-vk.svg")).pv-header__socialIcon
+                                    li.pv-header__socialItem
+                                        a(href="#").pv-header__socialLink
+                                            img(src=require("./images/icon-fb.svg")).pv-header__socialIcon
+                                    li.pv-header__socialItem
+                                        a(href="#").pv-header__socialLink
+                                            img(src=require("./images/icon-tw.svg")).pv-header__socialIcon
+                                    li.pv-header__socialItem
+                                        a(href="#").pv-header__socialLink
+                                            img(src=require("./images/icon-ig.svg")).pv-header__socialIcon
+                                    li.pv-header__socialItem
+                                        a(href="#").pv-header__socialLink
+                                            img(src=require("./images/icon-yb.svg")).pv-header__socialIcon
+                                
+                                ul.pv-header__info
+                                    li.d-md-none.pv-header__infoItem.pv-mobileSearchBtn
+                                        a(href="#").pv-header__infoLink
+                                            img(src=require("./images/icon-search.svg")).pv-header__infoIcon
+                                    li.d-none.d-md-block.pv-header__infoItem
+                                        a(href="#").pv-header__infoLink
+                                            img(src=require("./images/icon-bars.svg")).pv-header__infoIcon
+                                            .pv-header__infoIconCount 2
+                                    li.d-none.d-md-block.pv-header__infoItem
+                                        a(href="#").pv-header__infoLink
+                                            img(src=require("./images/icon-hurt.svg")).pv-header__infoIcon
+                                            .pv-header__infoIconCount 1
+                                    li.pv-header__infoItem
+                                        a(href="#").pv-header__infoLink
+                                            img(src=require("./images/icon-bucket.svg")).pv-header__infoIcon
+                                            .pv-header__infoIconCount 1
+                                    li.d-none.d-md-block.pv-header__infoItem
+                                        a(href="#").pv-header__infoLink
+                                            img(src=require("./images/icon-logout.svg")).pv-header__infoIcon
+                nav.d-none.d-md-block.container-fluid.pv-nav
+                    .row.pv-nav__wrap
+                        .col-2.pv-nav__catalog Каталог товаров
+                        .col-10.pv-nav__menu-wrap
+                            ul.pv-nav__menu
+                                li.pv-nav__menuItem 
+                                    a(href="#").pv-nav__menuLink О компании
+                                li.pv-nav__menuItem 
+                                    a(href="#").pv-nav__menuLink Доставка и оплата
+                                li.pv-nav__menuItem 
+                                    a(href="#").pv-nav__menuLink Отзывы
+                                li.pv-nav__menuItem 
+                                    a(href="#").pv-nav__menuLink Новости
+                                li.pv-nav__menuItem 
+                                    a(href="#").pv-nav__menuLink Блог
+                                li.pv-nav__menuItem 
+                                    a(href="#").pv-nav__menuLink Услуги
+                                li.pv-nav__menuItem 
+                                    a(href="#").pv-nav__menuLink Вопрос-ответ
+                                li.pv-nav__menuItem 
+                                    a(href="#").pv-nav__menuLink Контакты
+                            .pv-nav__search
+                                input(placeholder="Поиск по каталогу магазина").pv-nav__searchInput
+                                .pv-nav__searchBtn
+                                    .pv-nav__searchBtn_icon
+                                        img(src=require("./images/icon-search.svg"))
+                block main
+                footer

@@ -6,13 +6,20 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  // background-size: calc(100% + 50px);
   background-attachment: fixed;
+
+  @include media-breakpoint-down(sm) {
+    height: inherit;
+  }
 
   .pv-topPartner_show {
     width: 650px !important;
     height: 450px !important;
     margin: 100px !important;
+
+    @include media-breakpoint-down(sm) {
+      height: inherit !important;
+    }
   }
 
   .pv-topPartner {
@@ -23,6 +30,15 @@
     margin: 0;
     transition: all 0.2s ease-in-out;
     transition-delay: 0.1s;
+
+    @include media-breakpoint-down(sm) {
+      width: 80% !important;
+      margin: 10% auto !important;
+    }
+
+    @include media-breakpoint-down(xs) {
+      padding: 20px;
+    }
 
     &::after {
       content: "";
@@ -51,6 +67,14 @@
         font-family: "Trebuchet MS";
         font-size: 50px;
         opacity: 0;
+
+        @include media-breakpoint-down(sm) {
+          font-size: 2rem;
+        }
+
+        @include media-breakpoint-down(xs) {
+          font-size: 1.3rem;
+        }
       }
 
       .pv-topPartner__text {
@@ -59,6 +83,15 @@
         font-weight: 300;
         line-height: 1.6;
         opacity: 0;
+        @include media-breakpoint-down(sm) {
+          font-size: 14px;
+        }
+
+        @include media-breakpoint-down(xs) {
+          font-size: 12px;
+          line-height: 1.4;
+          margin: 10px 0;
+        }
       }
 
       .pv-topPartner__form {
@@ -66,6 +99,14 @@
         width: 500px;
         height: 50px;
         opacity: 0;
+
+        @include media-breakpoint-down(sm) {
+          width: 100%;
+        }
+
+        @include media-breakpoint-down(xs) {
+          height: 40px;
+        }
 
         .pv-topPartner__input {
           width: 300px;
@@ -75,6 +116,16 @@
           font-size: 20px;
           background-color: rgba(255, 255, 255, 0.3);
           border-radius: 4px 0 0 4px;
+
+          @include media-breakpoint-down(sm) {
+            width: 65%;
+            font-size: 16px;
+          }
+
+          @include media-breakpoint-down(xs) {
+            width: 86%;
+            font-size: 15px;
+          }
 
           &::-webkit-input-placeholder {
             color: #f8f9fa;
@@ -103,6 +154,16 @@
           border-radius: 0 4px 4px 0;
           cursor: pointer;
           text-transform: uppercase;
+
+          @include media-breakpoint-down(sm) {
+            width: 35%;
+            font-size: 13px;
+          }
+
+          @include media-breakpoint-down(xs) {
+            width: 14%;
+            font-size: 25px;
+          }
         }
       }
 
@@ -111,6 +172,11 @@
         color: #c5c5c5;
         font-size: 13px;
         opacity: 0;
+
+        @include media-breakpoint-down(xs) {
+          font-size: 9px;
+          margin-top: 12px;
+        }
 
         .pv-topPartner__legacy {
           color: #c5c5c5;
@@ -157,6 +223,10 @@
     font-family: "Trebuchet MS";
     font-size: 50px;
     text-align: center;
+    @include media-breakpoint-down(sm) {
+      font-size: 2rem;
+      margin-top: 60px;
+    }
   }
 
   .pv-ourDiff__slogan {
@@ -166,11 +236,27 @@
     font-size: 20px;
     font-weight: 400;
     text-align: center;
+
+    @include media-breakpoint-down(sm) {
+      font-size: 16px;
+    }
+
+    @include media-breakpoint-down(xs) {
+      font-size: 14px;
+    }
   }
 }
 
 .pv-ourDiff__wrap {
   margin-top: 50px;
+
+  @include media-breakpoint-down(sm) {
+    margin-top: 30px;
+  }
+
+  @include media-breakpoint-down(xs) {
+    margin-top: 0;
+  }
 
   .pv-ourDiff__item {
     padding: 0 20px;
@@ -178,22 +264,42 @@
     text-align: center;
     opacity: 0;
 
+    @include media-breakpoint-down(md) {
+      padding: 0 10px;
+    }
+
+    @include media-breakpoint-down(xs) {
+      padding: 0 40px;
+    }
+
     .pv-ourDiff__item_title {
       margin: 25px 0;
       font-family: "Trebuchet MS";
       font-size: 24px;
+
+      @include media-breakpoint-down(sm) {
+        font-size: 22px;
+        margin: 20px 0;
+      }
     }
 
     .pv-ourDiff__item_text {
       color: #4a4a4a;
       font-size: 16px;
       line-height: 1.6;
+
+      @include media-breakpoint-down(sm) {
+        font-size: 14px;
+        line-height: 1.5;
+        max-width: 350px;
+        margin: 0 auto;
+      }
     }
   }
 }
 
 .pv-about {
-  height: 475px;
+  min-height: 475px;
   padding-top: 75px;
   padding-bottom: 75px;
   margin: 0 -15px;
@@ -205,10 +311,26 @@
   background-size: cover;
   background-attachment: fixed;
 
+  @include media-breakpoint-down(sm) {
+    padding-bottom: 20px;
+    margin-top: 60px;
+    padding-top: 60px;
+    min-height: inherit;
+  }
+
+  @include media-breakpoint-down(xs) {
+    padding-bottom: 10px;
+    margin-top: 40px;
+    padding-top: 40px;
+  }
+
   .pv-about__title {
     font-family: "Trebuchet MS";
     font-size: 50px;
     text-align: center;
+    @include media-breakpoint-down(sm) {
+      font-size: 2rem;
+    }
   }
 
   .pv-about__slogan {
@@ -216,6 +338,16 @@
     font-size: 20px;
     font-weight: 400;
     text-align: center;
+
+    @include media-breakpoint-down(sm) {
+      margin-top: 25px;
+      font-size: 16px;
+    }
+
+    @include media-breakpoint-down(xs) {
+      margin-top: 20px;
+      font-size: 14px;
+    }
   }
 
   .pv-about__wrap {
@@ -225,10 +357,22 @@
       padding: 0 30px;
       text-align: center;
 
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 50px;
+      }
+
       .pv-about__item_title {
         font-family: "Trebuchet MS";
         font-size: 50px;
         line-height: 1;
+
+        @include media-breakpoint-down(sm) {
+          font-size: 2rem;
+        }
+
+        @include media-breakpoint-down(xs) {
+          font-size: 3.5rem;
+        }
       }
 
       .pv-about__item_hr {
@@ -242,6 +386,11 @@
       .pv-about__item_text {
         font-size: 16px;
         line-height: 1.6;
+
+        @include media-breakpoint-down(sm) {
+          font-size: 14px;
+          line-height: 1.4;
+        }
       }
     }
   }
@@ -250,11 +399,29 @@
 .pv-wyg {
   margin-top: 75px;
 
+  @include media-breakpoint-down(sm) {
+    margin-top: 60px;
+  }
+
+  @include media-breakpoint-down(xs) {
+    margin-top: 50px;
+    padding: 0 10%;
+  }
+
   .pv-wyg__title {
     margin-bottom: 75px;
     font-family: "Trebuchet MS";
     font-size: 50px;
     text-align: center;
+
+    @include media-breakpoint-down(sm) {
+      font-size: 2rem;
+      margin-bottom: 60px;
+    }
+
+    @include media-breakpoint-down(xs) {
+      margin-bottom: 50px;
+    }
   }
 
   .pv-wyg__item {
@@ -263,12 +430,41 @@
     padding: 0 95px;
     margin-bottom: 125px;
 
+    @include media-breakpoint-down(lg) {
+      padding: 0px 40px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      padding: 0px;
+    }
+
+    @include media-breakpoint-down(md) {
+      margin-bottom: 70px;
+    }
+
+    @include media-breakpoint-down(xs) {
+      flex-flow: column;
+    }
+
     &:nth-child(2n) {
       flex-flow: row;
+
+      @include media-breakpoint-down(xs) {
+        flex-flow: column;
+      }
 
       .pv-wyg__item_data {
         padding-right: 0;
         padding-left: 75px;
+        @include media-breakpoint-down(md) {
+          padding-left: 10px;
+        }
+
+        @include media-breakpoint-down(xs) {
+          padding-left: 15px;
+          margin-top: 30px;
+          padding-right: 15px;
+        }
       }
     }
 
@@ -282,17 +478,49 @@
       width: 50%;
       padding-right: 75px;
 
+      @include media-breakpoint-down(md) {
+        padding-right: 10px;
+      }
+
+      @include media-breakpoint-down(xs) {
+        padding-left: 15px;
+        margin-top: 30px;
+        padding-right: 15px;
+      }
+
+      @include media-breakpoint-down(xs) {
+        width: 100%;
+      }
+
       .pv-wyg__item_number {
         color: #0e974f;
         font-family: "Roboto";
         font-size: 115px;
         font-weight: 700;
         line-height: 1.2;
+
+        @include media-breakpoint-down(sm) {
+          font-size: 70px;
+          line-height: 0.8;
+        }
+
+        @include media-breakpoint-down(xs) {
+          line-height: 1.2;
+        }
       }
 
       .pv-wyg__item_title {
         font-family: "Trebuchet MS";
         font-size: 24px;
+
+        @include media-breakpoint-down(sm) {
+          margin-top: 15px;
+          font-size: 20px;
+        }
+
+        @include media-breakpoint-down(xs) {
+          margin-top: 0;
+        }
       }
 
       .pv-wyg__item_text {
@@ -301,11 +529,21 @@
         font-size: 16px;
         font-weight: 400;
         line-height: 1.6;
+
+        @include media-breakpoint-down(sm) {
+          margin-top: 10px;
+          font-size: 14px;
+          line-height: 1.3;
+        }
       }
     }
 
     .pv-wyg__item_img-wrapper {
       width: 50%;
+
+      @include media-breakpoint-down(xs) {
+        width: 100%;
+      }
 
       .pv-wyg__item_img {
         width: 100%;
@@ -318,10 +556,17 @@
 .pv-card {
   margin-top: 75px;
 
+  @include media-breakpoint-down(xs) {
+    margin-top: 50px;
+  }
+
   .pv-card__title {
     font-family: "Trebuchet MS";
     font-size: 50px;
     text-align: center;
+    @include media-breakpoint-down(sm) {
+      font-size: 2rem;
+    }
   }
 
   .pv-card__slogan {
@@ -330,23 +575,56 @@
     font-size: 20px;
     font-weight: 400;
     text-align: center;
+
+    @include media-breakpoint-down(sm) {
+      margin-top: 25px;
+      font-size: 16px;
+    }
+
+    @include media-breakpoint-down(xs) {
+      margin-top: 20px;
+      font-size: 14px;
+    }
   }
 
   .pv-card__wrap {
     margin-top: 50px;
 
     .pv-card__dataWrap {
-      margin-left: -150%;
+      margin-left: -180%;
       width: 100%;
+      position: relative;
+      z-index: 5;
+
+      &.mg-l0 {
+        @include media-breakpoint-down(sm) {
+          margin-left: 6% !important;
+        }
+
+        @include media-breakpoint-down(xs) {
+          margin-left: 0 !important;
+        }
+      }
     }
 
     .pv-card__data {
       padding: 0 110px;
 
+      @include media-breakpoint-down(lg) {
+        padding: 0 60px;
+      }
+
+      @include media-breakpoint-down(xs) {
+        padding: 10px 10%;
+      }
+
       .pv-card__data_title {
         font-family: "Trebuchet MS";
         font-size: 40px;
         line-height: 1.2;
+        @include media-breakpoint-down(sm) {
+          font-size: 2rem;
+        }
       }
 
       .pv-card__data_text {
@@ -354,6 +632,17 @@
         color: #4a4a4a;
         font-size: 16px;
         line-height: 1.6;
+
+        @include media-breakpoint-down(sm) {
+          font-size: 14px;
+          line-height: 1.3;
+          max-width: 500px;
+          width: 80%;
+        }
+
+        @include media-breakpoint-down(xs) {
+          width: 100%;
+        }
       }
     }
 
@@ -364,32 +653,86 @@
       .pv-card__bg_image {
         width: 100%;
         margin-left: 100%;
+        @include media-breakpoint-down(md) {
+          width: 80%;
+        }
+
+        @include media-breakpoint-down(xs) {
+          width: 90%;
+        }
       }
     }
 
     .pv-card__shadow {
-      max-width: 70%;
-      margin: -75px auto 0 auto;
+      margin: -40px auto 0 auto;
       text-align: center;
+      @include media-breakpoint-down(lg) {
+        margin: 10px auto 0 auto;
+      }
+
+      @include media-breakpoint-down(sm) {
+        margin: 40px auto;
+      }
+
+      @include media-breakpoint-down(xs) {
+        margin: 20px auto;
+      }
+      img {
+        width: 100%;
+        max-width: 966px;
+
+        @include media-breakpoint-down(md) {
+          max-width: 70%;
+        }
+
+        @include media-breakpoint-down(sm) {
+          max-width: 100%;
+        }
+      }
     }
   }
 }
 
 .pv-bap {
+  margin-top: 40px;
+  @include media-breakpoint-down(lg) {
+    margin-top: 0;
+  }
+  @include media-breakpoint-down(xs) {
+    margin-top: 20px;
+  }
   .pv-bap__title {
     font-family: "Trebuchet MS";
     font-size: 50px;
     text-align: center;
+
+    @include media-breakpoint-down(lg) {
+      margin-top: 50px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      font-size: 2rem;
+      margin-top: 0;
+    }
   }
 
   .pv-bap__step_wrap {
     padding: 0 15px;
     margin-top: 45px;
 
+    @include media-breakpoint-down(xs) {
+      margin-top: 25px;
+    }
+
     .pv-bap__step_item {
       display: flex;
       align-items: center;
       opacity: 0;
+
+      @include media-breakpoint-down(sm) {
+        flex-direction: column;
+        margin: 5px 0;
+      }
 
       &::after {
         content: "";
@@ -400,7 +743,17 @@
         background-image: url(images/arrow-right.svg);
         background-repeat: no-repeat;
         background-position: center;
-        background-size: contain;
+        background-size: 100%;
+        @include media-breakpoint-down(lg) {
+          margin-left: 10px;
+        }
+
+        @include media-breakpoint-down(sm) {
+          margin: 10px 0;
+          height: 10px;
+          width: 53px;
+          background-image: url(images/arrow-bottom.svg);
+        }
       }
 
       &:last-child {
@@ -415,12 +768,34 @@
         font-family: "Roboto";
         font-size: 50px;
         font-weight: 700;
+        @include media-breakpoint-down(sm) {
+          font-size: 50px;
+        }
+
+        @include media-breakpoint-down(xs) {
+          font-size: 50px;
+        }
       }
 
       .pv-bap__step_desc {
         color: #4a4a4a;
         font-size: 16px;
         line-height: 1.6;
+        @include media-breakpoint-down(lg) {
+          line-height: 1.3;
+        }
+
+        @include media-breakpoint-down(sm) {
+          width: 30%;
+          text-align: center;
+          font-size: 14px;
+          margin-top: 10px;
+        }
+
+        @include media-breakpoint-down(sm) {
+          width: 45%;
+          max-width: 200px;
+        }
       }
     }
   }
@@ -437,12 +812,31 @@
   background-size: cover;
   background-attachment: fixed;
 
+  @include media-breakpoint-down(md) {
+    padding: 80px 0;
+    margin-top: 80px;
+    height: inherit;
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding: 60px 0;
+    margin-top: 60px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding: 40px 0;
+    margin-top: 40px;
+  }
+
   .pv-bap__banner_wrap {
     .pv-bap__banner_title {
       color: #fff;
       font-family: "Trebuchet MS";
       font-size: 50px;
       text-align: center;
+      @include media-breakpoint-down(sm) {
+        font-size: 2rem;
+      }
     }
 
     .pv-bap__banner_form {
@@ -454,9 +848,14 @@
       margin: 40px auto 0 auto;
       background-color: #fff;
       border-radius: 4px;
+      justify-content: center;
+
+      @include media-breakpoint-down(xs) {
+        padding: 20px 15px;
+      }
 
       .pv-bap__banner_input {
-        width: 100%;
+        width: 60%;
         padding: 10px 20px;
         margin: 0 15px;
         color: #868686;
@@ -464,6 +863,22 @@
         font-weight: 400;
         background-color: #ececec;
         border-radius: 4px;
+
+        @include media-breakpoint-down(md) {
+          font-size: 18px;
+        }
+
+        @include media-breakpoint-down(sm) {
+          padding: 7px 20px;
+          margin: 0;
+          font-size: 16px;
+        }
+
+        @include media-breakpoint-down(xs) {
+          width: 100%;
+          font-size: 14px;
+          padding: 9px 20px;
+        }
       }
 
       .pv-bap__banner_submit {
@@ -477,6 +892,17 @@
         text-transform: uppercase;
         background-color: #ed1c24;
         border-radius: 4px;
+
+        @include media-breakpoint-down(sm) {
+          padding: 10px 20px;
+          font-size: 13px;
+        }
+
+        @include media-breakpoint-down(xs) {
+          padding: 4px 20px;
+          font-size: 20px;
+          margin: 0 0 0 10px;
+        }
       }
     }
 
@@ -486,6 +912,10 @@
       font-size: 13px;
       font-weight: 400;
       text-align: center;
+
+      @include media-breakpoint-down(xs) {
+        font-size: 11px;
+      }
     }
 
     .pv-bap__banner_legacy {
@@ -500,10 +930,30 @@
   padding: 0 175px;
   margin: 100px 0;
 
+  @include media-breakpoint-down(lg) {
+    padding: 0 60px;
+  }
+
+  @include media-breakpoint-down(md) {
+    margin: 80px 0;
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin: 60px 0;
+    padding: 0;
+  }
+
+  @include media-breakpoint-down(xs) {
+    margin: 50px 0;
+  }
+
   .pv-feedback__title {
     font-family: "Trebuchet MS";
     font-size: 50px;
     text-align: center;
+    @include media-breakpoint-down(sm) {
+      font-size: 2rem;
+    }
   }
 
   .pv-feedback__slider {
@@ -513,7 +963,13 @@
     font-size: 16px;
     line-height: 1.6;
     text-align: center;
-
+    @include media-breakpoint-down(sm) {
+      font-size: 2rem;
+      margin-top: 30px;
+    }
+    @include media-breakpoint-down(lg) {
+      padding: 0 30px;
+    }
     .slick-prev,
     .slick-next {
       &:before {
@@ -535,6 +991,12 @@
       }
     }
 
+    .pv-feedback__sliderItem_text {
+      @include media-breakpoint-down(sm) {
+        font-size: 14px;
+      }
+    }
+
     .pv-feedback__sliderItem_partnerWrap {
       display: flex;
       justify-content: center;
@@ -543,11 +1005,20 @@
 
       .pv-feedback__sliderItem_partnerAvatar {
         margin-right: 30px;
+
+        @include media-breakpoint-down(sm) {
+          max-width: 55px;
+        }
       }
 
       .pv-feedback__sliderItem_partner {
         line-height: 1.6;
         text-align: left;
+
+        @include media-breakpoint-down(sm) {
+          line-height: 1.4;
+          font-size: 14px;
+        }
       }
     }
   }
@@ -556,4 +1027,12 @@
 .mg-l0 {
   margin-left: 0 !important;
   transition: all 1s ease-in-out;
+
+  @include media-breakpoint-down(md) {
+    margin-left: 20% !important;
+  }
+
+  @include media-breakpoint-down(xs) {
+    margin-left: 10% !important;
+  }
 }
