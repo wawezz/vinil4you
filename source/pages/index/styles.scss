@@ -385,6 +385,7 @@
             .pv-about__item_text {
                 font-size: 16px;
                 line-height: 1.6;
+                opacity: 0;
 
                 @include media-breakpoint-down(sm) {
                     font-size: 14px;
@@ -455,6 +456,7 @@
             .pv-wyg__item_data {
                 padding-right: 0;
                 padding-left: 75px;
+                opacity: 0;
 
                 @include media-breakpoint-down(md) {
                     padding-left: 10px;
@@ -540,6 +542,7 @@
 
         .pv-wyg__item_img-wrapper {
             width: 50%;
+            opacity: 0;
 
             @include media-breakpoint-down(xs) {
                 width: 100%;
@@ -861,6 +864,7 @@
             background-color: #fff;
             border-radius: 4px;
             justify-content: center;
+            opacity: 0;
 
             @include media-breakpoint-down(xs) {
                 padding: 20px 15px;
