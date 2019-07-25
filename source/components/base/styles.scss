@@ -75,6 +75,7 @@
       border-right: 1px solid #e9eaec;
       justify-content: center;
       font-weight: 500;
+      cursor: pointer;
     }
 
     .pv-mobileMenu__registr {
@@ -82,6 +83,7 @@
       border-left: 1px solid #e9eaec;
       justify-content: center;
       font-weight: 500;
+      cursor: pointer;
     }
   }
 
@@ -93,6 +95,7 @@
       font-weight: 500;
       display: flex;
       justify-content: center;
+      cursor: pointer;
     }
 
     .pv-mobileMenu__citySub {
@@ -167,7 +170,6 @@
     }
     .pv-mobileMenu__catalogSub {
       margin: 0;
-      display: none;
 
       .pv-mobileMenu__catalogSub_item {
         border: 1px solid #e9eaec;
@@ -227,6 +229,11 @@
   box-shadow: 0 0 10px 0 #444;
   z-index: 50;
   position: relative;
+
+  &.open {
+    right: -260px;
+    position: fixed;
+  }
 }
 
 .pv-mobileBtn__padding {

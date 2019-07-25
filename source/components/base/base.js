@@ -8,6 +8,7 @@ $(function() {
   $(document).on("click", ".pv-header__burgerBtn", function() {
     $(this).toggleClass("pv-header__burgerBtn_open");
     $(".pv-mobileMenu").toggleClass("show");
+    $(".pv-contentWrap").toggleClass("open");
   });
 
   $(document).on("click", ".pv-header__cityInfo", function() {
