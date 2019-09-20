@@ -3,9 +3,9 @@ import PerfectScrollbar from 'perfect-scrollbar';
 
 $(function () {
 
-  const addressesList = document.querySelector('#pv-addressesList');
+  var addressesList = document.querySelector('#pv-addressesList');
 
-  const ps = new PerfectScrollbar(addressesList, {
+  var ps = new PerfectScrollbar(addressesList, {
     wheelSpeed: 1,
     wheelPropagation: true,
     minScrollbarLength: 1

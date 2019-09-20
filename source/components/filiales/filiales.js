@@ -15,7 +15,7 @@ $(function () {
     $(".pv-filiales__mapSvgWrap .activePath").removeClass('activePath');
     $(this).addClass('activePath');
 
-    let index = $(this).index();
+    var index = $(this).index();
     $('#svg_map_popup .pv-filiales__mapPopap_title').text(cities[index].title || cities[index].name);
     $('#svg_map_popup .pv-filiales__mapPopap_address span').text(cities[index].address || '---');
     $('#svg_map_popup .pv-filiales__mapPopap_workingDays').text(cities[index].working_days || '---');
@@ -33,19 +33,17 @@ $(function () {
       $('#svg_map_popup .pv-filiales__mapPopap_orderVisit').attr('href', '#').hide();
     }
 
-    let parentPos = $(".pv-filiales__mapSvgWrap")[0].getBoundingClientRect(),
+    var parentPos = $(".pv-filiales__mapSvgWrap")[0].getBoundingClientRect(),
       childPos = $(".pv-filiales__mapSvgWrap path")[index].getBoundingClientRect(),
       relativePos = {};
 
     relativePos.top = childPos.top - parentPos.top,
       relativePos.left = childPos.left - parentPos.left;
 
-    let top = relativePos.top + childPos.height / 2 + $("#svg_map_popup").height() / 2 - 10;
-    let left = relativePos.left + childPos.height / 2 - $("#svg_map_popup").width() / 2 - 20;
-
-
-    if (left < 0) left = -15;
-    if (left + $("#svg_map_popup").outerWidth() + 30 > $(window).width()) left = $(window).width() - $("#svg_map_popup").outerWidth() - 45;
+    var top = relativePos.top + childPos.height / 2 + $("#svg_map_popup").height() / 2 - 10;
+    var left = relativePos.left + childPos.height / 2 - $("#svg_map_popup").width() / 2;;
+    if (left < 0 && $('.pv-filiales__map').width() + 60 == $(window).width()) left = -15;
+    if (left + $("#svg_map_popup").outerWidth() + 30 > $(".pv-filiales__mapSvgWrap").width()) left = $(".pv-filiales__mapSvgWrap").width() - $("#svg_map_popup").outerWidth() + 15;
 
     $("#svg_map_popup").addClass('active').css({
       top: top,
@@ -55,7 +53,7 @@ $(function () {
 });
 
 
-const cities = [{
+var cities = [{
   name: 'Республика Адыгея',
   title: 'СВАО, м. Владыкино, ЛЦ «Аврора»',
   address: 'г. Москва, Алтуфьевское шоссе 37 стр. 10, эт. 3, офис № 3',

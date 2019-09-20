@@ -16,7 +16,7 @@ $(function () {
   });
 
   $(document).on("click", ".pv-nav__searchBtn", function () {
-    const input = $(".pv-nav__search .pv-nav__searchInput");
+    var input = $(".pv-nav__search .pv-nav__searchInput");
 
     if (input.width() === 0) {
       input.addClass("open");

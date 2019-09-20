@@ -6,9 +6,9 @@ import "./styles.scss";
 $(function () {
 
     $(".pv-AQ").on("click", ".pv-AQ__rowMore", function () {
-        const activeRow = $('.pv-AQ .activeRow');
-        const row = $(this).parents('.pv-AQ__row');
-        const breake = row.hasClass('activeRow') ? true : false;
+        var activeRow = $('.pv-AQ .activeRow');
+        var row = $(this).parents('.pv-AQ__row');
+        var breake = row.hasClass('activeRow') ? true : false;
 
         if (activeRow) {
             activeRow.children('.pv-AQ__rowBody').slideUp(300);
@@ -27,7 +27,7 @@ $(function () {
     })
 
     $(document).on("click", ".pv-AQ__more", function () {
-        const html = '<div class="fadingInRow pv-AQ__row">' +
+        var html = '<div class="fadingInRow pv-AQ__row">' +
             '<div class="pv-AQ__rowHead">' +
             '<div class="pv-AQ__rowTitle">С какими транспортными компаниями мы работаем?</div>' +
             '<div class="pv-AQ__rowMore"><span>Подробнее</span></div>' +
@@ -42,9 +42,9 @@ $(function () {
     });
 
     $(".pv-deliveryTarif__tableRow").on("click", ".pv-deliveryTarif__tableColumn_titleArrow", function () {
-        const activeRow = $('.pv-deliveryTarif__table .activeRow');
-        const row = $(this).parents('.pv-deliveryTarif__tableRow');
-        const breake = row.hasClass('activeRow') ? true : false;
+        var activeRow = $('.pv-deliveryTarif__table .activeRow');
+        var row = $(this).parents('.pv-deliveryTarif__tableRow');
+        var breake = row.hasClass('activeRow') ? true : false;
 
         if (activeRow) {
             activeRow.children('.pv-deliveryTarif__tableColumn_slide').slideUp(300);
