@@ -6,21 +6,19 @@ $dark-blue: #1c2e54;
 $dark-grey: #333;
 
 //fonts
-$font-family-sans-serif: "Rubik", sans-serif;
-$font-family-thin: "Rubik", sans-serif;
-$grid-breakpoints: (
-  xs: 0,
-  sm: 576px,
+$font-family-sans-serif: "Rubik",
+sans-serif;
+$font-family-thin: "Rubik",
+sans-serif;
+$grid-breakpoints: (xs: 0,
+  sm: 768px,
   md: 1024px,
   lg: 1200px,
-  xl: 1410px
-);
-$container-max-widths: (
-  xs: 100%,
+  xl: 1410px);
+$container-max-widths: (xs: 100%,
   sm: 100%,
   md: 994px,
   lg: 1170px,
-  xl: 100%
-);
+  xl: 100%);
 
 @import "~bootstrap/scss/variables";

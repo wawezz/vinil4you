@@ -1,0 +1,168 @@
+@import "../../common/styles/styles";
+
+.pv-addresses {
+    margin-top: 50px;
+
+    .pv-addressesHeader {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .pv-addressesTitle {
+            font-family: "Trebuchet MS";
+            font-size: 24px;
+
+            @include media-breakpoint-down(xs) {
+                font-size: 17px;
+                margin: 0;
+            }
+        }
+
+        .pv-addressesView {
+            display: flex;
+            align-items: center;
+
+            .pv-addressesView__item {
+                display: flex;
+                align-items: center;
+                font-size: 16px;
+                font-weight: 300;
+                margin: 0 8px;
+                color: #4a4a4a;
+                cursor: pointer;
+
+                @include media-breakpoint-down(xs) {
+                    font-size: 13px;
+                }
+
+                &:hover {
+                    color: #000000;
+                }
+
+                &.active {
+                    color: #0e974f;
+                }
+
+                .fa {
+                    font-size: 10px;
+                    margin-right: 3px;
+                }
+
+                .fa-map-marker {
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+
+    .pv-addressesWrap {
+        margin-top: 25px;
+        display: flex;
+
+        .pv-addressesList {
+            height: 300px;
+            width: 39%;
+            padding-right: 20px;
+            position: relative;
+            transition: all 0.5s ease-in-out;
+
+            @include media-breakpoint-down(lg) {
+                width: 47%;
+            }
+
+            @include media-breakpoint-down(md) {
+                width: 0;
+                visibility: hidden;
+                padding: 0;
+                margin: 0;
+            }
+
+            .pv-addressesListRow {
+                padding: 10px 0;
+                border-bottom: solid 1px #e9eaec;
+
+                .pv-addressesListRow__title {
+                    font-size: 16px;
+                    font-weight: 300;
+                    line-height: 25px;
+                }
+
+                .pv-addressesListRow__links {
+                    color: #0e974f;
+                    font-size: 12px;
+                    line-height: 20px;
+
+                    .pv-addressesListRow__link {
+                        border-left: 1px solid #0e974f;
+                        border-right: 1px solid #0e974f;
+                        color: #0e974f;
+                        text-decoration: none;
+                        padding: 0 15px;
+
+                        &:first-child {
+                            border-left: none;
+                            padding: 0 15px 0 0;
+                        }
+
+                        &:last-child {
+                            border-right: none;
+                            padding: 0 0 0 15px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .pv-addressesMap {
+            width: 61%;
+            height: 300px;
+            margin-left: 30px;
+            background-image: url(images/map-mock.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            transition: all 0.5s ease-in-out;
+
+            @include media-breakpoint-down(lg) {
+                width: 53%;
+            }
+
+            @include media-breakpoint-down(md) {
+                width: 100%;
+                padding: 0;
+                margin: 0;
+            }
+        }
+
+        &.list {
+            .pv-addressesList {
+                width: 100%;
+                margin: 0;
+                padding-right: 20px;
+                visibility: visible;
+            }
+
+            .pv-addressesMap {
+                width: 0;
+                visibility: hidden;
+                padding: 0;
+                margin: 0;
+            }
+        }
+
+        &.map {
+            .pv-addressesMap {
+                width: 100%;
+                padding: 0;
+                margin: 0;
+            }
+
+            .pv-addressesList {
+                width: 0;
+                visibility: hidden;
+                padding: 0;
+                margin: 0;
+            }
+        }
+    }
+}

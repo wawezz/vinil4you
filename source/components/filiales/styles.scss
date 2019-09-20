@@ -1,0 +1,227 @@
+@import "../../common/styles/styles";
+
+.pv-filiales {
+    margin-top: 50px;
+
+    .pv-filiales__wrap {
+        display: flex;
+
+        @include media-breakpoint-down(sm) {
+            flex-flow: column;
+        }
+
+        .pv-filiales__info {
+            width: 33%;
+
+            @include media-breakpoint-down(sm) {
+                width: 100%;
+            }
+
+            .pv-filiales__info_title {
+                font-family: "Trebuchet MS";
+                font-size: 24px;
+                margin-bottom: 10px;
+
+                @include media-breakpoint-down(xs) {
+                    font-size: 20px;
+                }
+            }
+
+            .pv-filiales__info_slog {
+                font-family: "Trebuchet MS";
+                font-size: 36px;
+                line-height: 1.1;
+                margin-bottom: 30px;
+
+                @include media-breakpoint-down(xs) {
+                    font-size: 30px;
+                }
+            }
+
+            .pv-filiales__info_clients {
+                font-size: 16px;
+                font-weight: 300;
+
+                @include media-breakpoint-down(xs) {
+                    font-size: 14px;
+                }
+            }
+
+            .pv-main_btn {
+                font-family: inherit;
+                font-size: 15px;
+                font-weight: 400;
+                margin: 25px 0;
+                width: 85%;
+                padding: 12px 0;
+
+                @include media-breakpoint-down(md) {
+                    font-size: 13px;
+                }
+
+                @include media-breakpoint-down(sm) {
+                    width: 300px;
+                }
+            }
+        }
+
+        .pv-filiales__map {
+            position: relative;
+            width: 67%;
+            padding-left: 20px;
+
+            @include media-breakpoint-down(sm) {
+                width: 100%;
+                padding: 0;
+            }
+
+            .pv-filiales__mapSvg {
+                width: 100%;
+                overflow: hidden;
+
+                .pv-filiales__mapSvgWrap {
+                    width: 100%;
+
+                    path {
+                        cursor: pointer;
+                        pointer-events: all;
+                        transition: all 0.2s linear;
+                        -webkit-transition: all 0.2s linear;
+                        -moz-transition: all 0.2s linear;
+                        -o-transition: all 0.2s linear;
+
+                        &:hover,
+                        &.activePath {
+                            fill: #ed1c24;
+                        }
+                    }
+                }
+
+
+            }
+
+            .pv-filiales__mapPopap {
+                display: none;
+                position: absolute;
+                width: 330px;
+                height: max-content;
+                bottom: 25px;
+                color: #000000;
+                padding: 20px;
+                font-weight: 400;
+                border-radius: 4px;
+                background: #fff;
+                -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+                -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+                box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+                opacity: 0;
+                z-index: 100;
+                margin-top: -40px;
+                -webkit-transition-property: opacity, margin;
+                -moz-transition-property: opacity, margin;
+                -o-transition-property: opacity, margin;
+                transition-property: opacity, margin;
+                -webkit-transition-duration: .2s;
+                -moz-transition-duration: .2s;
+                -o-transition-duration: .2s;
+                transition-duration: .2s;
+
+                &.active {
+                    display: block;
+                    opacity: 1;
+                }
+
+                &:after {
+                    content: '';
+                    border: 15px solid transparent;
+                    border-bottom: 15px solid #fff;
+                    width: 0;
+                    height: 0;
+                    display: block;
+                    position: absolute;
+                    left: 50%;
+                    top: 0;
+                    bottom: auto;
+                    margin: -30px 0 0 -15px;
+                }
+
+                .pv-filiales__mapPopap_title {
+                    font-size: 16px;
+                    font-weight: 300;
+                    margin-bottom: 15px;
+                }
+
+                .pv-filiales__mapPopap_address {
+                    font-size: 12px;
+                    line-height: 20px;
+                    margin-bottom: 20px;
+                }
+
+                .pv-filiales__mapPopap_addressWrap {
+                    .pv-filiales__mapPopap_yandexLink {
+                        color: #0e974f;
+                        border-bottom: 1px dashed #e2e2e2;
+                        text-decoration: none;
+                        margin-left: 10px;
+                    }
+                }
+
+                .pv-filiales__mapPopap_daysWrap {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-end;
+
+                    .pv-filiales__mapPopap_days {
+                        font-size: 12px;
+                        line-height: 20px;
+                    }
+
+                    .pv-filiales__mapPopap_orderVisit {
+                        border-radius: 2px;
+                        border: 1px solid #0e974f;
+                        color: #0e974f;
+                        font-size: 10px;
+                        font-weight: 400;
+                        text-decoration: none;
+                        display: table;
+                        padding: 5px 10px;
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+.pv-filiales__Legal {
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 1.6;
+
+    @include media-breakpoint-down(xs) {
+        font-size: 14px;
+    }
+
+    .pv-filiales__Legal_head {
+        border-bottom: 1px dashed #c5c5c5;
+        font-weight: 300;
+        width: max-content;
+        margin-bottom: 32px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: 1;
+
+        &:after {
+            content: "\F105";
+            color: #0e974f;
+            font-family: "FontAwesome";
+            font-size: 18px;
+            margin-left: 11px;
+        }
+    }
+
+    .pv-filiales__Legal_body {
+        font-weight: 300;
+    }
+}

@@ -1,0 +1,184 @@
+extends ../../components/base/base
+block title
+    | Delivery page
+block main
+    .container-fluid
+        .row.pv-deliveryTopBanner
+            .col-12
+                .pv-deliveryInfo
+                    .pv-delivery__titleWrap
+                        h2.pv-delivery__title Оперативная доставка#[br]по всей России
+                    .pv-delivery__textWrap
+                        .pv-delivery__text Интернет-магазин выполняет доставку любого товара своей собственной Службой доставки. Мы отправляем заказы в любые города России почтой России и другими курьерскими службами
+        .container
+            .row.d-none.d-md-flex
+                ul.col-12.pv-breadcrumb 
+                    li.pv-breadcrumb__item 
+                        a(href="#").pv-breadcrumb__link Главная страница
+                    li.pv-breadcrumb__item 
+                        a(href="#").pv-breadcrumb__link О компании
+                    li.pv-breadcrumb__item Доставка
+
+            .row.pv-pageInfo
+                .col-12
+                    h2.pv-pageInfo__title Доставка и оплата товаров
+
+            .row.pv-deliveryTarif
+                .col-12
+                    h3.pv-deliveryTarif__title Тарифы на доставку
+                    .row.pv-deliveryTarif__wrapper
+                        .col-12.col-lg-9.pv-deliveryTarif__table
+                            .d-none.d-md-flex.pv-deliveryTarif__tableRow
+                                .pv-deliveryTarif__tableColumn Тип и стоимость доставки
+                                .pv-deliveryTarif__tableColumn Стоимость доставки
+                                .pv-deliveryTarif__tableColumn Срок доставки
+                                .pv-deliveryTarif__tableColumn Оплата
+                            .pv-deliveryTarif__tableRow
+                                .pv-deliveryTarif__tableColumn.pv-deliveryTarif__tableColumn_title 
+                                    | Самовывоз
+                                    .pv-deliveryTarif__tableColumn_titleArrow
+                                        i.fa.fa-angle-right
+                                .pv-deliveryTarif__tableColumn.pv-deliveryTarif__tableColumn_green.pv-deliveryTarif__tableColumn_slide 
+                                    .pv-deliveryTarif__tableColumn_slideTitle Стоимость доставки
+                                    | Бесплатно
+                                .pv-deliveryTarif__tableColumn.pv-deliveryTarif__tableColumn_slide.pv-deliveryTarif__tableColumn_slideC 
+                                    .pv-deliveryTarif__tableColumn_slideTitle Срок доставки
+                                    | Самовывоз возможен после подтверждения заказа.#[br]
+                                    a(href="#").pv-deliveryTarif__tableColumn_link Адреса магазинов
+                                .pv-deliveryTarif__tableColumn.pv-deliveryTarif__tableColumn_slide.pv-deliveryTarif__tableColumn_slideC 
+                                    .pv-deliveryTarif__tableColumn_slideTitle Оплата
+                                    | Наличными или банковской картой#[br]Безналичный расчет (по счету)
+                            .pv-deliveryTarif__tableRow
+                                .pv-deliveryTarif__tableColumn.pv-deliveryTarif__tableColumn_title 
+                                    | Доставка день в день
+                                    .pv-deliveryTarif__tableColumn_titleArrow
+                                        i.fa.fa-angle-right
+                                .pv-deliveryTarif__tableColumn.pv-deliveryTarif__tableColumn_green.pv-deliveryTarif__tableColumn_slide.pv-deliveryTarif__tableColumn_slideC 
+                                    .pv-deliveryTarif__tableColumn_slideTitle Стоимость доставки
+                                    | В пределах МКАД – от 400 руб. 
+                                    a(href="#").d-none.d-md.block.pv-deliveryTarif__tableColumn_info ?
+                                       .pv-deliveryTarif__tableColumn_infoPopap После 15:00 стоимость#[br]доставки расчитывается#[br]индивидуально
+                                    br
+                                    | За пределы МКАД – от 600 руб.
+                                .pv-deliveryTarif__tableColumn.pv-deliveryTarif__tableColumn_slide.pv-deliveryTarif__tableColumn_slideC 
+                                    .pv-deliveryTarif__tableColumn_slideTitle Срок доставки
+                                    | В день заказа#[br]При оформлении до 15:00
+                                .pv-deliveryTarif__tableColumn.pv-deliveryTarif__tableColumn_slide.pv-deliveryTarif__tableColumn_slideC
+                                    .pv-deliveryTarif__tableColumn_slideTitle Оплата
+                                    | Наличными или банковской картой#[br]При оформлении заказов после 15:00 – 100% предоплата
+                            .pv-deliveryTarif__tableRow
+                                .pv-deliveryTarif__tableColumn.pv-deliveryTarif__tableColumn_title 
+                                    | Стандартная доставка
+                                    .pv-deliveryTarif__tableColumn_titleArrow
+                                        i.fa.fa-angle-right
+                                .pv-deliveryTarif__tableColumn.pv-deliveryTarif__tableColumn_green.pv-deliveryTarif__tableColumn_slide.pv-deliveryTarif__tableColumn_slideC 
+                                    .pv-deliveryTarif__tableColumn_slideTitle Стоимость доставки
+                                    | В пределах МКАД – от 400 руб.#[br]За пределы МКАД – от 600 руб.
+                                .pv-deliveryTarif__tableColumn.pv-deliveryTarif__tableColumn_slide.pv-deliveryTarif__tableColumn_slideC 
+                                    .pv-deliveryTarif__tableColumn_slideTitle Срок доставки
+                                    | На следующий день#[br]При оформлении после 15:00
+                                .pv-deliveryTarif__tableColumn.pv-deliveryTarif__tableColumn_slide.pv-deliveryTarif__tableColumn_slideC 
+                                    .pv-deliveryTarif__tableColumn_slideTitle Оплата                                    
+                                    | Наличными или банковской картой#[br]Безналичный расчет (по счету)
+                            .pv-deliveryTarif__tableRow
+                                .pv-deliveryTarif__tableColumn.pv-deliveryTarif__tableColumn_title 
+                                    | Траснпортными компаниями
+                                    .pv-deliveryTarif__tableColumn_titleArrow
+                                        i.fa.fa-angle-right
+                                .pv-deliveryTarif__tableColumn.pv-deliveryTarif__tableColumn_green.pv-deliveryTarif__tableColumn_slide 
+                                    .pv-deliveryTarif__tableColumn_slideTitle Стоимость доставки
+                                    | По тарифам перевозчика
+                                .pv-deliveryTarif__tableColumn.pv-deliveryTarif__tableColumn_slide.pv-deliveryTarif__tableColumn_slideC
+                                    .pv-deliveryTarif__tableColumn_slideTitle Срок доставки                                    
+                                    | В день заказа#[br]При оформлении до 14:00
+                                .pv-deliveryTarif__tableColumn.pv-deliveryTarif__tableColumn_slide.pv-deliveryTarif__tableColumn_slideC
+                                    .pv-deliveryTarif__tableColumn_slideTitle Оплата                                    
+                                    | Банковской картой онлайн#[br]Безналичный расчет (по счету)
+                            .pv-deliveryTarif__tableRow
+                                .pv-deliveryTarif__tableColumn.pv-deliveryTarif__tableColumn_title 
+                                    | Почтой России
+                                    .pv-deliveryTarif__tableColumn_titleArrow
+                                        i.fa.fa-angle-right
+                                .pv-deliveryTarif__tableColumn.pv-deliveryTarif__tableColumn_green.pv-deliveryTarif__tableColumn_slide
+                                    .pv-deliveryTarif__tableColumn_slideTitle Стоимость доставки                                    
+                                    | По тарифам перевозчика
+                                .pv-deliveryTarif__tableColumn.pv-deliveryTarif__tableColumn_slide.pv-deliveryTarif__tableColumn_slideC
+                                    .pv-deliveryTarif__tableColumn_slideTitle Срок доставки                                     
+                                    | Отправки 2 раза в неделю 
+                                .pv-deliveryTarif__tableColumn.pv-deliveryTarif__tableColumn_slide.pv-deliveryTarif__tableColumn_slideC 
+                                    .pv-deliveryTarif__tableColumn_slideTitle Оплата                                    
+                                    | Банковской картой онлайн#[br]Безналичный расчет (по счету)                                
+                        .d-none.d-lg-block.col-3.pv-deliveryTarif__aside
+                            .pv-deliveryTarif__aside_title Есть вопросы?
+                            .pv-deliveryTarif__aside_description Cвяжитесь с нами удобным Вам способом
+                            .pv-deliveryTarif__aside_row
+                                img(src=require("./images/icon-phone_green.svg")).pv-deliveryTarif__aside_rowIcon 
+                                .pv-deliveryTarif__aside_rowText 8 (495) 150-22-62#[br]8 (800) 550-22-62
+                            .pv-deliveryTarif__aside_row
+                                img(src=require("./images/icon-mail_green.svg")).pv-deliveryTarif__aside_rowIcon 
+                                .pv-deliveryTarif__aside_rowText sale@vinyl4you.ru#[br]opt@vinyl4you.ru
+                            .pv-deliveryTarif__aside_row
+                                img(src=require("./images/icon-time_green.svg")).pv-deliveryTarif__aside_rowIcon 
+                                .pv-deliveryTarif__aside_rowText Пн-Сб : 10:00–19:00
+                            .pv-main_btn Обратная связь 
+            include ../../components/addresses/addresses.pug
+            .row.pv-HWW
+                .col-12
+                    h2.pv-HWW__title Как мы работаем
+                    .row.pv-HWW__wrap
+                        .col-12.col-sm-6.col-md-3.pv-HWW__item
+                            img(src=require("./images/hex-decor.svg")).pv-HWW__item_icon
+                            .pv-HWW__item_title Оформление
+                            hr.pv-HWW__item_hr
+                            .pv-HWW__item_text Оформляйте заказ удобным способом – по телефону или на сайте
+                        .col-12.col-sm-6.col-md-3.pv-HWW__item
+                            img(src=require("./images/hex-confirmation.svg")).pv-HWW__item_icon
+                            .pv-HWW__item_title Подтверждение
+                            hr.pv-HWW__item_hr
+                            .pv-HWW__item_text Наш менеджер свяжется с вами в течение 60 минут и подтвердит заказ
+                        .col-12.col-sm-6.col-md-3.pv-HWW__item
+                            img(src=require("./images/hex-delivery.svg")).pv-HWW__item_icon
+                            .pv-HWW__item_title Доставка
+                            hr.pv-HWW__item_hr
+                            .pv-HWW__item_text Служба доставки оперативно доставит заказ по  Москве и Московской области
+                        .col-12.col-sm-6.col-md-3.pv-HWW__item
+                            img(src=require("./images/hex-serving.svg")).pv-HWW__item_icon
+                            .pv-HWW__item_title Вручение адресату
+                            hr.pv-HWW__item_hr
+                            .pv-HWW__item_text Курьер вручает вам заказ, а также полный комплект документов
+            include ../../components/filiales/filiales.pug
+        .row.pv-AQ
+            .col-12
+                h2.pv-AQ__title Вопросы и ответы
+                .pv-AQ__rows
+                    .pv-AQ__row
+                        .pv-AQ__rowHead
+                            .pv-AQ__rowTitle С какими транспортными компаниями мы работаем?
+                            .pv-AQ__rowMore 
+                                span Подробнее
+                        .pv-AQ__rowBody 
+                            | Возврат целых рулонов производится безоговорочно в течении 14 дней с момента покупки товара. Постановление Правительства РФ от 20.10.1998 № 1222.
+                            br
+                            br
+                            | Товары, отпускаемые метражом (винил, тонировочная пленка, экокожа, и т.п.) возврату или обмену на аналогичный товар другого размера, фирмы, габарита, фасона, расцветки или комплектации не подлежат. Постановление Правительства РФ от 19.01.1998 №55 (ред. От 23.12.2016).
+                    .pv-AQ__row
+                        .pv-AQ__rowHead
+                            .pv-AQ__rowTitle С какими транспортными компаниями мы работаем?
+                            .pv-AQ__rowMore 
+                                span Подробнее
+                        .pv-AQ__rowBody 
+                            | Возврат целых рулонов производится безоговорочно в течении 14 дней с момента покупки товара. Постановление Правительства РФ от 20.10.1998 № 1222.
+                            br
+                            br
+                            | Товары, отпускаемые метражом (винил, тонировочная пленка, экокожа, и т.п.) возврату или обмену на аналогичный товар другого размера, фирмы, габарита, фасона, расцветки или комплектации не подлежат. Постановление Правительства РФ от 19.01.1998 №55 (ред. От 23.12.2016).
+                    .pv-AQ__row
+                        .pv-AQ__rowHead
+                            .pv-AQ__rowTitle С какими транспортными компаниями мы работаем?
+                            .pv-AQ__rowMore 
+                            span Подробнее
+                        .pv-AQ__rowBody 
+                            | Возврат целых рулонов производится безоговорочно в течении 14 дней с момента покупки товара. Постановление Правительства РФ от 20.10.1998 № 1222.
+                            br
+                            br
+                            | Товары, отпускаемые метражом (винил, тонировочная пленка, экокожа, и т.п.) возврату или обмену на аналогичный товар другого размера, фирмы, габарита, фасона, расцветки или комплектации не подлежат. Постановление Правительства РФ от 19.01.1998 №55 (ред. От 23.12.2016).
+                .pv-AQ__more ПОСМОТРЕТЬ ЕЩЕ

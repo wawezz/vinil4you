@@ -1,0 +1,481 @@
+@import "../../common/styles/styles";
+
+.pv-deliveryTarif {
+    margin-top: 25px;
+
+    .pv-deliveryTarif__title {
+        font-family: "Trebuchet MS";
+        font-size: 24px;
+        margin-bottom: 25px;
+    }
+
+    .pv-deliveryTarif__wrapper {
+        .pv-deliveryTarif__table {
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 21px;
+
+            .pv-deliveryTarif__tableRow {
+                width: 100%;
+                display: flex;
+                justify-content: space-around;
+                border-bottom: solid 1px #e9eaec;
+                padding: 12px 0;
+
+                @include media-breakpoint-down(sm) {
+                    border: solid 1px #e9eaec;
+                    flex-flow: column;
+                    padding: 12px 20px;
+                }
+
+                .pv-deliveryTarif__tableColumn {
+                    width: 22%;
+                    padding-right: 20px;
+                    box-sizing: border-box;
+
+                    @include media-breakpoint-down(sm) {
+                        width: 100%;
+                        padding: 0;
+                    }
+
+                    .pv-deliveryTarif__tableColumn_link {
+                        text-decoration: none;
+                        border-bottom: 1px dashed #bdbdbd;
+                        color: #0e974f;
+                    }
+
+                    .pv-deliveryTarif__tableColumn_info {
+                        color: #979797;
+                        border-radius: 50%;
+                        border: 1px solid #979797;
+                        display: inline-flex;
+                        text-decoration: none;
+                        font-size: 10px;
+                        width: 16px;
+                        height: 16px;
+                        justify-content: center;
+                        align-items: center;
+                        margin-left: 10px;
+                        position: relative;
+
+                        &:hover {
+                            .pv-deliveryTarif__tableColumn_infoPopap {
+                                display: block;
+                                opacity: 1;
+                            }
+                        }
+
+                        .pv-deliveryTarif__tableColumn_infoPopap {
+                            display: none;
+                            position: absolute;
+                            width: max-content;
+                            bottom: 25px;
+                            color: #000000;
+                            padding: 8px 10px;
+                            font-weight: 400;
+                            border-radius: 4px;
+                            background: #fff;
+                            -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+                            -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+                            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+                            opacity: 0;
+                            z-index: 100;
+                            margin-top: -40px;
+                            -webkit-transition-property: opacity, margin;
+                            -moz-transition-property: opacity, margin;
+                            -o-transition-property: opacity, margin;
+                            transition-property: opacity, margin;
+                            -webkit-transition-duration: .2s;
+                            -moz-transition-duration: .2s;
+                            -o-transition-duration: .2s;
+                            transition-duration: .2s;
+
+                            &:after {
+                                content: '';
+                                border: 10px solid transparent;
+                                border-top: 8px solid #fff;
+                                width: 0;
+                                height: 0;
+                                display: block;
+                                position: absolute;
+                                left: 50%;
+                                bottom: 0;
+                                margin: 0 0 -18px -10px;
+                            }
+                        }
+                    }
+
+                    &:nth-child(2) {
+                        width: 28%;
+
+                        @include media-breakpoint-down(sm) {
+                            width: 100%;
+                        }
+                    }
+
+                    &:last-child {
+                        width: 28%;
+
+                        @include media-breakpoint-down(sm) {
+                            width: 100%;
+                        }
+                    }
+                }
+
+                .pv-deliveryTarif__tableColumn_title {
+                    .pv-deliveryTarif__tableColumn_titleArrow {
+                        color: #0e974f;
+                        font-weight: 600;
+                        display: none;
+                        cursor: pointer;
+                        font-size: 17px;
+
+                        @include media-breakpoint-down(sm) {
+                            display: block;
+                        }
+                    }
+
+                    @include media-breakpoint-down(sm) {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        font-size: 14px;
+                        font-weight: 500;
+                    }
+                }
+
+                .pv-deliveryTarif__tableColumn_slide {
+                    justify-content: space-between;
+                    padding: 10px 0;
+
+                    @include media-breakpoint-down(sm) {
+                        display: none;
+                    }
+
+                    .pv-deliveryTarif__tableColumn_slideTitle {
+                        display: none;
+                        color: #000000;
+                        font-size: 13px;
+                        font-weight: 500;
+
+                        @include media-breakpoint-down(sm) {
+                            display: block;
+                        }
+                    }
+                }
+
+                .pv-deliveryTarif__tableColumn_slideC {
+                    @include media-breakpoint-down(sm) {
+                        flex-flow: column;
+                    }
+                }
+
+                .pv-deliveryTarif__tableColumn_green {
+                    color: #0e974f;
+                }
+
+            }
+
+        }
+
+        .pv-deliveryTarif__aside {
+            border: 1px solid #e9eaec;
+            padding: 26px 29px;
+
+            .pv-deliveryTarif__aside_title {
+                font-family: "Trebuchet MS";
+                font-size: 24px;
+                line-height: 25px;
+                margin-bottom: 25px;
+            }
+
+            .pv-deliveryTarif__aside_description {
+                font-size: 16px;
+                font-weight: 300;
+                line-height: 25px;
+                margin-bottom: 25px;
+            }
+
+            .pv-deliveryTarif__aside_row {
+                display: flex;
+                align-items: start;
+                margin-bottom: 25px;
+
+                .pv-deliveryTarif__aside_rowIcon {
+                    margin: 5px 10px 0 0
+                }
+
+                .pv-deliveryTarif__aside_rowText {
+                    font-size: 16px;
+                    font-weight: 300;
+                    line-height: 25px;
+                }
+            }
+
+            .pv-main_btn {
+                font-family: inherit;
+                font-size: 15px;
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+.pv-deliveryTopBanner {
+    height: 550px;
+    background-image: url(images/delivery-bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+
+    .pv-deliveryInfo {
+        margin: 50px 100px;
+
+        @include media-breakpoint-down(xs) {
+            margin: 35px 0;
+        }
+
+        .pv-delivery__titleWrap {
+            width: fit-content;
+            margin-bottom: 20px;
+
+            .pv-delivery__title {
+                background-color: #000000;
+                color: #ffffff;
+                font-family: "Trebuchet MS";
+                font-size: 50px;
+                line-height: 60px;
+                padding: 4px 0;
+                display: inline;
+
+                @include media-breakpoint-down(md) {
+                    font-size: 40px;
+                    line-height: 54px;
+                }
+
+                @include media-breakpoint-down(xs) {
+                    font-size: 27px;
+                    line-height: 36px;
+                }
+            }
+        }
+
+        .pv-delivery__textWrap {
+            width: 600px;
+
+            @include media-breakpoint-down(xs) {
+                width: 100%;
+            }
+
+            .pv-delivery__text {
+                background-color: #000000;
+                color: #ffffff;
+                font-size: 16px;
+                font-weight: 300;
+                line-height: 25px;
+                padding: 6px 0;
+                display: inline;
+            }
+        }
+    }
+}
+
+.pv-HWW {
+    min-height: 475px;
+    padding: 47px 20px;
+    margin: 0 -15px;
+    margin-top: 75px;
+    color: #fff;
+    background-image: url(images/howWWBG.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+
+    @include media-breakpoint-down(sm) {
+        padding-bottom: 20px;
+        margin-top: 60px;
+        padding-top: 60px;
+        min-height: inherit;
+    }
+
+    @include media-breakpoint-down(xs) {
+        padding-bottom: 10px;
+        margin-top: 40px;
+        padding-top: 40px;
+    }
+
+    .pv-HWW__title {
+        font-family: "Trebuchet MS";
+        font-size: 36px;
+        text-align: center;
+
+        @include media-breakpoint-down(xs) {
+            font-size: 2rem;
+        }
+    }
+
+    .pv-HWW__wrap {
+        margin-top: 25px;
+
+        .pv-HWW__item {
+            padding: 0 13px;
+            text-align: center;
+
+            @include media-breakpoint-down(sm) {
+                margin-bottom: 50px;
+            }
+
+            .pv-HWW__item_icon {
+                margin-bottom: 25px;
+            }
+
+            .pv-HWW__item_title {
+                font-family: "Trebuchet MS";
+                font-size: 24px;
+                line-height: 1.6;
+
+                @include media-breakpoint-down(sm) {
+                    font-size: 22px;
+                }
+
+                @include media-breakpoint-down(xs) {
+                    font-size: 1.5rem;
+                }
+            }
+
+            .pv-HWW__item_hr {
+                display: inline-block;
+                width: 70px;
+                height: 2px;
+                margin: 15px 0;
+                background-color: #0e974f;
+            }
+
+            .pv-HWW__item_text {
+                font-size: 14px;
+                font-weight: 300;
+                line-height: 1.6;
+
+                @include media-breakpoint-down(sm) {
+                    font-size: 14px;
+                    line-height: 1.4;
+                }
+            }
+        }
+    }
+}
+
+.pv-AQ {
+    background-color: #f2f2f2;
+    padding: 50px;
+    margin-top: 82px;
+
+    @include media-breakpoint-down(sm) {
+        padding: 25px;
+    }
+
+    @include media-breakpoint-down(xs) {
+        padding: 25px 0;
+    }
+
+    .pv-AQ__title {
+        text-align: center;
+        font-family: "Trebuchet MS";
+        font-size: 36px;
+        margin-bottom: 45px;
+
+        @include media-breakpoint-down(xs) {
+            font-size: 30px;
+        }
+    }
+
+    .pv-AQ__rows {
+        padding-bottom: 20px;
+
+        .pv-AQ__row {
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.04);
+            border-radius: 4px;
+            background-color: #ffffff;
+            margin: 25px 0;
+            padding: 25px 30px;
+
+            .pv-AQ__rowHead {
+                display: flex;
+                justify-content: space-between;
+
+                .pv-AQ__rowTitle {
+                    font-size: 16px;
+                    font-weight: 300;
+                }
+
+                .pv-AQ__rowMore {
+                    color: #666666;
+                    font-size: 16px;
+                    font-weight: 300;
+                    cursor: pointer;
+                    transition: all .2 ease-in-out;
+
+                    @include media-breakpoint-down(xs) {
+                        display: flex;
+                        align-items: center;
+                    }
+
+                    span {
+                        @include media-breakpoint-down(xs) {
+                            display: none;
+                        }
+                    }
+
+                    &:after {
+                        content: "\F105";
+                        color: #0e974f;
+                        font-family: "FontAwesome";
+                        font-size: 18px;
+                        margin-left: 11px;
+                        transition: all .2 ease-in-out;
+                    }
+
+                    &.open::after {
+                        content: "\F107";
+                    }
+                }
+
+            }
+
+            .pv-AQ__rowBody {
+                margin-top: 25px;
+                font-size: 14px;
+                font-weight: 300;
+                display: none;
+            }
+
+            &.activeRow {
+                .pv-AQ__rowHead {
+
+                    .pv-AQ__rowTitle {
+                        color: #0e974f;
+                    }
+                }
+            }
+        }
+    }
+
+    .pv-AQ__more {
+        color: #6d7278;
+        font-size: 15px;
+        font-weight: 500;
+        cursor: pointer;
+        display: block;
+        margin: 0 auto;
+        border-radius: 4px;
+        border: 1px solid #d9d9d9;
+        width: 200px;
+        padding: 17px 0;
+        text-align: center;
+    }
+}

@@ -185,30 +185,6 @@
     }
 }
 
-.pv-breadcrumb {
-    display: flex;
-    margin: 25px 0;
-    color: #c5c5c5;
-
-    .pv-breadcrumb__item {
-        &:after {
-            content: "|";
-            margin: 0 15px;
-        }
-
-        &:last-child {
-            &:after {
-                content: none;
-            }
-        }
-
-        .pv-breadcrumb__link {
-            color: #c5c5c5;
-            text-decoration: none;
-        }
-    }
-}
-
 .pv-ourDiff {
     margin: 0 -15px;
     z-index: 100;
@@ -308,6 +284,9 @@
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
+    justify-content: center;
+    display: flex;
+    align-items: center;
 
     @include media-breakpoint-down(sm) {
         padding-bottom: 20px;
@@ -896,30 +875,6 @@
                     padding: 9px 20px;
                 }
             }
-
-            .pv-bap__banner_submit {
-                padding: 12px 30px;
-                margin: 0 15px;
-                color: #fff;
-                font-family: "Trebuchet MS";
-                font-size: 16px;
-                font-weight: 700;
-                text-align: center;
-                text-transform: uppercase;
-                background-color: #ed1c24;
-                border-radius: 4px;
-
-                @include media-breakpoint-down(sm) {
-                    padding: 10px 20px;
-                    font-size: 13px;
-                }
-
-                @include media-breakpoint-down(xs) {
-                    padding: 4px 20px;
-                    font-size: 20px;
-                    margin: 0 0 0 10px;
-                }
-            }
         }
 
         .pv-bap__banner_info {
@@ -1042,18 +997,5 @@
                 }
             }
         }
-    }
-}
-
-.mg-l0 {
-    margin-left: 0 !important;
-    transition: all 1s ease-in-out;
-
-    @include media-breakpoint-down(md) {
-        margin-left: 20% !important;
-    }
-
-    @include media-breakpoint-down(xs) {
-        margin-left: 10% !important;
     }
 }
