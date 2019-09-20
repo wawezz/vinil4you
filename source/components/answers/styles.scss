@@ -1,0 +1,111 @@
+@import "../../common/styles/styles";
+
+.pv-AQ {
+    background-color: #f2f2f2;
+    padding: 50px;
+    margin-top: 82px;
+
+    @include media-breakpoint-down(sm) {
+        padding: 25px;
+    }
+
+    @include media-breakpoint-down(xs) {
+        padding: 25px 0;
+    }
+
+    .pv-AQ__title {
+        text-align: center;
+        font-family: "Trebuchet MS";
+        font-size: 36px;
+        margin-bottom: 45px;
+
+        @include media-breakpoint-down(xs) {
+            font-size: 30px;
+        }
+    }
+
+    .pv-AQ__rows {
+        padding-bottom: 20px;
+
+        .pv-AQ__row {
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.04);
+            border-radius: 4px;
+            background-color: #ffffff;
+            margin: 25px 0;
+            padding: 25px 30px;
+
+            .pv-AQ__rowHead {
+                display: flex;
+                justify-content: space-between;
+
+                .pv-AQ__rowTitle {
+                    font-size: 16px;
+                    font-weight: 300;
+                }
+
+                .pv-AQ__rowMore {
+                    color: #666666;
+                    font-size: 16px;
+                    font-weight: 300;
+                    cursor: pointer;
+                    transition: all .2 ease-in-out;
+
+                    @include media-breakpoint-down(xs) {
+                        display: flex;
+                        align-items: center;
+                    }
+
+                    span {
+                        @include media-breakpoint-down(xs) {
+                            display: none;
+                        }
+                    }
+
+                    &:after {
+                        content: "\F105";
+                        color: #0e974f;
+                        font-family: "FontAwesome";
+                        font-size: 18px;
+                        margin-left: 11px;
+                        transition: all .2 ease-in-out;
+                    }
+
+                    &.open::after {
+                        content: "\F107";
+                    }
+                }
+
+            }
+
+            .pv-AQ__rowBody {
+                margin-top: 25px;
+                font-size: 14px;
+                font-weight: 300;
+                display: none;
+            }
+
+            &.activeRow {
+                .pv-AQ__rowHead {
+
+                    .pv-AQ__rowTitle {
+                        color: #0e974f;
+                    }
+                }
+            }
+        }
+    }
+
+    .pv-AQ__more {
+        color: #6d7278;
+        font-size: 15px;
+        font-weight: 500;
+        cursor: pointer;
+        display: block;
+        margin: 0 auto;
+        border-radius: 4px;
+        border: 1px solid #d9d9d9;
+        width: 200px;
+        padding: 17px 0;
+        text-align: center;
+    }
+}
