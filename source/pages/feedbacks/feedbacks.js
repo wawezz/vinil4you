@@ -35,11 +35,19 @@ $(function () {
 
     });
 
-    setTimeout(
-        function () {
-            $('.pv-custFeedback__feedbackSlider-itemAdd').height($('.pv-custFeedback__feedbackSlider-nav img').height());
-        },
-        200
-    )
+    function updateButtonResize() {
+        setTimeout(
+            function () {
+                $('.pv-custFeedback__feedbackSlider-itemAdd').height($('.pv-custFeedback__feedbackSlider-nav img').height());
+            },
+            200
+        )
+    }
+
+    updateButtonResize();
+
+    $(window).resize(function () {
+        updateButtonResize();
+    });
 
 });

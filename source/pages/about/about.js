@@ -133,13 +133,19 @@ $(function () {
         }, 200);
     }
 
+    function fitAboutText() {
+        var aboutImgH = $('.pv-aboutCompany__image img').height() || 445;
+        $('.pv-aboutCompany__text').height(aboutImgH);
+    }
+
     $("#pv-circleRotate").circle();
     autoHeightCircle();
+    fitAboutText();
     $(window).resize(function () {
         autoHeightCircle();
+        fitAboutText();
     });
 
-    $('.pv-aboutCompany__text').height($('.pv-aboutCompany__image img').height());
 
     var aboutCompanyTeaxt = document.querySelector('#pv-aboutCompanyTeaxt');
 
@@ -154,31 +160,24 @@ $(function () {
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 2000,
-        responsive: [
-            // {
-            //     breakpoint: 1200,
-            //     settings: {
-            //         slidesToShow: 4
-            //     }
-            // },
-            // {
-            //     breakpoint: 980,
-            //     settings: {
-            //         slidesToShow: 3,
-            //         dots: false,
-            //         prevArrow: false,
-            //         nextArrow: false
-            //     }
-            // },
-            // {
-            //     breakpoint: 740,
-            //     settings: {
-            //         slidesToShow: 2,
-            //         dots: false,
-            //         prevArrow: false,
-            //         nextArrow: false
-            //     }
-            // },
+        responsive: [{
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3
+                }
+            },
+            {
+                breakpoint: 769,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 450,
+                settings: {
+                    slidesToShow: 1,
+                }
+            },
             // {
             //     breakpoint: 500,
             //     settings: {

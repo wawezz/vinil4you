@@ -23,9 +23,14 @@
         margin-top: 50px;
         display: flex;
         align-items: center;
+        text-align: center;
 
         .pv-feedbacks__logo {
             margin: 0 35px;
+
+            @include media-breakpoint-down(sm) {
+                margin: 30px;
+            }
         }
     }
 }

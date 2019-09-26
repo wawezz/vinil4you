@@ -6,9 +6,9 @@ block main
         .row.pv-aboutTopBanner
             .col-12.pv-aboutInfo__wrap
                 .pv-aboutInfo
-                    img(src=require("./images/logo.svg")).pv-aboutInfo__logo
+                    img(src=require("./images/logo.svg")).pv-aboutInfo__logo.d-none.d-sm-block
                     h2.pv-aboutInfo__title Крупнейший поставщик#[br]самоклеящихся пленочных#[br]материалов
-                ul.pv-aboutPoints
+                ul.pv-aboutPoints.d-none.d-lg-block
                     li.pv-aboutPoints__item 1. Мы продали более 40000 км пленки
                     li.pv-aboutPoints__item 2. Более 6 лет успешной работы
                     li.pv-aboutPoints__item 3. Более 2 000 товарных позиций
@@ -93,12 +93,11 @@ block main
     .container    
         .pv-aboutCompany
             .row.pv-aboutCompany__title
-                .col-12
-                    h2 О компании
+                h2.col-12 О компании
             .row.row-eq-height.pv-aboutCompany__body
-                .col-5.pv-aboutCompany__image 
+                .col-5.pv-aboutCompany__image.d-none.d-sm-block 
                     img(src=require("./images/aboutCompany.jpg"))
-                .col-7#pv-aboutCompanyTeaxt.pv-aboutCompany__text Компания VINYL4YOU была основана в 2013 году. Изначальной целью компании была поставка самоклеящихся пленочных материалов на территорию РФ из Юго-Восточной Азии. Спустя год, наша компания начала развивать собственную сеть специализированных магазинов, чтобы предоставить клиентам полный ассортимент товаров, производимых на заводах.
+                .col-12.col-sm-7#pv-aboutCompanyTeaxt.pv-aboutCompany__text Компания VINYL4YOU была основана в 2013 году. Изначальной целью компании была поставка самоклеящихся пленочных материалов на территорию РФ из Юго-Восточной Азии. Спустя год, наша компания начала развивать собственную сеть специализированных магазинов, чтобы предоставить клиентам полный ассортимент товаров, производимых на заводах.
                     br 
                     | В 2014 году был запущен интернет-проект, VINYL4YOU.RU для розничных продаж по всей территории РФ и СНГ. Главным приоритетом всегда являлось предоставление доступных цен на качественные материалы.
                     br 
@@ -172,35 +171,35 @@ block main
                 .col-12
                     h2.pv-ourAdvantages__title Наши преимущества
             .row.pv-ourAdvantages__items
-                .col-3.pv-ourAdvantages__item
+                .col-12.col-sm-6.col-md-3.pv-ourAdvantages__item
                     img(src=require("./images/icon-advantages1.svg")).pv-ourAdvantages__item-icon
                     .pv-ourAdvantages__item-text Разработка и поставка инновационной продуции
-                .col-3.pv-ourAdvantages__item
+                .col-12.col-sm-6.col-md-3.pv-ourAdvantages__item
                     img(src=require("./images/icon-advantages2.svg")).pv-ourAdvantages__item-icon
                     .pv-ourAdvantages__item-text Лучшие цены на рынке автовинила
-                .col-3.pv-ourAdvantages__item
+                .col-12.col-sm-6.col-md-3.pv-ourAdvantages__item
                     img(src=require("./images/icon-advantages3.svg")).pv-ourAdvantages__item-icon
                     .pv-ourAdvantages__item-text Гарантия качества поставляемых материалов и предоставляемых услуг  
-                .col-3.pv-ourAdvantages__item
+                .col-12.col-sm-6.col-md-3.pv-ourAdvantages__item
                     img(src=require("./images/icon-advantages4.svg")).pv-ourAdvantages__item-icon
                     .pv-ourAdvantages__item-text Собственный детейлинг-центр VINYL4YOU STUDIO
             .row.pv-ourAdvantages__items
-                .col-3.pv-ourAdvantages__item
+                .col-12.col-sm-6.col-md-3.pv-ourAdvantages__item
                     img(src=require("./images/icon-advantages5.svg")).pv-ourAdvantages__item-icon
                     .pv-ourAdvantages__item-text Оперативная доставка по всей территории РФ и СНГ
-                .col-3.pv-ourAdvantages__item
+                .col-12.col-sm-6.col-md-3.pv-ourAdvantages__item
                     img(src=require("./images/icon-advantages6.svg")).pv-ourAdvantages__item-icon
                     .pv-ourAdvantages__item-text Огромный асортимент товаров в наличии на складе
-                .col-3.pv-ourAdvantages__item
+                .col-12.col-sm-6.col-md-3.pv-ourAdvantages__item
                     img(src=require("./images/icon-advantages7.svg")).pv-ourAdvantages__item-icon
                     .pv-ourAdvantages__item-text Собственная сеть магазинов VINYL4YOU
-                .col-3.pv-ourAdvantages__item
+                .col-12.col-sm-6.col-md-3.pv-ourAdvantages__item
                     img(src=require("./images/icon-advantages8.svg")).pv-ourAdvantages__item-icon
                     .pv-ourAdvantages__item-text Поддержка на всех этапах сотрудничества
     .pv-stock
         .pv-stock__title Склад в Москве с самовывозом
         .pv-stock__desc Вы можете самостоятельно забрать товары в крупном обьеме с нашего склада в Москве. Наши сотрудники помогут аккуратно погрузить материал в Ваш автомобиль так, чтобы он доехал в целости и сохранности.
-        img(src=require("./images/stockBg.jpg")).pv-stock__img 
+        .pv-stock__img
     .container
         include ../../components/filiales/filiales.pug 
         .pv-ourBrands
