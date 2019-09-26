@@ -2,13 +2,127 @@ extends ../../components/base/base
 block title
     | Feedbacks page
 block main
-    .container-fluid
-
+    .container
+        .row.d-none.d-md-flex
+            ul.col-12.pv-breadcrumb 
+                li.pv-breadcrumb__item 
+                    a(href="#").pv-breadcrumb__link Главная страница
+                li.pv-breadcrumb__item 
+                    a(href="#").pv-breadcrumb__link О компании
+                li.pv-breadcrumb__item Отзывы
+        .pv-custFeedback
+            .row
+                .col-12
+                    h2.pv-custFeedback__title Отзывы от покупателей
+            .row
+                .col-9
+                    .pv-custFeedback__info Вы можете оценить качество работы нашего магазина и оставить отзыв о нашей работе. Обратите внимание, что отзывы могут оставлять только авторизованные пользователи. Прежде чем оставить отзыв, ознакомьтесь пожалуйста с #[a(href="") правилами публикации отзывов на сайте].
+                .col-3 
+                    .pv-main_btn Написать отзыв
+            .row
+                .col-12
+                    .pv-custFeedback__top
+                        .pv-custFeedback__percent
+                            .number 91%
+                            .text покупателей рекомендуют наc
+                        .pv-custFeedback__filter
+                            a(href="#").pv-custFeedback__filter-item.active Актуальные
+                            a(href="#").pv-custFeedback__filter-item Полезные
+                            a(href="#").pv-custFeedback__filter-item Обсуждаемые
+                        .pv-custFeedback__starFilter
+                            .pv-custFeedback__starFilter-text Показать по оценкам:
+                            .pv-custFeedback__starFilter-stars
+                    .pv-custFeedback__feedbacks
+                        .row.pv-custFeedback__feedback
+                            .col-5
+                                .pv-custFeedback__feedbackSlider
+                                    img(src=require("./images/feedbacks1.jpg"))
+                                .pv-custFeedback__feedbackSlider-navWrap
+                                    .pv-custFeedback__feedbackSlider-nav
+                                        img(src=require("./images/feedbacksThumb1.jpg"))
+                                    img(src=require("./images/feedbacksThumbAdd.jpg")).pv-custFeedback__feedbackSlider-itemAdd
+                            .col-7.pv-custFeedback__feedbackBody
+                                .pv-custFeedback__feedbackBody-top
+                                    .pv-custFeedback__feedbackBody-userWrap
+                                        img(src=require("./images/avatar.png")).pv-custFeedback__feedbackBody-avatar
+                                        .pv-custFeedback__feedbackBody-info
+                                            .pv-custFeedback__feedbackBody-user Вальдемар 
+                                            .pv-custFeedback__feedbackBody-date 7 августа 2019
+                                    .pv-custFeedback__feedbackBody-stars
+                                    .pv-custFeedback__feedbackBody-stickers
+                                        .pv-custFeedback__feedbackBody-sticker 
+                                            i.fa.fa-thumbs-up.green
+                                            |    Рекомендует
+                                        .pv-custFeedback__feedbackBody-sticker                                             
+                                            i.fa.fa-thumbs-up
+                                            |    18
+                                        .pv-custFeedback__feedbackBody-sticker                                             
+                                            i.fa.fa-thumbs-down
+                                            |    2
+                                .pv-custFeedback__feedbackBody-content Доброй всем ночи! Докладываю последнюю новость с полей. Была приобретена пленка Скорпио премиум цвета белый мат. Проконсультировали по всем вопросам в полном обьеме, выдали рулон в коробке все красиво. Работают ребята качественно и профессионально. Тянули машину полностью в нее. на удивление пленка ложиться отменным образом и без проблем. доволен все. Спасибо! теперь только к вам! Доброй всем ночи! Докладываю последнюю новость с полей. была приобретена пленка Скорпио премиум цвета белый мат. проконсультировали… 
+                                    a(href="#").pv-custFeedback__feedbackBody-contentMore Читать полностью
+                                .pv-custFeedback__feedbackBody-link
+                                    img(src=require("./images/icon-vk-cercle.svg")).pv-custFeedback__feedbackBody-linkIcon
+                                    a(href="") Ссылка на отзыв
+                                .pv-custFeedback__feedbackBody-answer
+                                    .pv-custFeedback__feedbackBody-answerTitle Ответ магазина:
+                                    .pv-custFeedback__feedbackBody-answerText Спасибо за Ваш отзыв, заходите к нам за покупками!
+                        .row.pv-custFeedback__feedback
+                            .col-5
+                                .pv-custFeedback__feedbackSlider
+                                    img(src=require("./images/feedbacks2.jpg"))
+                                    img(src=require("./images/feedbacks1.jpg"))
+                                    img(src=require("./images/feedbacks2.jpg"))
+                                    img(src=require("./images/feedbacks2.jpg"))
+                                    img(src=require("./images/feedbacks2.jpg"))
+                                    img(src=require("./images/feedbacks2.jpg"))
+                                    img(src=require("./images/feedbacks2.jpg"))
+                                    img(src=require("./images/feedbacks2.jpg"))
+                                .pv-custFeedback__feedbackSlider-navWrap
+                                    .pv-custFeedback__feedbackSlider-nav
+                                        img(src=require("./images/feedbacksThumb2.jpg"))
+                                        img(src=require("./images/feedbacksThumb1.jpg"))
+                                        img(src=require("./images/feedbacksThumb2.jpg"))
+                                        img(src=require("./images/feedbacksThumb2.jpg"))
+                                        img(src=require("./images/feedbacksThumb2.jpg"))
+                                        img(src=require("./images/feedbacksThumb2.jpg"))
+                                        img(src=require("./images/feedbacksThumb2.jpg"))
+                                        img(src=require("./images/feedbacksThumb2.jpg"))
+                            .col-7.pv-custFeedback__feedbackBody
+                                .pv-custFeedback__feedbackBody-top
+                                    .pv-custFeedback__feedbackBody-userWrap
+                                        img(src=require("./images/avatar.png")).pv-custFeedback__feedbackBody-avatar
+                                        .pv-custFeedback__feedbackBody-info
+                                            .pv-custFeedback__feedbackBody-user Марк 
+                                            .pv-custFeedback__feedbackBody-date 7 августа 2019
+                                    .pv-custFeedback__feedbackBody-stars
+                                    .pv-custFeedback__feedbackBody-stickers
+                                        .pv-custFeedback__feedbackBody-sticker 
+                                            i.fa.fa-thumbs-down
+                                            |    Не рекомендует
+                                        .pv-custFeedback__feedbackBody-sticker                                             
+                                            i.fa.fa-thumbs-up
+                                            |    18
+                                        .pv-custFeedback__feedbackBody-sticker                                             
+                                            i.fa.fa-thumbs-down
+                                            |    2
+                                .pv-custFeedback__feedbackBody-content Доброй всем ночи! Докладываю последнюю новость с полей. Была приобретена пленка Скорпио премиум цвета белый мат. Проконсультировали по всем вопросам в полном обьеме, выдали рулон в коробке все красиво. Работают ребята качественно и профессионально. Тянули машину полностью в нее. на удивление пленка ложиться отменным образом и без проблем. доволен все. Спасибо! теперь только к вам! Доброй всем ночи! Докладываю последнюю новость с полей. была приобретена пленка Скорпио премиум цвета белый мат. проконсультировали… 
+                                    a(href="#").pv-custFeedback__feedbackBody-contentMore Читать полностью
+                                .pv-custFeedback__feedbackBody-link
+                                    img(src=require("./images/icon-vk-cercle.svg")).pv-custFeedback__feedbackBody-linkIcon
+                                    a(href="") Ссылка на отзыв
+                                .pv-custFeedback__feedbackBody-answer
+                                    .pv-custFeedback__feedbackBody-answerTitle Ответ магазина:
+                                    .pv-custFeedback__feedbackBody-answerText Спасибо за Ваш отзыв, заходите к нам за покупками!
+                    .pv-custFeedback__paginate 
+                        .pv-custFeedback__paginate-prev.deactive Назад
+                        .pv-custFeedback__paginate-pages
+                            a(href="#").pv-custFeedback__paginate-page.active 1
+                            a(href="#").pv-custFeedback__paginate-page 2
+                            a(href="#").pv-custFeedback__paginate-page 3
+                            a(href="#").pv-custFeedback__paginate-page 4
+                            a(href="#").pv-custFeedback__paginate-page 5
+                        .pv-custFeedback__paginate-next Вперед
+    .pv-greyGradient
         .container
-            .row.d-none.d-md-flex
-                ul.col-12.pv-breadcrumb 
-                    li.pv-breadcrumb__item 
-                        a(href="#").pv-breadcrumb__link Главная страница
-                    li.pv-breadcrumb__item 
-                        a(href="#").pv-breadcrumb__link О компании
-                    li.pv-breadcrumb__item Отзывы
+            include ../../components/feedbacks/feedbacks.pug 

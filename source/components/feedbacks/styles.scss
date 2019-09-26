@@ -1,0 +1,31 @@
+@import "../../common/styles/styles";
+
+.pv-feedbacks {
+    margin: 100px 0;
+
+    .pv-feedbacks__top {
+        text-align: center;
+
+        .pv-feedbacks__title {
+            font-family: "Trebuchet MS";
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .pv-feedbacks__desc {
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 1.6;
+        }
+    }
+
+    .pv-feedbacks__logos {
+        margin-top: 50px;
+        display: flex;
+        align-items: center;
+
+        .pv-feedbacks__logo {
+            margin: 0 35px;
+        }
+    }
+}

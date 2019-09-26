@@ -2,7 +2,6 @@ extends ../../components/base/base
 block title
     | Contacts page
 block main
-    .container-fluid
 
         .container
             .row.d-none.d-md-flex
@@ -12,3 +11,52 @@ block main
                     li.pv-breadcrumb__item 
                         a(href="#").pv-breadcrumb__link О компании
                     li.pv-breadcrumb__item Контакты
+            .pv-contactsInfo
+                .row
+                    h2.col-12.pv-contactsInfo__title Контактная информация
+                .row.pv-contactsInfo__types
+                    .col-4.pv-contactsInfo__type
+                        .pv-contactsInfo__type-title Позвоните нам
+                        .pv-contactsInfo__type-subtitle Есть вопросы? Мы поможем!
+                        .pv-contactsInfo__type-dataWrap
+                            img(src=require('./images/icon-phone_green.svg')).pv-contactsInfo__type-dataIcon
+                            .pv-contactsInfo__type-dataText
+                                b 8 (495) 150-22-62
+                                |  – Розничный отдел
+                                br
+                                b 8 (499) 288-11-48
+                                |  – Оптовый отдел
+                    .col-4.pv-contactsInfo__type
+                        .pv-contactsInfo__type-title Напишите нам
+                        .pv-contactsInfo__type-subtitle Мы открыты для любых вопросов!
+                        .pv-contactsInfo__type-dataWrap
+                            img(src=require('./images/icon-mail_green.svg')).pv-contactsInfo__type-dataIcon
+                            .pv-contactsInfo__type-dataText
+                                b sale@vinyl4you.ru
+                                |  – Розничный отдел
+                                br
+                                b opt@vinyl4you.ru
+                                |  – Оптовый отдел
+                    .col-4.pv-contactsInfo__type
+                        .pv-contactsInfo__type-title Режим работы колцентра
+                        .pv-contactsInfo__type-subtitle Готовы ответить на любы
+                        .pv-contactsInfo__type-dataWrap
+                            img(src=require('./images/icon-time_green.svg')).pv-contactsInfo__type-dataIcon
+                            .pv-contactsInfo__type-dataText
+                                b Пн-Сб – с 10:00 до 22:00#[br]Вс – колцентр не работает    
+            include ../../components/addresses/addresses.pug                                
+        .pv-af__banner
+            .container
+                .row
+                    .col-12.pv-af__banner_wrap
+                        h2.pv-af__banner_title Всегда на шаг впереди!
+                        .pv-af__banner_subtitle Подпишитесь на рассылку и получите возможность получать скидки до 70% раньше всех 
+                        form.pv-af__banner_form 
+                            input(placeholder="Введите ваш адрес электронной почты").pv-af__banner_input
+                            .pv-main_btn
+                                span.d-none.d-sm-block Подписаться
+                                img(src=require("./images/icon-go.svg")).d-sm-none 
+                        .pv-af__banner_info Нажимая кнопку "Оставить заявку" вы соглашаетесь #[a(href="#").pv-af__banner_legacy с пользовательским соглашением].
+        .container            
+            include ../../components/filiales/filiales.pug
+        include ../../components/answers/answers.pug                    
