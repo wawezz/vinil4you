@@ -6,7 +6,7 @@ import "./styles.scss";
 
 $(function () {
 
-    $(".pv-deliveryTarif__tableRow").on("click", ".pv-deliveryTarif__tableColumn_titleArrow", function () {
+    $(".pv-deliveryTarif__tableRow").on("click", ".pv-deliveryTarif__tableColumn_title", function () {
         var activeRow = $('.pv-deliveryTarif__table .activeRow');
         var row = $(this).parents('.pv-deliveryTarif__tableRow');
         var breake = row.hasClass('activeRow') ? true : false;

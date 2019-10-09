@@ -1,1 +1,26 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><defs><clipPath id="v3hla"><path fill="#fff" d="M79 41.887a10 10 0 0 1 10 0l33.301 19.226a10 10 0 0 1 5 8.66v38.453a10 10 0 0 1-5 8.66L89 136.114a10 10 0 0 1-10 0l-33.301-19.226a10 10 0 0 1-5-8.66V69.773a10 10 0 0 1 5-8.66z"/></clipPath></defs><g><g><g><path fill="none" stroke="#0e974f" stroke-miterlimit="50" stroke-width="4" d="M79 41.887a10 10 0 0 1 10 0l33.301 19.226a10 10 0 0 1 5 8.66v38.453a10 10 0 0 1-5 8.66L89 136.114a10 10 0 0 1-10 0l-33.301-19.226a10 10 0 0 1-5-8.66V69.773a10 10 0 0 1 5-8.66z" clip-path="url(&quot;#v3hla&quot;)"/></g><g><g><g><path fill="none" stroke="#000" stroke-linejoin="round" stroke-miterlimit="50" stroke-width="1.6" d="M68 78.656C68 71.114 75.163 65 84 65s16 6.114 16 13.656"/></g><g><path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="50" stroke-width="1.6" d="M92.471 78.656c0-5.828-3.792-13.656-8.47-13.656-4.679 0-8.471 7.828-8.471 13.656"/></g><g><path fill="none" stroke="#000" stroke-linejoin="round" stroke-miterlimit="50" stroke-width="1.6" d="M84 65v36.55"/></g><g><path fill="none" stroke="#000" stroke-linejoin="round" stroke-miterlimit="50" stroke-width="1.6" d="M92.47 78.66L84 101.553"/></g><g><path fill="none" stroke="#000" stroke-linejoin="round" stroke-miterlimit="50" stroke-width="1.6" d="M75.53 78.66L84 101.553"/></g><g><path fill="none" stroke="#000" stroke-linejoin="round" stroke-miterlimit="50" stroke-width="1.6" d="M68 78.66v0l16 22.893v0l16-22.893v0"/></g></g><g><g><path fill="none" stroke="#000" stroke-linejoin="round" stroke-miterlimit="50" stroke-width="1.6" d="M83.86 96v0l7.69 3.908v0l-7.69 3.909v0l-7.69-3.909v0z"/></g><g><path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="50" stroke-width="1.6" d="M91.55 109.768v0l-7.69 3.909v0l-7.69-3.909v0"/></g><g><path fill="none" stroke="#000" stroke-miterlimit="50" stroke-width="1.6" d="M76.167 99.74v10.195"/></g><g><path fill="none" stroke="#000" stroke-miterlimit="50" stroke-width="1.6" d="M83.857 103.82v9.856"/></g><g><path fill="none" stroke="#000" stroke-miterlimit="50" stroke-width="1.6" d="M91.547 99.74v10.195"/></g></g></g></g></g></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>Icons/postavka_icon</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Icons/postavka_icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M54.5,3.75277675 C51.7153903,2.1450816 48.2846097,2.1450816 45.5,3.75277675 L12.1987298,22.9792741 C9.41412012,24.5869692 7.69872981,27.5581124 7.69872981,30.7735027 L7.69872981,69.2264973 C7.69872981,72.4418876 9.41412012,75.4130308 12.1987298,77.0207259 L45.5,96.2472233 C48.2846097,97.8549184 51.7153903,97.8549184 54.5,96.2472233 L87.8012702,77.0207259 C90.5858799,75.4130308 92.3012702,72.4418876 92.3012702,69.2264973 L92.3012702,30.7735027 C92.3012702,27.5581124 90.5858799,24.5869692 87.8012702,22.9792741 L54.5,3.75277675 Z" id="Polygon" stroke="#0E974F" stroke-width="2"></path>
+        <g id="Group-3" transform="translate(34.000000, 26.000000)" stroke="#000000" stroke-width="1.5999999">
+            <g id="Group-2" stroke-linejoin="round">
+                <path d="M32,13.6557377 C32,6.11388202 24.836556,0 16,0 C7.163444,0 0,6.11388202 0,13.6557377 M0,13.6557377 L32,13.6557377" id="Combined-Shape"></path>
+                <path d="M24.4705882,13.6557377 C24.4705882,7.82794013 20.6781767,0 16,0 C11.3218233,0 7.52941176,7.82794013 7.52941176,13.6557377" id="Shape" stroke-linecap="round"></path>
+                <path d="M16,0 L16,36.5491803" id="Path-10"></path>
+                <path d="M24.4705882,13.6557377 L16,36.5491803" id="Path-10"></path>
+                <path d="M16,13.6557377 L7.52941176,36.5491803" id="Path-10-Copy" transform="translate(11.764706, 25.102459) scale(-1, 1) translate(-11.764706, -25.102459) "></path>
+                <polyline id="Path-11" points="0 13.6557377 16 36.5491803 32 13.6557377"></polyline>
+            </g>
+            <g id="Group" transform="translate(8.000000, 31.000000)">
+                <polygon id="Polygon" stroke-linejoin="round" points="7.85758514 -3.55271368e-15 15.5479876 3.90825977 7.85758514 7.81651955 0.167182663 3.90825977"></polygon>
+                <polyline id="Shape" stroke-linecap="round" stroke-linejoin="round" points="15.5479876 13.7638714 7.85758514 17.6721311 0.167182663 13.7638714"></polyline>
+                <path d="M0.167182663,3.73833544 L0.167182663,13.9337957" id="Path-4"></path>
+                <path d="M7.85758514,7.81651955 L7.85758514,17.6721311" id="Path-4-Copy"></path>
+                <path d="M15.5479876,3.73833544 L15.5479876,13.9337957" id="Path-4-Copy-2"></path>
+            </g>
+        </g>
+    </g>
+</svg>

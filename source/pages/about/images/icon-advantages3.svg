@@ -1,1 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><defs><clipPath id="n4e0a"><path fill="#fff" d="M79 41.887a10 10 0 0 1 10 0l33.301 19.226a10 10 0 0 1 5 8.66v38.453a10 10 0 0 1-5 8.66L89 136.114a10 10 0 0 1-10 0l-33.301-19.226a10 10 0 0 1-5-8.66V69.773a10 10 0 0 1 5-8.66z"/></clipPath></defs><g><g><g><path fill="none" stroke="#0e974f" stroke-miterlimit="50" stroke-width="4" d="M79 41.887a10 10 0 0 1 10 0l33.301 19.226a10 10 0 0 1 5 8.66v38.453a10 10 0 0 1-5 8.66L89 136.114a10 10 0 0 1-10 0l-33.301-19.226a10 10 0 0 1-5-8.66V69.773a10 10 0 0 1 5-8.66z" clip-path="url(&quot;#n4e0a&quot;)"/></g><g><path fill="none" stroke="#000" stroke-linejoin="round" stroke-miterlimit="50" stroke-width="2" d="M84 95.8v0l-9.992 6.953v0l3.525-11.652v0l-9.701-7.354v0l12.171-.248v0L84 72v0l3.997 11.499v0l12.171.248v0l-9.7 7.354v0l3.524 11.652v0z"/></g></g></g></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>Icons/star_icon</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Icons/star_icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M54.5,3.75277675 C51.7153903,2.1450816 48.2846097,2.1450816 45.5,3.75277675 L12.1987298,22.9792741 C9.41412012,24.5869692 7.69872981,27.5581124 7.69872981,30.7735027 L7.69872981,69.2264973 C7.69872981,72.4418876 9.41412012,75.4130308 12.1987298,77.0207259 L45.5,96.2472233 C48.2846097,97.8549184 51.7153903,97.8549184 54.5,96.2472233 L87.8012702,77.0207259 C90.5858799,75.4130308 92.3012702,72.4418876 92.3012702,69.2264973 L92.3012702,30.7735027 C92.3012702,27.5581124 90.5858799,24.5869692 87.8012702,22.9792741 L54.5,3.75277675 Z" id="Polygon" stroke="#0E974F" stroke-width="2"></path>
+        <polygon id="Star" stroke="#000000" stroke-width="2" stroke-linejoin="round" points="50 56.8 40.0076507 63.7532889 43.5328157 52.1013156 33.8320392 44.7467111 46.0030603 44.4986844 50 33 53.9969397 44.4986844 66.1679608 44.7467111 56.4671843 52.1013156 59.9923493 63.7532889"></polygon>
+    </g>
+</svg>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>Circle_Icons/circle_icon_3</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Circle_Icons/circle_icon_3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-10" transform="translate(0.000000, 0.000000)">
+            <circle id="Oval" cx="49.999997" cy="49.999997" r="49.999997"></circle>
+        </g>
+        <path d="M34,37 L46,37 L47.5108194,47.5757359 C47.745134,49.215938 46.605437,50.7355339 44.965235,50.9698485 C44.8247051,50.9899242 44.6829275,51 44.5409709,51 L35.4590291,51 C33.8021748,51 32.4590291,49.6568542 32.4590291,48 C32.4590291,47.8580434 32.4691049,47.7162658 32.4891806,47.5757359 L34,37 L34,37 Z" id="Rectangle" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+        <path d="M44,36 C44,33.790861 42.209139,32 40,32 C37.790861,32 36,33.790861 36,36" id="Path" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+        <rect id="Rectangle" stroke="#FFFFFF" stroke-width="2" x="26" y="26" width="48" height="37" rx="7"></rect>
+        <path d="M37,74 L63,74 C63,70.6862915 60.3137085,68 57,68 L43,68 C39.6862915,68 37,70.6862915 37,74 Z" id="Rectangle-Copy" stroke="#FFFFFF" stroke-width="2"></path>
+        <path d="M26.5,56.5 L74,56.5" id="Path-7" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"></path>
+        <path d="M53,50.5 L69,50.5" id="Path-7-Copy" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"></path>
+        <path d="M53,44.5 L69,44.5" id="Path-7-Copy-2" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"></path>
+        <path d="M53,38.5 L69,38.5" id="Path-7-Copy-3" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"></path>
+        <path d="M53,32.5 L59.375,32.5" id="Path-7-Copy-4" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"></path>
+        <path d="M54.284668,65 L58,65" id="Path-7-Copy-4" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" transform="translate(56.000000, 65.000000) rotate(-270.000000) translate(-56.000000, -65.000000) "></path>
+        <path d="M41.142334,65 L44.857666,65" id="Path-7-Copy-5" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" transform="translate(42.857666, 65.000000) rotate(-270.000000) translate(-42.857666, -65.000000) "></path>
+    </g>
+</svg>

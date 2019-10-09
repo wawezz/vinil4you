@@ -2,6 +2,16 @@ import "./styles.scss";
 
 $(function () {
 
+  $('.pv-filiales__Legal').on('click', '.pv-filiales__Legal_head', function () {
+    if ($(this).hasClass('open')) {
+      $(this).removeClass('open');
+      $(this).next('.pv-filiales__Legal_body').slideUp();
+    } else {
+      $(this).addClass('open');
+      $(this).next('.pv-filiales__Legal_body').slideDown();
+    }
+  });
+
   $(document).on("click", "body", function (evt) {
 
     if (evt.target.parentNode.id == 'map_wrap' && evt.target.tagName == "path" || evt.target.id == "svg_map_popup") return;
@@ -42,8 +52,8 @@ $(function () {
 
     var top = relativePos.top + childPos.height / 2 + $("#svg_map_popup").height() / 2 - 10;
     var left = relativePos.left + childPos.height / 2 - $("#svg_map_popup").width() / 2;;
-    if (left < 0 && $('.pv-filiales__map').width() + 60 == $(window).width()) left = -15;
-    if (left + $("#svg_map_popup").outerWidth() + 30 > $(".pv-filiales__mapSvgWrap").width()) left = $(".pv-filiales__mapSvgWrap").width() - $("#svg_map_popup").outerWidth() + 15;
+    if (left < 0 && $(window).width() < 1024) left = 0;
+    if (left + $("#svg_map_popup").outerWidth() + 30 > $(".pv-filiales__mapSvgWrap").width()) left = $(".pv-filiales__mapSvgWrap").width() - $("#svg_map_popup").outerWidth();
 
     $("#svg_map_popup").addClass('active').css({
       top: top,

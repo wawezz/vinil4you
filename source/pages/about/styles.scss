@@ -8,15 +8,20 @@
     background-size: cover;
     background-attachment: fixed;
 
-    @include media-breakpoint-down(md) {
+    >.container,
+    >.container>.row {
+        height: 100%;
+    }
+
+    @include media-breakpoint-down(lg) {
         height: 650px;
     }
 
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(md) {
         height: 490px;
     }
 
-    @include media-breakpoint-down(xs) {
+    @include media-breakpoint-down(sm) {
         height: 380px;
     }
 
@@ -26,20 +31,15 @@
         flex-flow: column;
 
         .pv-aboutInfo {
-            margin: 270px 0 60px 0;
             display: flex;
             justify-content: center;
             align-items: center;
-
-            @include media-breakpoint-down(md) {
-                margin: 0;
-            }
 
             .pv-aboutInfo__logo {
                 width: 215px;
                 padding-right: 50px;
 
-                @include media-breakpoint-down(sm) {
+                @include media-breakpoint-down(md) {
                     width: 180px;
                 }
             }
@@ -52,23 +52,57 @@
                 border-left: 2px solid #ffffff;
                 margin: 0;
 
-                @include media-breakpoint-down(sm) {
+                @include media-breakpoint-down(md) {
                     font-size: 32px;
+                }
+
+                @include media-breakpoint-down(sm) {
+                    font-size: 24px;
                 }
 
                 @include media-breakpoint-down(xs) {
                     font-size: 20px;
+                    padding-left: 25px;
                 }
             }
         }
+    }
+}
 
-        .pv-aboutPoints {
-            color: #ffffff;
-            font-family: "Trebuchet MS";
-            font-size: 36px;
-            line-height: 1.2;
+.pv-servicesWrap {
+    position: relative;
+    width: 100%;
 
-            .pv-aboutPoints__item {}
+    .pv-servicesBg {
+        display: flex;
+        height: 100%;
+        top: 0;
+        position: absolute;
+        width: 100%;
+        left: 0;
+
+        .pv-servicesBg__item {
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            position: absolute;
+            background-size: 100%;
+            background-position: 0 0;
+            transition: all 2s ease-in-out;
+            transition-delay: .1s;
+
+            &:nth-child(1) {
+                background-image: url(images/bg-decor-1.png);
+            }
+
+            &:nth-child(2) {
+                background-image: url(images/bg-decor-2.png);
+            }
+
+            &:nth-child(3) {
+                background-image: url(images/bg-decor-3.png);
+            }
         }
     }
 }
@@ -77,9 +111,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-image: url(images/elementsBg.png);
-    background-size: cover;
-    background-position: center;
     padding: 13% 0;
 
     >* {
@@ -92,13 +123,17 @@
     border: 1px #000000 solid;
     width: 50%;
     height: 50%;
+    max-width: 600px;
+    max-height: 600px;
     margin: 0 auto 0;
     position: relative;
     transform: rotate(0deg);
     z-index: 0;
     padding: 0;
 
-    @include media-breakpoint-down(sm) {
+    background-color: rgba(255, 255, 255, 0.8);
+
+    @include media-breakpoint-down(md) {
         width: 78%;
         height: 78%;
     }
@@ -128,25 +163,51 @@
             transition: all 500ms ease;
             box-shadow: -10px 10px 25px rgba(0, 0, 0, 0.2);
 
-            &:hover {}
-        }
+            i {
+                color: #ffffff;
+                font-size: 44px;
+                margin: auto;
+                cursor: pointer;
+                width: 100%;
+                height: 100%;
+                display: table;
+                background-position: center;
+                background-size: 100%;
+                background-repeat: no-repeat;
 
-        i {
-            color: #ffffff;
-            font-size: 44px;
-            margin: auto;
-            cursor: pointer;
-            width: 100%;
-            height: 100%;
-            display: table;
+                @include media-breakpoint-down(sm) {
+                    font-size: 24px;
+                }
 
-            @include media-breakpoint-down(xs) {
-                font-size: 24px;
-            }
+                &::before {
+                    display: table-cell;
+                    vertical-align: middle;
+                }
 
-            &::before {
-                display: table-cell;
-                vertical-align: middle;
+                &.icon-globe {
+                    background-image: url(images/circle_icon_1.svg);
+                }
+
+                &.icon-trophy {
+                    background-image: url(images/circle_icon_2.svg);
+                }
+
+                &.icon-desktop {
+                    background-image: url(images/circle_icon_3.svg);
+                }
+
+                &.icon-star {
+                    background-image: url(images/circle_icon_4.svg);
+                }
+
+                &.icon-magic {
+                    background-image: url(images/circle_icon_5.svg);
+                }
+
+                &.icon-phone {
+                    background-image: url(images/circle_icon_6.svg);
+                }
+
             }
         }
 
@@ -433,8 +494,10 @@
         bottom: 0;
         margin: auto;
         border-radius: 50%;
+        max-width: 370px;
+        max-height: 370px;
 
-        @include media-breakpoint-down(sm) {
+        @include media-breakpoint-down(md) {
             width: 49%;
             height: 49%;
         }
@@ -446,12 +509,16 @@
         font-size: 20px;
         line-height: 1.2;
 
-        @include media-breakpoint-down(md) {
+        @include media-breakpoint-down(lg) {
             font-size: 16px;
         }
 
-        @include media-breakpoint-down(sm) {
+        @include media-breakpoint-down(md) {
             font-size: 20px;
+        }
+
+        @include media-breakpoint-down(sm) {
+            font-size: 15px;
         }
 
         @include media-breakpoint-down(xs) {
@@ -463,12 +530,16 @@
             font-size: 36px;
             margin-bottom: 10px;
 
-            @include media-breakpoint-down(md) {
+            @include media-breakpoint-down(lg) {
                 font-size: 30px;
             }
 
-            @include media-breakpoint-down(sm) {
+            @include media-breakpoint-down(md) {
                 font-size: 36px;
+            }
+
+            @include media-breakpoint-down(sm) {
+                font-size: 27px;
             }
 
             @include media-breakpoint-down(xs) {
@@ -562,7 +633,7 @@
     .pv-rotateCircle__prev {
         left: 19%;
 
-        @include media-breakpoint-down(sm) {
+        @include media-breakpoint-down(md) {
             left: 3%;
         }
     }
@@ -570,7 +641,7 @@
     .pv-rotateCircle__next {
         right: 19%;
 
-        @include media-breakpoint-down(sm) {
+        @include media-breakpoint-down(md) {
             right: 3%;
         }
     }
@@ -580,11 +651,11 @@
 .pv-aboutCompany {
     margin: 100px 0;
 
-    @include media-breakpoint-down(md) {
+    @include media-breakpoint-down(lg) {
         margin: 50px 0 100px 0;
     }
 
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(md) {
         margin: 20px 0 50px 0;
     }
 
@@ -619,7 +690,7 @@
 .pv-ourMission {
     padding: 75px 0;
 
-    @include media-breakpoint-down(xs) {
+    @include media-breakpoint-down(sm) {
         padding: 50px 0;
     }
 
@@ -649,18 +720,18 @@
         justify-content: center;
         align-items: center;
 
-        @include media-breakpoint-down(md) {
+        @include media-breakpoint-down(lg) {
             margin-bottom: 70px;
         }
 
-        @include media-breakpoint-down(xs) {
+        @include media-breakpoint-down(sm) {
             flex-flow: column;
         }
 
         &:nth-child(2n) {
             flex-flow: row;
 
-            @include media-breakpoint-down(xs) {
+            @include media-breakpoint-down(sm) {
                 flex-flow: column;
             }
 
@@ -668,11 +739,11 @@
                 padding-right: 50px;
                 padding-left: 75px;
 
-                @include media-breakpoint-down(md) {
+                @include media-breakpoint-down(lg) {
                     padding-left: 10px;
                 }
 
-                @include media-breakpoint-down(xs) {
+                @include media-breakpoint-down(sm) {
                     padding-left: 15px;
                     margin-top: 30px;
                     padding-right: 15px;
@@ -691,17 +762,17 @@
             padding-right: 75px;
             padding-left: 50px;
 
-            @include media-breakpoint-down(md) {
+            @include media-breakpoint-down(lg) {
                 padding-right: 10px;
             }
 
-            @include media-breakpoint-down(xs) {
+            @include media-breakpoint-down(sm) {
                 padding-left: 15px;
                 margin-top: 30px;
                 padding-right: 15px;
             }
 
-            @include media-breakpoint-down(xs) {
+            @include media-breakpoint-down(sm) {
                 width: 100%;
             }
 
@@ -709,12 +780,12 @@
                 font-family: "Trebuchet MS";
                 font-size: 30px;
 
-                @include media-breakpoint-down(sm) {
+                @include media-breakpoint-down(md) {
                     margin-top: 15px;
                     font-size: 20px;
                 }
 
-                @include media-breakpoint-down(xs) {
+                @include media-breakpoint-down(sm) {
                     margin-top: 0;
                 }
             }
@@ -725,7 +796,7 @@
                 line-height: 1.7;
                 margin-top: 20px;
 
-                @include media-breakpoint-down(sm) {
+                @include media-breakpoint-down(md) {
                     margin-top: 10px;
                     font-size: 14px;
                     line-height: 1.3;
@@ -736,7 +807,7 @@
         .pv-ourMission__item_img-wrapper {
             width: 50%;
 
-            @include media-breakpoint-down(xs) {
+            @include media-breakpoint-down(sm) {
                 width: 100%;
             }
 
@@ -762,6 +833,10 @@
     .pv-ourAdvantages__items {
         margin: 25px 0;
 
+        @include media-breakpoint-down(md) {
+            margin: 0;
+        }
+
         .pv-ourAdvantages__item {
             justify-content: start;
             align-items: center;
@@ -769,12 +844,13 @@
             flex-flow: column;
             padding: 0 20px;
 
-            @include media-breakpoint-down(sm) {
-                padding: 0 40px;
+            @include media-breakpoint-down(md) {
+                padding: 0 50px;
+                margin-bottom: 25px;
             }
 
-            @include media-breakpoint-down(xs) {
-                padding: 0 70px;
+            @include media-breakpoint-down(sm) {
+                padding: 0 20px;
             }
 
             .pv-ourAdvantages__item-icon {
@@ -834,7 +910,7 @@
         display: flex;
         justify-content: center;
 
-        @include media-breakpoint-down(sm) {
+        @include media-breakpoint-down(md) {
             width: 90%;
             margin: 40px auto;
         }

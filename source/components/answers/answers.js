@@ -2,7 +2,7 @@ import "./styles.scss";
 
 $(function () {
 
-  $(".pv-AQ").on("click", ".pv-AQ__rowMore", function () {
+  $(".pv-AQ").on("click", ".pv-AQ__rowHead", function () {
     var activeRow = $('.pv-AQ .activeRow');
     var row = $(this).parents('.pv-AQ__row');
     var breake = row.hasClass('activeRow') ? true : false;

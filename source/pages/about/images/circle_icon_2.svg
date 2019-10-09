@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>Circle_Icons/circle_icon_2</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Circle_Icons/circle_icon_2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-10">
+            <circle id="Oval" cx="49.999997" cy="49.999997" r="49.999997"></circle>
+        </g>
+        <path d="M32,44 C28.1340068,44 25,40.8659932 25,37 C25,33.1340068 28.1340068,30 32,30 L32,30 L32,30 M68,30 C71.8659932,30 75,33.1340068 75,37 C75,40.8659932 71.8659932,44 68,44" id="Shape" stroke="#FFFFFF" stroke-width="2"></path>
+        <path d="M35,26 C33.3431458,26 32,27.3431458 32,29 L32,41.5 C32,50.0604136 38.9395864,57 47.5,57 L52.5,57 C61.0604136,57 68,50.0604136 68,41.5 L68,29 C68,27.3431458 66.6568542,26 65,26 L35,26 Z" id="Rectangle" stroke="#FFFFFF" stroke-width="2"></path>
+        <polygon id="Star" stroke="#FFFFFF" stroke-width="2" stroke-linejoin="round" points="50 45.5 44.7099327 48.2811529 45.7202457 42.3905765 41.4404914 38.2188471 47.3549664 37.3594235 50 32 52.6450336 37.3594235 58.5595086 38.2188471 54.2797543 42.3905765 55.2900673 48.2811529"></polygon>
+        <path d="M37,74 L63,74 L63,71 C63,67.6862915 60.3137085,65 57,65 L43,65 C39.6862915,65 37,67.6862915 37,71 L37,74 Z" id="Rectangle-Copy" stroke="#FFFFFF" stroke-width="2"></path>
+        <path d="M50,57 L50,64" id="Path-3" stroke="#FFFFFF" stroke-width="2"></path>
+    </g>
+</svg>

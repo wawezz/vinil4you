@@ -1,19 +1,18 @@
 @import "../../common/styles/styles";
 
 .pv-contactsInfo {
-    @include media-breakpoint-down(lg) {
-        margin-top: 25px;
-    }
 
     .pv-contactsInfo__title {
         font-family: "Trebuchet MS";
         font-size: 36px;
-        margin-bottom: 20px;
+        margin-bottom: 25px;
     }
 
     .pv-contactsInfo__types {
         .pv-contactsInfo__type {
-            margin-top: 25px;
+            @include media-breakpoint-down(xs) {
+                margin-top: 25px;
+            }
 
             &:first-child {
                 margin-top: 0;
@@ -60,7 +59,7 @@
     align-items: center;
     height: 400px;
     padding: 75px 0;
-    margin: 75px 0 25px 0;
+    margin: 75px 0;
     background-image: url(images/afBg.jpg);
     background-repeat: no-repeat;
     background-position: center;
@@ -75,12 +74,7 @@
 
     @include media-breakpoint-down(sm) {
         padding: 60px 0;
-        margin-top: 60px;
-    }
-
-    @include media-breakpoint-down(sm) {
-        padding: 40px 0;
-        margin-top: 40px;
+        margin: 50px 0;
     }
 
     .pv-af__banner_wrap {
@@ -121,25 +115,23 @@
 
             .pv-af__banner_input {
                 color: #ffffff;
-                font-size: 14px;
                 font-weight: 300;
                 width: 70%;
                 padding: 10px 20px;
                 background-color: rgba(255, 255, 255, 0.3);
                 border-radius: 4px 0 0 4px;
 
-                @include media-breakpoint-down(lg) {
-                    padding: 10px 20px;
+                &::placeholder {
+                    color: #ffffff;
                 }
 
-                @include media-breakpoint-down(md) {
-                    font-size: 18px;
+                @include media-breakpoint-down(lg) {
+                    padding: 10px 20px;
                 }
 
                 @include media-breakpoint-down(sm) {
                     padding: 8px 20px;
                     margin: 0;
-                    font-size: 16px;
                 }
 
                 @include media-breakpoint-down(xs) {

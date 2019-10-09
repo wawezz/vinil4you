@@ -3,34 +3,35 @@ block title
     | Feedbacks page
 block main
     .container
-        .row.d-none.d-md-flex
+        .row
             ul.col-12.pv-breadcrumb 
                 li.pv-breadcrumb__item 
                     a(href="#").pv-breadcrumb__link Главная страница
                 li.pv-breadcrumb__item 
                     a(href="#").pv-breadcrumb__link О компании
                 li.pv-breadcrumb__item Отзывы
-        .pv-custFeedback
+    .pv-custFeedback
+        .container
             .row
                 .col-12
                     h2.pv-custFeedback__title Отзывы от покупателей
             .row
-                .col-12.col-sm-7.col-md-9
+                .col-12.col-md-7.col-lg-9
                     .pv-custFeedback__info Вы можете оценить качество работы нашего магазина и оставить отзыв о нашей работе. Обратите внимание, что отзывы могут оставлять только авторизованные пользователи. Прежде чем оставить отзыв, ознакомьтесь пожалуйста с #[a(href="") правилами публикации отзывов на сайте].
-                .col-12.col-sm-5.col-md-3.pv-custFeedback__button 
+                .col-12.col-md-5.col-lg-3.pv-custFeedback__button 
                     .pv-main_btn Написать отзыв
             .row
                 .col-12
                     .pv-custFeedback__top.d-none.d-sm-flex
-                        .pv-custFeedback__percent
+                        .pv-custFeedback__percent.d-none.d-md-flex
                             .number 91%
                             .text покупателей рекомендуют наc
-                        .pv-flexBrake.d-block.d-md-none
+                        .pv-flexBrake.d-block.d-lg-none
                         .pv-custFeedback__filter
                             a(href="#").pv-custFeedback__filter-item.active Актуальные
                             a(href="#").pv-custFeedback__filter-item Полезные
                             a(href="#").pv-custFeedback__filter-item Обсуждаемые
-                        .pv-custFeedback__starFilter
+                        .pv-custFeedback__starFilter.d-none.d-md-flex
                             .pv-custFeedback__starFilter-text Показать по оценкам:
                             .pv-stars.pv-custFeedback__starFilter-stars
                                 i.fa.fa-star.green
@@ -40,14 +41,14 @@ block main
                                 i.fa.fa-star.green
                     .pv-custFeedback__feedbacks
                         .row.pv-custFeedback__feedback
-                            .col-12.col-md-5
+                            .col-12.col-lg-5
                                 .pv-custFeedback__feedbackSlider
                                     img(src=require("./images/feedbacks1.jpg"))
                                 .pv-custFeedback__feedbackSlider-navWrap
                                     .pv-custFeedback__feedbackSlider-nav
                                         img(src=require("./images/feedbacksThumb1.jpg"))
                                     img(src=require("./images/feedbacksThumbAdd.jpg")).pv-custFeedback__feedbackSlider-itemAdd
-                            .col-12.col-md-7.pv-custFeedback__feedbackBody
+                            .col-12.col-lg-7.pv-custFeedback__feedbackBody
                                 .pv-custFeedback__feedbackBody-top
                                     .pv-custFeedback__feedbackBody-leftWrap
                                         .pv-custFeedback__feedbackBody-userWrap
@@ -55,7 +56,7 @@ block main
                                             .pv-custFeedback__feedbackBody-info
                                                 .pv-custFeedback__feedbackBody-user Вальдемар 
                                                 .pv-custFeedback__feedbackBody-date 7 августа 2019
-                                        .pv-stars.pv-custFeedback__feedbackBody-stars.d-none.d-sm-flex
+                                        .pv-stars.pv-custFeedback__feedbackBody-stars.d-none.d-md-flex
                                             i.fa.fa-star.green
                                             i.fa.fa-star.green
                                             i.fa.fa-star.green
@@ -80,7 +81,7 @@ block main
                                     .pv-custFeedback__feedbackBody-answerTitle Ответ магазина:
                                     .pv-custFeedback__feedbackBody-answerText Спасибо за Ваш отзыв, заходите к нам за покупками!
                         .row.pv-custFeedback__feedback
-                            .col-12.col-md-5
+                            .col-12.col-lg-5
                                 .pv-custFeedback__feedbackSlider
                                     img(src=require("./images/feedbacks2.jpg"))
                                     img(src=require("./images/feedbacks1.jpg"))
@@ -100,7 +101,7 @@ block main
                                         img(src=require("./images/feedbacksThumb2.jpg"))
                                         img(src=require("./images/feedbacksThumb2.jpg"))
                                         img(src=require("./images/feedbacksThumb2.jpg"))
-                            .col-12.col-md-7.pv-custFeedback__feedbackBody
+                            .col-12.col-lg-7.pv-custFeedback__feedbackBody
                                 .pv-custFeedback__feedbackBody-top
                                     .pv-custFeedback__feedbackBody-leftWrap
                                         .pv-custFeedback__feedbackBody-userWrap
@@ -108,7 +109,7 @@ block main
                                             .pv-custFeedback__feedbackBody-info
                                                 .pv-custFeedback__feedbackBody-user Марк 
                                                 .pv-custFeedback__feedbackBody-date 7 августа 2019
-                                        .pv-stars.pv-custFeedback__feedbackBody-stars.d-none.d-sm-flex
+                                        .pv-stars.pv-custFeedback__feedbackBody-stars.d-none.d-md-flex
                                             i.fa.fa-star.red
                                             i.fa.fa-star.red
                                             i.fa.fa-star

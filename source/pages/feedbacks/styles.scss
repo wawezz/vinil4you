@@ -5,7 +5,7 @@
 
     .pv-custFeedback__button {
         .pv-main_btn {
-            @include media-breakpoint-down(xs) {
+            @include media-breakpoint-down(sm) {
                 margin-top: 25px;
                 font-size: 15px;
                 padding: 10px 0;
@@ -42,6 +42,10 @@
         align-items: center;
         flex-flow: wrap;
 
+        @include media-breakpoint-down(sm) {
+            justify-content: center;
+        }
+
         .pv-custFeedback__percent {
             border-radius: 5px;
             border: 2px solid #0e974f;
@@ -50,7 +54,7 @@
             justify-content: center;
             padding: 10px 15px;
 
-            @include media-breakpoint-down(sm) {
+            @include media-breakpoint-down(md) {
                 margin-bottom: 25px;
             }
 
@@ -175,7 +179,7 @@
             .pv-custFeedback__feedbackBody {
                 padding-left: 30px;
 
-                @include media-breakpoint-down(sm) {
+                @include media-breakpoint-down(md) {
                     margin-top: 50px;
                     padding-left: 15px;
                 }
@@ -190,12 +194,12 @@
                         align-items: center;
                         justify-content: space-between;
 
-                        @include media-breakpoint-down(md) {
+                        @include media-breakpoint-down(lg) {
                             flex-flow: column;
                             align-items: start;
                         }
 
-                        @include media-breakpoint-down(sm) {
+                        @include media-breakpoint-down(md) {
                             flex-flow: row;
                             align-items: center;
                         }
@@ -231,7 +235,7 @@
                         .pv-custFeedback__feedbackBody-stars {
                             margin-left: 15px;
 
-                            @include media-breakpoint-down(md) {
+                            @include media-breakpoint-down(lg) {
                                 margin-left: 65px;
                             }
                         }

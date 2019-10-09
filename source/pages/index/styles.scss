@@ -7,6 +7,12 @@
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
+    display: flex;
+
+    @include media-breakpoint-down(lg) {
+        height: 550px;
+        align-items: center;
+    }
 
     @include media-breakpoint-down(sm) {
         height: inherit;
@@ -16,6 +22,10 @@
         width: 650px !important;
         height: 450px !important;
         margin: 100px !important;
+
+        @include media-breakpoint-down(lg) {
+            margin: 0 !important;
+        }
 
         @include media-breakpoint-down(sm) {
             height: inherit !important;
@@ -68,6 +78,10 @@
                 font-size: 50px;
                 opacity: 0;
 
+                @include media-breakpoint-down(lg) {
+                    font-size: 40px;
+                }
+
                 @include media-breakpoint-down(sm) {
                     font-size: 2rem;
                 }
@@ -75,10 +89,13 @@
 
             .pv-topPartner__text {
                 margin: 25px 0;
-                font-size: 16px;
                 font-weight: 300;
                 line-height: 1.6;
                 opacity: 0;
+
+                @include media-breakpoint-down(lg) {
+                    margin: 0 0 15px 0;
+                }
 
                 @include media-breakpoint-down(sm) {
                     font-size: 14px;
@@ -170,6 +187,10 @@
                 font-size: 13px;
                 opacity: 0;
 
+                @include media-breakpoint-down(lg) {
+                    margin-top: 15px;
+                }
+
                 @include media-breakpoint-down(xs) {
                     font-size: 9px;
                     margin-top: 12px;
@@ -186,7 +207,7 @@
 }
 
 .pv-ourDiff {
-    margin: 0 -15px;
+    margin: 20px 0 0 0;
     z-index: 100;
     position: relative;
     background-color: #fff;
@@ -197,9 +218,12 @@
         font-size: 50px;
         text-align: center;
 
+        @include media-breakpoint-down(lg) {
+            font-size: 40px;
+        }
+
         @include media-breakpoint-down(sm) {
-            font-size: 2rem;
-            margin-top: 60px;
+            font-size: 27px;
         }
     }
 
@@ -211,24 +235,25 @@
         font-weight: 400;
         text-align: center;
 
-        @include media-breakpoint-down(sm) {
-            font-size: 16px;
+        @include media-breakpoint-down(lg) {
+            font-size: 18px;
         }
 
-        @include media-breakpoint-down(xs) {
+        @include media-breakpoint-down(sm) {
             font-size: 14px;
         }
+
     }
 }
 
 .pv-ourDiff__wrap {
     margin-top: 50px;
 
-    @include media-breakpoint-down(sm) {
-        margin-top: 30px;
+    @include media-breakpoint-down(lg) {
+        margin-top: 20px;
     }
 
-    @include media-breakpoint-down(xs) {
+    @include media-breakpoint-down(sm) {
         margin-top: 0;
     }
 
@@ -251,8 +276,12 @@
             font-family: "Trebuchet MS";
             font-size: 24px;
 
-            @include media-breakpoint-down(sm) {
+            @include media-breakpoint-down(lg) {
                 font-size: 22px;
+            }
+
+            @include media-breakpoint-down(sm) {
+                font-size: 19px;
                 margin: 20px 0;
             }
         }
@@ -262,9 +291,13 @@
             font-size: 16px;
             line-height: 1.6;
 
-            @include media-breakpoint-down(sm) {
+            @include media-breakpoint-down(lg) {
                 font-size: 14px;
                 line-height: 1.5;
+            }
+
+            @include media-breakpoint-down(sm) {
+                font-size: 12px;
                 max-width: 350px;
                 margin: 0 auto;
             }
@@ -306,8 +339,12 @@
         font-size: 50px;
         text-align: center;
 
+        @include media-breakpoint-down(lg) {
+            font-size: 40px;
+        }
+
         @include media-breakpoint-down(sm) {
-            font-size: 2rem;
+            font-size: 27px;
         }
     }
 
@@ -317,15 +354,15 @@
         font-weight: 400;
         text-align: center;
 
-        @include media-breakpoint-down(sm) {
-            margin-top: 25px;
-            font-size: 16px;
+        @include media-breakpoint-down(lg) {
+            font-size: 18px;
         }
 
-        @include media-breakpoint-down(xs) {
-            margin-top: 20px;
+        @include media-breakpoint-down(sm) {
+            margin-top: 25px;
             font-size: 14px;
         }
+
     }
 
     .pv-about__wrap {
@@ -335,7 +372,7 @@
             padding: 0 30px;
             text-align: center;
 
-            @include media-breakpoint-down(sm) {
+            @include media-breakpoint-down(md) {
                 margin-bottom: 50px;
             }
 
@@ -344,8 +381,8 @@
                 font-size: 50px;
                 line-height: 1;
 
-                @include media-breakpoint-down(sm) {
-                    font-size: 2rem;
+                @include media-breakpoint-down(lg) {
+                    font-size: 45px;
                 }
 
                 @include media-breakpoint-down(xs) {
@@ -366,9 +403,14 @@
                 line-height: 1.6;
                 opacity: 0;
 
-                @include media-breakpoint-down(sm) {
+                @include media-breakpoint-down(lg) {
                     font-size: 14px;
                     line-height: 1.4;
+                }
+
+                @include media-breakpoint-down(sm) {
+                    font-size: 12px;
+                    line-height: 1.2;
                 }
             }
         }
@@ -393,9 +435,13 @@
         font-size: 50px;
         text-align: center;
 
+        @include media-breakpoint-down(lg) {
+            font-size: 40px;
+            margin-bottom: 50px;
+        }
+
         @include media-breakpoint-down(sm) {
-            font-size: 2rem;
-            margin-bottom: 60px;
+            font-size: 27px;
         }
 
         @include media-breakpoint-down(xs) {
@@ -411,24 +457,23 @@
 
         @include media-breakpoint-down(lg) {
             padding: 0px 40px;
-        }
-
-        @include media-breakpoint-down(sm) {
-            padding: 0px;
+            margin-bottom: 100px;
         }
 
         @include media-breakpoint-down(md) {
             margin-bottom: 70px;
+            padding: 0px;
+
         }
 
-        @include media-breakpoint-down(xs) {
+        @include media-breakpoint-down(sm) {
             flex-flow: column;
         }
 
         &:nth-child(2n) {
             flex-flow: row;
 
-            @include media-breakpoint-down(xs) {
+            @include media-breakpoint-down(sm) {
                 flex-flow: column;
             }
 
@@ -438,10 +483,6 @@
                 opacity: 0;
 
                 @include media-breakpoint-down(md) {
-                    padding-left: 10px;
-                }
-
-                @include media-breakpoint-down(xs) {
                     padding-left: 15px;
                     margin-top: 30px;
                     padding-right: 15px;
@@ -460,16 +501,9 @@
             padding-right: 75px;
 
             @include media-breakpoint-down(md) {
-                padding-right: 10px;
-            }
-
-            @include media-breakpoint-down(xs) {
                 padding-left: 15px;
                 margin-top: 30px;
                 padding-right: 15px;
-            }
-
-            @include media-breakpoint-down(xs) {
                 width: 100%;
             }
 
@@ -479,6 +513,10 @@
                 font-size: 115px;
                 font-weight: 700;
                 line-height: 1.2;
+
+                @include media-breakpoint-down(lg) {
+                    font-size: 90px;
+                }
 
                 @include media-breakpoint-down(sm) {
                     font-size: 70px;
@@ -494,9 +532,12 @@
                 font-family: "Trebuchet MS";
                 font-size: 24px;
 
+                @include media-breakpoint-down(lg) {
+                    font-size: 19px;
+                }
+
                 @include media-breakpoint-down(sm) {
                     margin-top: 15px;
-                    font-size: 20px;
                 }
 
                 @include media-breakpoint-down(xs) {
@@ -511,10 +552,14 @@
                 font-weight: 400;
                 line-height: 1.6;
 
-                @include media-breakpoint-down(sm) {
-                    margin-top: 10px;
+                @include media-breakpoint-down(lg) {
                     font-size: 14px;
                     line-height: 1.3;
+                }
+
+                @include media-breakpoint-down(sm) {
+                    margin-top: 10px;
+                    font-size: 12px;
                 }
             }
         }
@@ -523,7 +568,7 @@
             width: 50%;
             opacity: 0;
 
-            @include media-breakpoint-down(xs) {
+            @include media-breakpoint-down(sm) {
                 width: 100%;
             }
 
@@ -547,6 +592,10 @@
         font-size: 50px;
         text-align: center;
 
+        @include media-breakpoint-down(lg) {
+            font-size: 40px;
+        }
+
         @include media-breakpoint-down(sm) {
             font-size: 2rem;
         }
@@ -559,8 +608,12 @@
         font-weight: 400;
         text-align: center;
 
-        @include media-breakpoint-down(sm) {
+        @include media-breakpoint-down(lg) {
+            font-size: 18px;
             margin-top: 25px;
+        }
+
+        @include media-breakpoint-down(sm) {
             font-size: 16px;
         }
 
@@ -617,7 +670,7 @@
                 font-size: 16px;
                 line-height: 1.6;
 
-                @include media-breakpoint-down(sm) {
+                @include media-breakpoint-down(md) {
                     font-size: 14px;
                     line-height: 1.3;
                     max-width: 500px;
@@ -649,7 +702,7 @@
         }
 
         .pv-card__shadow {
-            margin: -40px auto 0 auto;
+            margin: 10px auto 0 auto;
             text-align: center;
 
             @include media-breakpoint-down(lg) {
@@ -666,7 +719,11 @@
 
             img {
                 width: 100%;
-                max-width: 966px;
+                max-width: 800px;
+
+                @include media-breakpoint-down(md) {
+                    max-width: 570px;
+                }
 
                 @include media-breakpoint-down(md) {
                     max-width: 70%;
@@ -697,6 +754,7 @@
         text-align: center;
 
         @include media-breakpoint-down(lg) {
+            font-size: 40px;
             margin-top: 50px;
         }
 
@@ -710,7 +768,7 @@
         padding: 0 15px;
         margin-top: 45px;
 
-        @include media-breakpoint-down(xs) {
+        @include media-breakpoint-down(lg) {
             margin-top: 25px;
         }
 
@@ -719,7 +777,7 @@
             align-items: center;
             opacity: 0;
 
-            @include media-breakpoint-down(sm) {
+            @include media-breakpoint-down(md) {
                 flex-direction: column;
                 margin: 5px 0;
             }
@@ -739,7 +797,7 @@
                     margin-left: 10px;
                 }
 
-                @include media-breakpoint-down(sm) {
+                @include media-breakpoint-down(md) {
                     margin: 25px 0 10px 0;
                     height: 10px;
                     width: 53px;
@@ -775,10 +833,11 @@
                 line-height: 1.6;
 
                 @include media-breakpoint-down(lg) {
+                    font-size: 13px;
                     line-height: 1.3;
                 }
 
-                @include media-breakpoint-down(sm) {
+                @include media-breakpoint-down(md) {
                     width: 30%;
                     text-align: center;
                     font-size: 14px;
@@ -786,7 +845,7 @@
                 }
 
                 @include media-breakpoint-down(sm) {
-                    width: 45%;
+                    width: 70%;
                     max-width: 200px;
                 }
             }
@@ -805,9 +864,13 @@
     background-size: cover;
     background-attachment: fixed;
 
-    @include media-breakpoint-down(md) {
+    @include media-breakpoint-down(lg) {
         padding: 80px 0;
         margin-top: 80px;
+
+    }
+
+    @include media-breakpoint-down(md) {
         height: inherit;
     }
 
@@ -828,6 +891,10 @@
             font-size: 50px;
             text-align: center;
 
+            @include media-breakpoint-down(lg) {
+                font-size: 40px;
+            }
+
             @include media-breakpoint-down(sm) {
                 font-size: 2rem;
             }
@@ -844,6 +911,10 @@
             border-radius: 4px;
             justify-content: center;
             opacity: 0;
+
+            @include media-breakpoint-down(md) {
+                width: 100%;
+            }
 
             @include media-breakpoint-down(xs) {
                 padding: 20px 15px;
@@ -898,12 +969,8 @@
 }
 
 .pv-feedback {
-    padding: 0 175px;
+    padding: 0 50px;
     margin: 100px 0;
-
-    @include media-breakpoint-down(lg) {
-        padding: 0 60px;
-    }
 
     @include media-breakpoint-down(md) {
         margin: 80px 0;
@@ -923,6 +990,10 @@
         font-size: 50px;
         text-align: center;
 
+        @include media-breakpoint-down(lg) {
+            font-size: 40px;
+        }
+
         @include media-breakpoint-down(sm) {
             font-size: 2rem;
         }
@@ -940,10 +1011,14 @@
             padding: 0 30px;
         }
 
+        @include media-breakpoint-down(md) {
+            font-size: 14px;
+        }
+
         @include media-breakpoint-down(sm) {
-            font-size: 2rem;
-            margin-top: 30px;
+            margin: 30px auto 0 auto;
             padding: 0;
+            width: 90%;
         }
 
         .slick-prev,
@@ -969,7 +1044,7 @@
 
         .pv-feedback__sliderItem_text {
             @include media-breakpoint-down(sm) {
-                font-size: 14px;
+                font-size: 12px;
             }
         }
 

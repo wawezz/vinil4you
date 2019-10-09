@@ -189,4 +189,11 @@ $(function () {
             // }
         ]
     });
+
+    $(window).scroll(function () {
+        var x = $(this).scrollTop();
+        $('.pv-servicesBg__item:eq(0)').css('background-position', '0 ' + parseInt(x / 7) + 'px ');
+        $('.pv-servicesBg__item:eq(1)').css('background-position', parseInt(x / 10) + 'px 0');
+        $('.pv-servicesBg__item:eq(2)').css('background-position', parseInt(x / 20) + 'px ' + parseInt(x / 20) + 'px ');
+    });
 });

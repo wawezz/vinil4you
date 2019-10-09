@@ -11,7 +11,8 @@ $(function () {
     $(".pv-contentWrap").toggleClass("open");
   });
 
-  $(document).on("click", ".pv-header__cityInfo", function () {
+  $(document).on("click", ".pv-header__cityInfo", function (e) {
+    e.preventDefault();
     $(this).toggleClass("pv-header__cityInfo_open");
   });
 

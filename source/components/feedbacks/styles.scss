@@ -28,7 +28,7 @@
         .pv-feedbacks__logo {
             margin: 0 35px;
 
-            @include media-breakpoint-down(sm) {
+            @include media-breakpoint-down(md) {
                 margin: 30px;
             }
         }

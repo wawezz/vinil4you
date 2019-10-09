@@ -50,13 +50,13 @@
                     cursor: pointer;
                     transition: all .2 ease-in-out;
 
-                    @include media-breakpoint-down(xs) {
+                    @include media-breakpoint-down(sm) {
                         display: flex;
                         align-items: center;
                     }
 
                     span {
-                        @include media-breakpoint-down(xs) {
+                        @include media-breakpoint-down(sm) {
                             display: none;
                         }
                     }
