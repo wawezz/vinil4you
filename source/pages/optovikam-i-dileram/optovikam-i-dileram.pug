@@ -1,0 +1,184 @@
+extends ../../components/base/base
+block title
+    | Optovikam I Dileram
+block main
+    .pv-topBanner
+        .container
+            .row.pv-topBanner
+                .col-12
+                    .pv-topPartner
+                        .pv-topPartner__wrap
+                            h2.pv-topPartner__title Хотите стать #[br]нашим партнёром?
+                            .pv-topPartner__text Чтобы ознакомится с нашим предложением и узнать индивидуальные условия сотрудничества, вам просто нужно оставить ваш контактный номер телефона, для обратной связи.
+                            .pv-topPartner__form 
+                                input#phone-mask.pv-topPartner__input(placeholder="+7 (495) 123-45-67")
+                                .pv-topPartner__btn 
+                                    span.d-none.d-sm-block Оставить заявку
+                                    img(src=require("./images/icon-go.svg")).d-sm-none 
+                            .pv-topPartner__info Нажимая кнопку "Оставить заявку" вы соглашаетесь #[a(href="#").pv-topPartner__legacy с пользовательским соглашением].
+    .container
+        .row
+            ul.col-12.pv-breadcrumb 
+                li.pv-breadcrumb__item 
+                    a(href="#").pv-breadcrumb__link Главная страница
+                li.pv-breadcrumb__item 
+                    a(href="#").pv-breadcrumb__link О компании
+                li.pv-breadcrumb__item Сотрудничество
+    .pv-ourDiff
+        .container
+            .row
+                .col-12
+                    h2.pv-ourDiff__title Наши преимущества
+                    h4.pv-ourDiff__slogan Надежный поставщик с гарантией качества
+            .row.pv-ourDiff__wrap
+                .col-12.col-sm-6.col-lg-3.pv-ourDiff__item
+                    img(src=require("./images/icon-price.svg")).pv-ourDiff__item_icon
+                    .pv-ourDiff__item_title Цены
+                    .pv-ourDiff__item_text Мы предлагаем лучшие цены на рынке автомобильных пленок
+                .col-12.col-sm-6.col-lg-3.pv-ourDiff__item
+                    img(src=require("./images/icon-delivery.svg")).pv-ourDiff__item_icon
+                    .pv-ourDiff__item_title Поставка
+                    .pv-ourDiff__item_text Мы являемся производителями и представителями продаваемых брендов
+                .col-12.col-sm-6.col-lg-3.pv-ourDiff__item
+                    img(src=require("./images/icon-team.svg")).pv-ourDiff__item_icon
+                    .pv-ourDiff__item_title Команда
+                    .pv-ourDiff__item_text С вами работает команда профессионалов с многолетним опытом
+                .col-12.col-sm-6.col-lg-3.pv-ourDiff__item
+                    img(src=require("./images/icon-stock.svg")).pv-ourDiff__item_icon
+                    .pv-ourDiff__item_title Склад
+                    .pv-ourDiff__item_text Товар всегда в наличии и готов к отправке в любую точку РФ и СНГ
+    .pv-about
+        .container
+            .row
+                .col-12
+                    h2.pv-about__title О нас
+                    h4.pv-about__slogan Широкие возможности для вашего бизнеса 
+                    .row.pv-about__wrap
+                        .col-12.col-sm-6.col-lg-3.pv-about__item
+                            .pv-about__item_title 
+                                span#counter_0.counter-value(data-count="6") 0
+                                | +
+                            hr.pv-about__item_hr
+                            .pv-about__item_text лет помогаем развитию #[br]вашего бизнеса
+                        .col-12.col-sm-6.col-lg-3.pv-about__item
+                            .pv-about__item_title 
+                                span#counter_1.counter-value(data-count="2000") 0
+                                | +
+                            hr.pv-about__item_hr
+                            .pv-about__item_text партнеров #[br]сотрудничают с нашей компанией
+                        .col-12.col-sm-6.col-lg-3.pv-about__item
+                            .pv-about__item_title 
+                                span#counter_2.counter-value(data-count="10000") 0
+                                | +
+                            hr.pv-about__item_hr
+                            .pv-about__item_text рулонов ежегодно поставляем #[br]на территорию РФ и СНГ
+                        .col-12.col-sm-6.col-lg-3.pv-about__item
+                            .pv-about__item_title 
+                                span#counter_3.counter-value(data-count="100") 0
+                                | %
+                            hr.pv-about__item_hr
+                            .pv-about__item_text честность и открытость по #[br]отношению к клиентам
+    .pv-wyg
+        .container
+            .row
+                .col-12
+                    .row
+                        h2.col-12.pv-wyg__title Что вы получаете?
+                    
+                    .row.pv-wyg__item
+                        .col-12.col-md-6.pv-wyg__item_img-wrapper
+                            img(src=require("./images/wyg1.jpg")).pv-wyg__item_img
+                        .col-12.col-md-6.pv-wyg__item_data
+                            .pv-wyg__item_number 1
+                            .pv-wyg__item_title Индивидуальные условия
+                            .pv-wyg__item_text Исходя из вашей потребности, мы создаем уникальное предложение, нацеленное на рост вашего бизнеса и долгосрочное сотрудничество.
+                    .row.pv-wyg__item
+                        .col-12.col-md-6.pv-wyg__item_img-wrapper
+                                img(src=require("./images/wyg2.jpg")).pv-wyg__item_img
+                        .col-12.col-md-6.pv-wyg__item_data
+                            .pv-wyg__item_number 2
+                            .pv-wyg__item_title Оперативную доставку
+                            .pv-wyg__item_text На наших складах всегда имеется полный ассортимент товарных позиций, готовых к отправке в любую точку РФ и СНГ. Если же вы находитесь в Москве, мы привезем ваш товар в день заказа вне зависимости от количества позиций.
+                    .row.pv-wyg__item
+                        .col-12.col-md-6.pv-wyg__item_img-wrapper
+                            img(src=require("./images/wyg3.jpg")).pv-wyg__item_img
+                        .col-12.col-md-6.pv-wyg__item_data
+                            .pv-wyg__item_number 3
+                            .pv-wyg__item_title Товары от производителя
+                            .pv-wyg__item_text На сегодняшний день, наша компания занимается не только поставкой и предоставлением услуг, но и разработкой новых инновационных продуктов, целью которых является удовлетворение возникающих потребностей наших клиентов.
+                    .row.pv-wyg__item
+                        .col-12.col-md-6.pv-wyg__item_img-wrapper
+                            img(src=require("./images/wyg4.jpg")).pv-wyg__item_img
+                        .col-12.col-md-6.pv-wyg__item_data
+                            .pv-wyg__item_number 4
+                            .pv-wyg__item_title Большой ассортимент
+                            .pv-wyg__item_text Помимо производства, наша компания является дистрибьютером многих известных брендов. Мы не перестаем изучать потребности наших клиентов и расширяем ассортимент, учитывая все факторы. Не одна компания в РФ не может предоставить такого количества товарных позиций.
+    .pv-card
+        .container-fluid
+            .row
+                .col-12
+                    .row
+                        .col-12
+                            h2.pv-card__title Карта привилегий для вашего бизнеса
+                            h4.pv-card__slogan Накопительная система ваших бонусов
+                    .row.pv-card__wrap
+                        .col-12.col-md-6.order-2.order-md-1.pv-card__data
+                            .pv-card__dataWrap.slide
+                                .pv-card__data_title Мы заботимся #[br]о наших партнерах!
+                                .pv-card__data_text Бонусная программа стала проще и удобнее для вас. Помимо индивидуальных условий сотрудничества, мы даем карту партнера. С картой партнера вы становитесь участником бонусной программы Vinyl4You. Узнать подробнее о том, как стать участником и как работает эта система, вы можете у наших менеджеров.
+                        .col-12.col-md-6.order-1.order-md-2.pv-card__bg
+                            img.pv-card__bg_image.slide(src=require("./images/cardBg.jpg"))
+                        .col-12.order-3.pv-card__shadow
+                            img(src=require("./images/shadow.png"))
+    .pv-bap
+        .container
+            .row
+                .col-12
+                    .row
+                        .col-12
+                            h2.pv-bap__title Как стать партнером?
+                    .row.pv-bap__step_wrap
+                        .col-12.col-lg-3.pv-bap__step_item
+                            .pv-bap__step_number 1
+                            .pv-bap__step_desc Оставьте ваш контактный номер телефона
+                        .col-12.col-lg-3.pv-bap__step_item
+                            .pv-bap__step_number 2
+                            .pv-bap__step_desc Оставьте ваш контактный номер телефона
+                        .col-12.col-lg-3.pv-bap__step_item
+                            .pv-bap__step_number 3
+                            .pv-bap__step_desc Оставьте ваш контактный номер телефона
+                        .col-12.col-lg-3.pv-bap__step_item
+                            .pv-bap__step_number 4
+                            .pv-bap__step_desc Оставьте ваш контактный номер телефона
+
+    .pv-bap__banner
+        .container
+            .row
+                .col-12.pv-bap__banner_wrap
+                    h2.pv-bap__banner_title Стать партнером
+                    form.pv-bap__banner_form 
+                        input(placeholder="+7 (495) 123-45-67")#phone-mask2.pv-bap__banner_input
+                        .pv-main_btn
+                            span.d-none.d-sm-block Оставить заявку
+                            img(src=require("./images/icon-go.svg")).d-sm-none 
+                    .pv-bap__banner_info Нажимая кнопку "Оставить заявку" вы соглашаетесь #[a(href="#").pv-bap__banner_legacy с пользовательским соглашением].
+    .pv-feedback  
+        .container      
+            .row
+                .col-12
+                    h2.pv-feedback__title Отзывы партнеров
+                    .pv-feedback__slider
+                        .pv-feedback__sliderItem
+                            .pv-feedback__sliderItem_text «Навыки начал применять ещё в процессе обучения. Сейчас работаю с двумя проектами, и по одному из них знания очень пригодились. Советую студентам выполнять все задания, т.к. всё быстро забывается. Программа подойдет людям без опыта, но нужно дополнительно изучить материал».
+                            .pv-feedback__sliderItem_partnerWrap
+                                img.pv-feedback__sliderItem_partnerAvatar(src=require("./images/avatar.jpg"))
+                                .pv-feedback__sliderItem_partner
+                                    .pv-feedback__sliderItem_partnerName ФИО 
+                                    .pv-feedback__sliderItem_partnerPosition Должность, Компания
+                        .pv-feedback__sliderItem
+                            .pv-feedback__sliderItem_text «Навыки начал применять ещё в процессе обучения. Сейчас работаю с двумя проектами, и по одному из них знания очень пригодились. Советую студентам выполнять все задания, т.к. всё быстро забывается. Программа подойдет людям без опыта, но нужно дополнительно изучить материал».
+                            .pv-feedback__sliderItem_partnerWrap
+                                img.pv-feedback__sliderItem_partnerAvatar(src=require("./images/avatar.jpg"))
+                                .pv-feedback__sliderItem_partner
+                                    .pv-feedback__sliderItem_partnerName ФИО 
+                                    .pv-feedback__sliderItem_partnerPosition Должность, Компания

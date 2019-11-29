@@ -2,183 +2,332 @@ extends ../../components/base/base
 block title
     | Index page
 block main
-    .pv-topBanner
-        .container
-            .row.pv-topBanner
-                .col-12
-                    .pv-topPartner
-                        .pv-topPartner__wrap
-                            h2.pv-topPartner__title Хотите стать #[br]нашим партнёром?
-                            .pv-topPartner__text Чтобы ознакомится с нашим предложением и узнать индивидуальные условия сотрудничества, вам просто нужно оставить ваш контактный номер телефона, для обратной связи.
-                            .pv-topPartner__form 
-                                input#phone-mask.pv-topPartner__input(placeholder="+7 (495) 123-45-67")
-                                .pv-topPartner__btn 
-                                    span.d-none.d-sm-block Оставить заявку
-                                    img(src=require("./images/icon-go.svg")).d-sm-none 
-                            .pv-topPartner__info Нажимая кнопку "Оставить заявку" вы соглашаетесь #[a(href="#").pv-topPartner__legacy с пользовательским соглашением].
-    .container
-        .row
-            ul.col-12.pv-breadcrumb 
-                li.pv-breadcrumb__item 
-                    a(href="#").pv-breadcrumb__link Главная страница
-                li.pv-breadcrumb__item 
-                    a(href="#").pv-breadcrumb__link О компании
-                li.pv-breadcrumb__item Сотрудничество
-    .pv-ourDiff
-        .container
-            .row
-                .col-12
-                    h2.pv-ourDiff__title Наши преимущества
-                    h4.pv-ourDiff__slogan Надежный поставщик с гарантией качества
-            .row.pv-ourDiff__wrap
-                .col-12.col-sm-6.col-lg-3.pv-ourDiff__item
-                    img(src=require("./images/icon-price.svg")).pv-ourDiff__item_icon
-                    .pv-ourDiff__item_title Цены
-                    .pv-ourDiff__item_text Мы предлагаем лучшие цены на рынке автомобильных пленок
-                .col-12.col-sm-6.col-lg-3.pv-ourDiff__item
-                    img(src=require("./images/icon-delivery.svg")).pv-ourDiff__item_icon
-                    .pv-ourDiff__item_title Поставка
-                    .pv-ourDiff__item_text Мы являемся производителями и представителями продаваемых брендов
-                .col-12.col-sm-6.col-lg-3.pv-ourDiff__item
-                    img(src=require("./images/icon-team.svg")).pv-ourDiff__item_icon
-                    .pv-ourDiff__item_title Команда
-                    .pv-ourDiff__item_text С вами работает команда профессионалов с многолетним опытом
-                .col-12.col-sm-6.col-lg-3.pv-ourDiff__item
-                    img(src=require("./images/icon-stock.svg")).pv-ourDiff__item_icon
-                    .pv-ourDiff__item_title Склад
-                    .pv-ourDiff__item_text Товар всегда в наличии и готов к отправке в любую точку РФ и СНГ
-    .pv-about
-        .container
-            .row
-                .col-12
-                    h2.pv-about__title О нас
-                    h4.pv-about__slogan Широкие возможности для вашего бизнеса 
-                    .row.pv-about__wrap
-                        .col-12.col-sm-6.col-lg-3.pv-about__item
-                            .pv-about__item_title 
-                                span#counter_0.counter-value(data-count="6") 0
-                                | +
-                            hr.pv-about__item_hr
-                            .pv-about__item_text лет помогаем развитию #[br]вашего бизнеса
-                        .col-12.col-sm-6.col-lg-3.pv-about__item
-                            .pv-about__item_title 
-                                span#counter_1.counter-value(data-count="2000") 0
-                                | +
-                            hr.pv-about__item_hr
-                            .pv-about__item_text партнеров #[br]сотрудничают с нашей компанией
-                        .col-12.col-sm-6.col-lg-3.pv-about__item
-                            .pv-about__item_title 
-                                span#counter_2.counter-value(data-count="10000") 0
-                                | +
-                            hr.pv-about__item_hr
-                            .pv-about__item_text рулонов ежегодно поставляем #[br]на территорию РФ и СНГ
-                        .col-12.col-sm-6.col-lg-3.pv-about__item
-                            .pv-about__item_title 
-                                span#counter_3.counter-value(data-count="100") 0
-                                | %
-                            hr.pv-about__item_hr
-                            .pv-about__item_text честность и открытость по #[br]отношению к клиентам
-    .pv-wyg
-        .container
-            .row
-                .col-12
-                    .row
-                        h2.col-12.pv-wyg__title Что вы получаете?
-                    
-                    .row.pv-wyg__item
-                        .col-12.col-md-6.pv-wyg__item_img-wrapper
-                            img(src=require("./images/wyg1.jpg")).pv-wyg__item_img
-                        .col-12.col-md-6.pv-wyg__item_data
-                            .pv-wyg__item_number 1
-                            .pv-wyg__item_title Индивидуальные условия
-                            .pv-wyg__item_text Исходя из вашей потребности, мы создаем уникальное предложение, нацеленное на рост вашего бизнеса и долгосрочное сотрудничество.
-                    .row.pv-wyg__item
-                        .col-12.col-md-6.pv-wyg__item_img-wrapper
-                                img(src=require("./images/wyg2.jpg")).pv-wyg__item_img
-                        .col-12.col-md-6.pv-wyg__item_data
-                            .pv-wyg__item_number 2
-                            .pv-wyg__item_title Оперативную доставку
-                            .pv-wyg__item_text На наших складах всегда имеется полный ассортимент товарных позиций, готовых к отправке в любую точку РФ и СНГ. Если же вы находитесь в Москве, мы привезем ваш товар в день заказа вне зависимости от количества позиций.
-                    .row.pv-wyg__item
-                        .col-12.col-md-6.pv-wyg__item_img-wrapper
-                            img(src=require("./images/wyg3.jpg")).pv-wyg__item_img
-                        .col-12.col-md-6.pv-wyg__item_data
-                            .pv-wyg__item_number 3
-                            .pv-wyg__item_title Товары от производителя
-                            .pv-wyg__item_text На сегодняшний день, наша компания занимается не только поставкой и предоставлением услуг, но и разработкой новых инновационных продуктов, целью которых является удовлетворение возникающих потребностей наших клиентов.
-                    .row.pv-wyg__item
-                        .col-12.col-md-6.pv-wyg__item_img-wrapper
-                            img(src=require("./images/wyg4.jpg")).pv-wyg__item_img
-                        .col-12.col-md-6.pv-wyg__item_data
-                            .pv-wyg__item_number 4
-                            .pv-wyg__item_title Большой ассортимент
-                            .pv-wyg__item_text Помимо производства, наша компания является дистрибьютером многих известных брендов. Мы не перестаем изучать потребности наших клиентов и расширяем ассортимент, учитывая все факторы. Не одна компания в РФ не может предоставить такого количества товарных позиций.
-    .pv-card
+    .pv-mainTopBanner
         .container-fluid
             .row
-                .col-12
-                    .row
-                        .col-12
-                            h2.pv-card__title Карта привилегий для вашего бизнеса
-                            h4.pv-card__slogan Накопительная система ваших бонусов
-                    .row.pv-card__wrap
-                        .col-12.col-md-6.order-2.order-md-1.pv-card__data
-                            .pv-card__dataWrap.slide
-                                .pv-card__data_title Мы заботимся #[br]о наших партнерах!
-                                .pv-card__data_text Бонусная программа стала проще и удобнее для вас. Помимо индивидуальных условий сотрудничества, мы даем карту партнера. С картой партнера вы становитесь участником бонусной программы Vinyl4You. Узнать подробнее о том, как стать участником и как работает эта система, вы можете у наших менеджеров.
-                        .col-12.col-md-6.order-1.order-md-2.pv-card__bg
-                            img.pv-card__bg_image.slide(src=require("./images/cardBg.jpg"))
-                        .col-12.order-3.pv-card__shadow
-                            img(src=require("./images/shadow.png"))
-    .pv-bap
+                .col-12.pv-mainTopBanner_slider
+                    - for(var x = 0; x < 4; x++)
+                        .pv-mainTopBanner_sliderItem
+                            h2.pv-mainInfo__title Готовимся к зимнему сезону выгодно
+                            .pv-mainInfo__desc Антигравийная пленка по специальной цене
+                            a(href="#").pv-main_btn Подробнее
+    .container.pv-mainCats
+        .row.pv-mainCats_wrap
+            .col-12
+                .d-block.d-md-none.pv-mainSliderMobile
+                    .pv-mainSliderMobile__title Популярные категории
+                    ul.pv-mainSliderMobile__nav
+                        li.pv-mainSliderMobile__navItem
+                            a(href="#").pv-mainSliderMobile__navItem_wrap
+                                .pv-mainSliderMobile__navImg.pv-mainSliderMobile__navImg_plenki
+                                .pv-mainSliderMobile__navTitle Автомобильные пленки
+                        li.pv-mainSliderMobile__navItem
+                            a(href="#").pv-mainSliderMobile__navItem_wrap
+                                .pv-mainSliderMobile__navImg.pv-mainSliderMobile__navImg_plenkiTon
+                                .pv-mainSliderMobile__navTitle Тонировочные пленки
+                        li.pv-mainSliderMobile__navItem
+                            a(href="#").pv-mainSliderMobile__navItem_wrap
+                                .pv-mainSliderMobile__navImg.pv-mainSliderMobile__navImg_plenkiAntigrav
+                                .pv-mainSliderMobile__navTitle Антигравийные пленки
+                        li.pv-mainSliderMobile__navItem
+                            a(href="#").pv-mainSliderMobile__navItem_wrap
+                                .pv-mainSliderMobile__navImg.pv-mainSliderMobile__navImg_alkantara
+                                .pv-mainSliderMobile__navTitle Алькантара
+                        li.pv-mainSliderMobile__navItem
+                            a(href="#").pv-mainSliderMobile__navItem_wrap
+                                .pv-mainSliderMobile__navImg.pv-mainSliderMobile__navImg_ekoKoja
+                                .pv-mainSliderMobile__navTitle Эко-кожа
+                        li.pv-mainSliderMobile__navItem
+                            a(href="#").pv-mainSliderMobile__navItem_wrap
+                                .pv-mainSliderMobile__navImg.pv-mainSliderMobile__navImg_rezina
+                                .pv-mainSliderMobile__navTitle Жидкая резина
+                    .pv-mainSliderMobile__more Показать все разделы
+                .d-none.d-md-block.pv-mainSliderNav
+                    .pv-mainSliderNav__item 
+                        .pv-mainSliderNav__itemImg_wrap
+                            .pv-mainSliderNav__itemImg.pv-mainSliderNav__itemImg_plenki
+                                .pv-mainSliderNav__itemImg_title Автомобильные пленки
+                        .pv-mainSliderNav__itemTitle Автомобильные пленки
+                    .pv-mainSliderNav__item 
+                        .pv-mainSliderNav__itemImg_wrap
+                            .pv-mainSliderNav__itemImg.pv-mainSliderNav__itemImg_plenkiTon
+                                .pv-mainSliderNav__itemImg_title Тонировочные пленки
+                        .pv-mainSliderNav__itemTitle Тонировочные пленки                        
+                    .pv-mainSliderNav__item 
+                        .pv-mainSliderNav__itemImg_wrap
+                            .pv-mainSliderNav__itemImg.pv-mainSliderNav__itemImg_plenkiAntigrav
+                                .pv-mainSliderNav__itemImg_title Антигравийные пленки
+                        .pv-mainSliderNav__itemTitle Антигравийные пленки
+                    .pv-mainSliderNav__item 
+                        .pv-mainSliderNav__itemImg_wrap
+                            .pv-mainSliderNav__itemImg.pv-mainSliderNav__itemImg_alkantara
+                                .pv-mainSliderNav__itemImg_title Алькантара
+                        .pv-mainSliderNav__itemTitle Алькантара
+                    .pv-mainSliderNav__item 
+                        .pv-mainSliderNav__itemImg_wrap
+                            .pv-mainSliderNav__itemImg.pv-mainSliderNav__itemImg_ekoKoja
+                                .pv-mainSliderNav__itemImg_title Эко-кожа
+                        .pv-mainSliderNav__itemTitle Эко-кожа
+                    .pv-mainSliderNav__item 
+                        .pv-mainSliderNav__itemImg_wrap
+                            .pv-mainSliderNav__itemImg.pv-mainSliderNav__itemImg_rezina
+                                .pv-mainSliderNav__itemImg_title Жидкая резина
+                        .pv-mainSliderNav__itemTitle Жидкая резина
+        .d-none.d-lg-block.row.pv-car
+            .col-12
+                .pv-carImage
+        .row.pv-mainProducts
+            .col-12
+                div(role="tablist")#nav-tab.nav.nav-fill.pv-mainProducts__nav
+                    a(data-toggle="tab" href="#nav-mainSale" role="tab" aria-controls="nav-mainSale" data-slider="pv-saleSlider" aria-selected="true")#nav-mainSale-tab.pv-mainProducts__navItem.active Распродажа
+                    a(data-toggle="tab" href="#nav-mainNew" role="tab" aria-controls="nav-mainNew" data-slider="pv-newSlider" aria-selected="true")#nav-mainNew-tab.pv-mainProducts__navItem Новинки
+                    a(data-toggle="tab" href="#nav-mainHit" role="tab" aria-controls="nav-mainHit" data-slider="pv-hitSlider" aria-selected="true")#nav-mainHit-tab.pv-mainProducts__navItem Хиты продаж
+                #nav-tabContent.tab-content
+                    div(role="tabpanel" aria-labelledby="nav-mainSale-tab")#nav-mainSale.tab-pane.fade.show.active.pv-mainProductsSlider.pv-saleSlider
+                        - for(var x = 0; x < 10; x++)
+                            .pv-mainProducts__item
+                                .pv-mainProducts__itemWrapper
+                                    .pv-mainProducts__itemImg_wrap
+                                        .pv-mainProducts__itemImg_info_wrap                        
+                                            .pv-mainProducts__itemImg_info.pv-mainProducts__itemImg_infoHit Хит
+                                            .pv-mainProducts__itemImg_info.pv-mainProducts__itemImg_infoNew Новинка
+                                        img(src=require("./images/productPic.jpg")).pv-mainProducts__itemImg
+                                    .pv-mainProducts__itemStars
+                                        i.fa.fa-star.green
+                                        i.fa.fa-star.green
+                                        i.fa.fa-star.green
+                                        i.fa.fa-star.green
+                                        i.fa.fa-star
+                                    .pv-mainProducts__itemTitle Пленка Суперглянец для панорамной крыши черный
+                                    .pv-mainProducts__itemData
+                                        .pv-mainProducts__itemPrice
+                                            .pv-mainProducts__itemPrice_old 25000
+                                            .pv-mainProducts__itemPrice_new 12950 ₽/п.м.
+                                        .pv-mainProducts__itemBtn.pv-main_btn В корзину
+                                    .pv-mainProducts__itemLinks
+                                        a(href="").pv-mainProducts__itemLink 
+                                            i.fa.fa-shopping-bag
+                                            | Купить в 1 клик
+                                        a(href="").pv-mainProducts__itemLink 
+                                            i.fa.fa-balance-scale
+                                            | К сравнению
+                                        a(href="").pv-mainProducts__itemLink 
+                                            i.fa.fa-heart
+                                            | В избранное                                                 
+                                        .pv-mainProducts__itemLink.green
+                                            i.fa.fa-check
+                                            | В наличии   
+                    div(role="tabpanel" aria-labelledby="nav-mainNew-tab")#nav-mainNew.tab-pane.pv-mainProductsSlider.pv-newSlider.fade
+                        - for(var x = 0; x < 10; x++)
+                            .pv-mainProducts__item
+                                .pv-mainProducts__itemWrapper
+                                    .pv-mainProducts__itemImg_wrap
+                                        .pv-mainProducts__itemImg_info_wrap                        
+                                            .pv-mainProducts__itemImg_info.pv-mainProducts__itemImg_infoHit Хит
+                                            .pv-mainProducts__itemImg_info.pv-mainProducts__itemImg_infoNew Новинка
+                                        img(src=require("./images/productPic.jpg")).pv-mainProducts__itemImg
+                                    .pv-mainProducts__itemStars
+                                        i.fa.fa-star.green
+                                        i.fa.fa-star.green
+                                        i.fa.fa-star.green
+                                        i.fa.fa-star.green
+                                        i.fa.fa-star
+                                    .pv-mainProducts__itemTitle Пленка Суперглянец для панорамной крыши черный
+                                    .pv-mainProducts__itemData
+                                        .pv-mainProducts__itemPrice
+                                            .pv-mainProducts__itemPrice_old 25000
+                                            .pv-mainProducts__itemPrice_new 12950 ₽/п.м.
+                                        .pv-mainProducts__itemBtn.pv-main_btn В корзину
+                                    .pv-mainProducts__itemLinks
+                                        a(href="").pv-mainProducts__itemLink 
+                                            i.fa.fa-shopping-bag
+                                            | Купить в 1 клик
+                                        a(href="").pv-mainProducts__itemLink 
+                                            i.fa.fa-balance-scale
+                                            | К сравнению
+                                        a(href="").pv-mainProducts__itemLink 
+                                            i.fa.fa-heart
+                                            | В избранное                                                 
+                                        .pv-mainProducts__itemLink.green
+                                            i.fa.fa-check
+                                            | В наличии              
+                    div(role="tabpanel" aria-labelledby="nav-mainHit-tab")#nav-mainHit.tab-pane.pv-mainProductsSlider.pv-hitSlider.fade
+                        - for(var x = 0; x < 10; x++)
+                            .pv-mainProducts__item
+                                .pv-mainProducts__itemWrapper
+                                    .pv-mainProducts__itemImg_wrap
+                                        .pv-mainProducts__itemImg_info_wrap                        
+                                            .pv-mainProducts__itemImg_info.pv-mainProducts__itemImg_infoHit Хит
+                                            .pv-mainProducts__itemImg_info.pv-mainProducts__itemImg_infoNew Новинка
+                                        img(src=require("./images/productPic.jpg")).pv-mainProducts__itemImg
+                                    .pv-mainProducts__itemStars
+                                        i.fa.fa-star.green
+                                        i.fa.fa-star.green
+                                        i.fa.fa-star.green
+                                        i.fa.fa-star.green
+                                        i.fa.fa-star
+                                    .pv-mainProducts__itemTitle Пленка Суперглянец для панорамной крыши черный
+                                    .pv-mainProducts__itemData
+                                        .pv-mainProducts__itemPrice
+                                            .pv-mainProducts__itemPrice_old 25000
+                                            .pv-mainProducts__itemPrice_new 12950 ₽/п.м.
+                                        .pv-mainProducts__itemBtn.pv-main_btn В корзину
+                                    .pv-mainProducts__itemLinks
+                                        a(href="").pv-mainProducts__itemLink 
+                                            i.fa.fa-shopping-bag
+                                            | Купить в 1 клик
+                                        a(href="").pv-mainProducts__itemLink 
+                                            i.fa.fa-balance-scale
+                                            | К сравнению
+                                        a(href="").pv-mainProducts__itemLink 
+                                            i.fa.fa-heart
+                                            | В избранное                                                 
+                                        .pv-mainProducts__itemLink.green
+                                            i.fa.fa-check
+                                            | В наличии  
+        .row
+            .col-12
+                .pv-mainFullBanners 
+                    - for(var x = 1; x < 4; x++)
+                        .pv-mainFullBanner(class="pv-mainFullBanner_" + x)
+                            .pv-mainFullBanner__title Доставка в день заказа –#[br]это наш конек!
+                            .pv-mainFullBanner__text Сделали заказ до 15:00? Доставим сегодня!#[br]Мы доставляем более 100 заказов каждый день.
+                            a(href="#").pv-mainFullBanner__button.pv-main_btn Подробнее
+        .row.pv-mainService
+            .col-12.col-md-4.pv-mainService__item
+                img(src=require("./images/service_icon_1.svg")).pv-mainService__img
+                .pv-mainService__title Студия
+                .pv-mainService__text Качественный материал, мастерская работа и индивидуальный подход
+            .col-12.col-md-4.pv-mainService__item
+                img(src=require("./images/service_icon_2.svg")).pv-mainService__img            
+                .pv-mainService__title Сервис
+                .pv-mainService__text Не поднимайте тяжестей!#[br]Доставим на дом, поднимем на этаж.         
+            .col-12.col-md-4.pv-mainService__item
+                img(src=require("./images/service_icon_3.svg")).pv-mainService__img
+                .pv-mainService__title Поддержка 12/7
+                .pv-mainService__text Есть вопросы? Мы поможем!#[br]Мы открыты для любых вопросов!
+        .row
+            .col-12
+                .pv-mainFullBanners_wrap 
+                    .pv-mainFullBanners 
+                        - for(var x = 0; x < 4; x++)
+                            .pv-mainFullBanner.pv-mainFullBanner_left
+                                .pv-mainFullBanner__title Твой автомобиль –#[br]твой стиль
+                                .pv-mainFullBanner__text Качественная оклейка твоего автомобиля#[br]винилом по специальной цене. 
+                    img(src=require("./images/banner_right.png")).d-none.d-lg-block.pv-mainFullBanners__coupon                            
+        .row.pv-mainPosts
+            .col-12
+                div(role="tablist")#nav-tab.nav.nav-fill.pv-mainPosts__nav
+                    a(data-toggle="tab" href="#nav-mainNews" role="tab" aria-controls="nav-mainNews" data-slider="pv-newsSlider" aria-selected="true")#nav-mainSale-tab.pv-mainPosts__navItem.active Новости
+                    a(data-toggle="tab" href="#nav-mainPosts" role="tab" aria-controls="nav-mainPosts" data-slider="pv-postsSlider" aria-selected="true")#nav-mainNew-tab.pv-mainPosts__navItem Статьи
+                    a(data-toggle="tab" href="#nav-mainOffers" role="tab" aria-controls="nav-mainOffers" data-slider="pv-offersSlider" aria-selected="true")#nav-mainHit-tab.pv-mainPosts__navItem Акции
+                #nav-tabContent.tab-content
+                    div(role="tabpanel" aria-labelledby="nav-mainNews-tab")#nav-mainNews.tab-pane.fade.show.active.pv-mainPostsSlider.pv-newsSlider
+                        - for(var x = 0; x < 10; x++)
+                            .pv-mainPosts__item
+                                .pv-mainPosts__itemWrap
+                                    img(src=require("./images/postsPic1.png")).pv-mainPosts__itemImg
+                                    .pv-mainPosts__info
+                                        .pv-mainPosts__itemTitle VINYL4YOU на выставке "Интеравто 2019"
+                                        .pv-mainPosts__itemDesc Sunt autem nusquam hoc tenebo, si mihi probabis ea, quae ab eo est et rationibus confirmare, tantum satis esse, quid malum, sensu iudicari, sed uti oratione.
+                    div(role="tabpanel" aria-labelledby="nav-mainPosts-tab")#nav-mainPosts.tab-pane.pv-mainPostsSlider.pv-postsSlider.fade                        
+                        - for(var x = 0; x < 10; x++)
+                            .pv-mainPosts__item
+                                .pv-mainPosts__itemWrap
+                                    img(src=require("./images/postsPic2.png")).pv-mainPosts__itemImg
+                                    .pv-mainPosts__info
+                                        .pv-mainPosts__itemTitle VINYL4YOU на выставке "Интеравто 2019"
+                                        .pv-mainPosts__itemDesc Sunt autem nusquam hoc tenebo, si mihi probabis ea, quae ab eo est et rationibus confirmare, tantum satis esse, quid malum, sensu iudicari, sed uti oratione.                    
+                    div(role="tabpanel" aria-labelledby="nav-mainOffers-tab")#nav-mainOffers.tab-pane.pv-mainPostsSlider.pv-offersSlider.fade
+                        - for(var x = 0; x < 10; x++)
+                            .pv-mainPosts__item
+                                .pv-mainPosts__itemWrap
+                                    img(src=require("./images/postsPic1.png")).pv-mainPosts__itemImg
+                                    .pv-mainPosts__info
+                                        .pv-mainPosts__itemTitle VINYL4YOU на выставке "Интеравто 2019"
+                                        .pv-mainPosts__itemDesc Sunt autem nusquam hoc tenebo, si mihi probabis ea, quae ab eo est et rationibus confirmare, tantum satis esse, quid malum, sensu iudicari, sed uti oratione.                                                                                        
+    .pv-mainVideo
         .container
             .row
+                .col-12.pv-mainVideoTop
+                    h2.pv-mainVideoTitle Видеоблог
+                    .pv-mainVideoDesc Бесплатно учим желающих творить с помощью пленок Vinyl4You
+                    .pv-mainVideoSlider
+                        - for(var x = 0; x < 10; x++)                
+                            .pv-mainVideoSlider__item
+                                .pv-mainVideoSlider__itemWrap
+                                    img(src=require("./images/postsPic1.png")).pv-mainVideoSlider__itemImg
+                                    .pv-mainVideoSlider__itemTitle VINYL4YOU на выставке "Интеравто 2019"
+                                    .pv-mainVideoSlider__itemDesc Sunt autem nusquam hoc tenebo, si mihi probabis ea, quae ab eo est et rationibus.
+    .container
+        .pv-shopInfo
+            .pv-shopInfo__title Интернет-магазин автомобильных пленок
+            .pv-shopInfo__text
+                | Сегодня, чтобы с уверенностью смотреть в будущее, важно уметь балансировать между высокой скоростью и наслаждением мгновением, гениальной простотой и функциональной сложностью. Интернет-магазин бытовой техники «Технопарк» предлагает технику и сервис, которые помогают найти баланс и наполняют будни новыми эмоциями. Мелкая и крупная бытовая техника представлена в широком ассортименте: от холодильников и стиральных машин до телевизоров и ноутбуков, от пылесосов и очистителей воздуха до мультиварок и духовых шкафов, от обогревателей и кондиционеров до планшетов и смартфонов. Приобретенные товары можно сразу оснастить всем необходимым – на сайте представлен богатый выбор аксессуаров и сопутствующих товаров. Сервис интернет-магазина бытовой техники «Технопарк» строится на принципах оперативности, честности и индивидуального подхода к каждому клиенту. Покупки можно оплатить любым удобным способом, в том числе картой на сайте и при доставке. Имеется возможность оформить кредит on-line. Вы получаете индивидуального персонального консультанта-профессионала, готового ответить на любые Ваши вопросы, и выгодные бонусы за каждую покупку. Продажа бытовой техники осуществляется с доставкой по Москве, Санкт-Петербургу и другим городам России. Купить бытовую технику можно с быстрой доставкой по всей России – в более чем 4000 городов и населенных пунктов.
+    .pv-mainBonus
+        .container.pv-mainBonus__wrap
+            .row
+                h2.col-12.pv-mainBonus__title Бонусная программа
+            .row.pv-mainBonus__itmes
+                .col-12.col-sm-6.col-lg-3.pv-mainBonus__item 
+                    img(src=require("./images/cb_icon_1.svg")).pv-mainBonus__itemImg
+                    .pv-mainBonus__itemText Получите карту при любой покупке в рознином магазине или на сайте   
+                .col-12.col-sm-6.col-lg-3.pv-mainBonus__item 
+                    img(src=require("./images/cb_icon_2.svg")).pv-mainBonus__itemImg
+                    .pv-mainBonus__itemText Следите за балансом в Личном кабинете  и пользуйтесь электронным дубликатом карты
+                .col-12.col-sm-6.col-lg-3.pv-mainBonus__item
+                    img(src=require("./images/cb_icon_3.svg")).pv-mainBonus__itemImg
+                    .pv-mainBonus__itemText Оплачивайте бонусами до 50% от новых покупок
+                .col-12.col-sm-6.col-lg-3.pv-mainBonus__item 
+                    img(src=require("./images/cb_icon_4.svg")).pv-mainBonus__itemImg
+                    .pv-mainBonus__itemText Подписывайтесь на новости и участвуйте в закрытых предложениях
+            .row
                 .col-12
-                    .row
-                        .col-12
-                            h2.pv-bap__title Как стать партнером?
-                    .row.pv-bap__step_wrap
-                        .col-12.col-lg-3.pv-bap__step_item
-                            .pv-bap__step_number 1
-                            .pv-bap__step_desc Оставьте ваш контактный номер телефона
-                        .col-12.col-lg-3.pv-bap__step_item
-                            .pv-bap__step_number 2
-                            .pv-bap__step_desc Оставьте ваш контактный номер телефона
-                        .col-12.col-lg-3.pv-bap__step_item
-                            .pv-bap__step_number 3
-                            .pv-bap__step_desc Оставьте ваш контактный номер телефона
-                        .col-12.col-lg-3.pv-bap__step_item
-                            .pv-bap__step_number 4
-                            .pv-bap__step_desc Оставьте ваш контактный номер телефона
-
-    .pv-bap__banner
+                    a(href="#").pv-mainBonus__itmesBtn Подробнее о бонусной программе
+    include ../../components/brands/brands.pug 
+    .pv-mainFeedbacks
         .container
             .row
-                .col-12.pv-bap__banner_wrap
-                    h2.pv-bap__banner_title Стать партнером
-                    form.pv-bap__banner_form 
-                        input(placeholder="+7 (495) 123-45-67")#phone-mask2.pv-bap__banner_input
-                        .pv-main_btn
-                            span.d-none.d-sm-block Оставить заявку
-                            img(src=require("./images/icon-go.svg")).d-sm-none 
-                    .pv-bap__banner_info Нажимая кнопку "Оставить заявку" вы соглашаетесь #[a(href="#").pv-bap__banner_legacy с пользовательским соглашением].
-    .pv-feedback  
-        .container      
+                .col-12.col-lg-6.pv-mainFeedbacks__info
+                    .pv-mainFeedbacks__infoTitle Отзывы наших покупателей
+                    .pv-mainFeedbacks__infoText Идеи? Предложения? Мы открыты для любых вопросов!#[br]Поделитесь мнением о нашей работе и помогите нам стать лучше!
+                    .d-none.d-lg-block.pv-mainFeedbacks__infoSocial
+                        img(src=require("./images/logo_yandexmarket_w.svg")).pv-mainFeedbacks__infoLogo
+                        .pv-mainFeedbacks__infoStars_wrap
+                            .pv-mainFeedbacks__infoStars
+                                i.fa.fa-star
+                                i.fa.fa-star
+                                i.fa.fa-star
+                                i.fa.fa-star
+                                i.fa.fa-star
+                            .pv-mainFeedbacks__infoPoints 4,7
+                .col-12.col-lg-6.pv-mainFeedbacks__slider_wrap
+                    .pv-mainFeedbacks__slider
+                        img(src=require("./images/postsPic1.png")).pv-mainFeedbacks__sliderItem
+                        img(src=require("./images/postsPic1.png")).pv-mainFeedbacks__sliderItem
+                        img(src=require("./images/postsPic1.png")).pv-mainFeedbacks__sliderItem
+                        img(src=require("./images/postsPic1.png")).pv-mainFeedbacks__sliderItem
+    .pv-mainFooter
+        .container
             .row
-                .col-12
-                    h2.pv-feedback__title Отзывы партнеров
-                    .pv-feedback__slider
-                        .pv-feedback__sliderItem
-                            .pv-feedback__sliderItem_text «Навыки начал применять ещё в процессе обучения. Сейчас работаю с двумя проектами, и по одному из них знания очень пригодились. Советую студентам выполнять все задания, т.к. всё быстро забывается. Программа подойдет людям без опыта, но нужно дополнительно изучить материал».
-                            .pv-feedback__sliderItem_partnerWrap
-                                img.pv-feedback__sliderItem_partnerAvatar(src=require("./images/avatar.jpg"))
-                                .pv-feedback__sliderItem_partner
-                                    .pv-feedback__sliderItem_partnerName ФИО 
-                                    .pv-feedback__sliderItem_partnerPosition Должность, Компания
-                        .pv-feedback__sliderItem
-                            .pv-feedback__sliderItem_text «Навыки начал применять ещё в процессе обучения. Сейчас работаю с двумя проектами, и по одному из них знания очень пригодились. Советую студентам выполнять все задания, т.к. всё быстро забывается. Программа подойдет людям без опыта, но нужно дополнительно изучить материал».
-                            .pv-feedback__sliderItem_partnerWrap
-                                img.pv-feedback__sliderItem_partnerAvatar(src=require("./images/avatar.jpg"))
-                                .pv-feedback__sliderItem_partner
-                                    .pv-feedback__sliderItem_partnerName ФИО 
-                                    .pv-feedback__sliderItem_partnerPosition Должность, Компания
+                .col-12.col-sm-6.col-lg-3.d-flex.flex-column.justify-content-center.pv-mainFooter__phoneWrap
+                    .pv-mainFooter__phone 8 (499) 472-44-20
+                    .pv-mainFooter__everyday Ежедневно с 10:00 до 19:00
+                .col-12.col-sm-6.col-lg-3.d-flex.align-items-center.pv-mainFooter__bonusWrap
+                    img(src=require("./images/icon-gift.svg")).pv-mainFooter__bonusIcon
+                    .pv-mainFooter__bonusText Оплачивайте покупки#[br]бонусами! 1 бонус = 1 рубль
+                .col-12.col-sm-6.col-lg-3.order-md-2.order-lg-1.d-flex.align-items-center.justify-content-center
+                    .pv-mainFooter__bonusButton вступить в #[span.d-none.d-md-inline.ml-1.mr-1 бонусную] программу
+                .col-12.col-sm-6.col-lg-3.order-md-1.order-lg-2.d-flex.flex-column.justify-content-center.pv-mainFooter__socialWrap
+                    .pv-mainFooter__socialTitle Мы в соцсетях
+                    .pv-mainFooter__socialIcons
+                        a(href="#").pv-mainFooter__socialIcon
+                            img(src=require("./images/icon-vk_b.svg"))
+                        a(href="#").pv-mainFooter__socialIcon
+                            img(src=require("./images/icon-fb_b.svg"))
+                        a(href="#").pv-mainFooter__socialIcon
+                            img(src=require("./images/icon-tw_b.svg"))
+                        a(href="#").pv-mainFooter__socialIcon
+                            img(src=require("./images/icon-ig_b.svg"))
+                        a(href="#").pv-mainFooter__socialIcon
+                            img(src=require("./images/icon-yb_b.svg"))

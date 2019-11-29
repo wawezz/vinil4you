@@ -1,0 +1,61 @@
+@import "../../common/styles/styles";
+
+.pv-ourBrands {
+    margin: 50px 0;
+    text-align: center;
+
+    .pv-ourBrands__title {
+        font-family: "Trebuchet MS";
+        font-size: 36px;
+    }
+
+    .pv-ourBrands__slider {
+        margin: 65px 0;
+        display: flex;
+        justify-content: center;
+
+        @include media-breakpoint-down(md) {
+            width: 90%;
+            margin: 40px auto;
+        }
+
+        .pv-ourBrands__sliderItem {
+            padding: 0 60px;
+        }
+
+        .slick-track {
+            display: flex;
+            align-items: center;
+        }
+
+        .slick-prev,
+        .slick-next {
+            &:before {
+                color: #ed1c24;
+                font-family: "FontAwesome";
+                font-size: 30px;
+            }
+        }
+
+        .slick-prev {
+            &:before {
+                content: "\F104";
+            }
+        }
+
+        .slick-next {
+            &:before {
+                content: "\F105";
+            }
+        }
+    }
+
+    .pv-ourBrands__all {
+        color: #979797;
+        font-size: 14px;
+        font-weight: 300;
+        text-decoration: underline;
+        text-transform: uppercase;
+
+    }
+}

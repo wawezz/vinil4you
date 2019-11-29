@@ -1,6 +1,7 @@
 import "../../components/base/base";
 import "../../components/filiales/filiales";
 import "../../components/feedbacks/feedbacks";
+import "../../components/brands/brands";
 import "./styles.scss";
 import PerfectScrollbar from 'perfect-scrollbar';
 
@@ -153,41 +154,6 @@ $(function () {
         wheelSpeed: 1,
         wheelPropagation: true,
         minScrollbarLength: 1
-    });
-
-    $(".pv-ourBrands__slider").slick({
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 2000,
-        responsive: [{
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 3
-                }
-            },
-            {
-                breakpoint: 769,
-                settings: {
-                    slidesToShow: 2
-                }
-            },
-            {
-                breakpoint: 450,
-                settings: {
-                    slidesToShow: 1,
-                }
-            },
-            // {
-            //     breakpoint: 500,
-            //     settings: {
-            //         slidesToShow: 1,
-            //         dots: false,
-            //         prevArrow: false,
-            //         nextArrow: false
-            //     }
-            // }
-        ]
     });
 
     $(window).scroll(function () {

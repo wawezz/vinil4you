@@ -787,3 +787,331 @@
     height: 0;
     width: 100%;
 }
+
+.pv-bars {
+    display: inline-flex;
+    background-color: #f1f3f6;
+    padding: 1px 2px;
+    margin-right: 20px;
+
+    .pv-bar {
+        font-weight: 700;
+        margin-right: 1px;
+        color: #d8d8d8;
+
+        &.green {
+            color: #0e974f;
+        }
+
+        &.orange {
+            color: #ff8a00;
+        }
+    }
+}
+
+.pv-mainProducts {
+    margin: 35px 0 90px 0;
+
+    .pv-mainProducts__nav {
+        margin-bottom: 35px;
+
+        .pv-mainProducts__navItem {
+            font-size: 15px;
+            font-weight: 500;
+            color: #6d7278;
+            padding: 10px 20px;
+            text-decoration: none;
+
+            &.active,
+            &:hover {
+                border-bottom: 2px solid #0e974f;
+            }
+        }
+    }
+
+    .pv-mainProductsSlider {
+        .pv-mainProducts__item {
+            padding: 0 7px;
+
+            &:hover {
+                position: absolute;
+
+                .pv-mainProducts__itemLinks {
+                    display: flex;
+                }
+            }
+
+            .pv-mainProducts__itemWrapper {
+                border: solid 1px #e0e7ee;
+                padding: 14px;
+            }
+
+            .pv-mainProducts__itemImg_wrap {
+                position: relative;
+
+                .pv-mainProducts__itemImg_info_wrap {
+                    position: absolute;
+                    padding: 9px 14px;
+                }
+
+                .pv-mainProducts__itemImg_info {
+                    color: #ffffff;
+                    background-color: #6d7278;
+                    font-weight: 600;
+                    font-size: 12px;
+                    text-transform: uppercase;
+                    margin: 5px 0;
+                    padding: 4px 10px;
+                    width: fit-content;
+
+                    &.pv-mainProducts__itemImg_infoSale {
+                        background-color: #fa6b00;
+                    }
+
+                    &.pv-mainProducts__itemImg_infoHit {
+                        background-color: #ff0000;
+                    }
+
+                    &.pv-mainProducts__itemImg_infoNew {
+                        background-color: #0e974f;
+                    }
+                }
+
+                .pv-mainProducts__itemImg {
+                    width: 100%;
+                }
+            }
+
+            .pv-mainProducts__itemStars {
+                margin-top: 20px;
+
+                i {
+                    color: #f0f0f0;
+
+                    &.green {
+                        color: #0e974f;
+                    }
+                }
+            }
+
+            .pv-mainProducts__itemTitle {
+                font-family: "Trebuchet MS";
+                font-size: 19px;
+                margin-top: 10px;
+
+                @include media-breakpoint-down(lg) {
+                    font-size: 18px;
+                }
+            }
+
+            .pv-mainProducts__itemData {
+                display: flex;
+                margin-top: 20px;
+
+                .pv-mainProducts__itemPrice {
+                    width: 50%;
+                    padding-right: 15px;
+
+                    .pv-mainProducts__itemPrice_old {
+                        color: #797979;
+                        font-size: 14px;
+                        font-weight: 600;
+                        text-decoration: line-through;
+                        text-decoration-color: #ed1c24;
+                    }
+
+                    .pv-mainProducts__itemPrice_new {
+                        font-size: 17px;
+                        font-weight: 600;
+
+                        @include media-breakpoint-down(lg) {
+                            font-size: 15px;
+                        }
+                    }
+                }
+
+                .pv-mainProducts__itemBtn {
+                    width: 50%;
+                    display: flex;
+                    font-size: 16px;
+                    padding: 0;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 0;
+                }
+            }
+
+            .pv-mainProducts__itemLinks {
+                margin-top: 25px;
+                flex-wrap: wrap;
+                display: none;
+
+                .pv-mainProducts__itemLink {
+                    flex: 0 50%;
+                    color: #6d7278;
+                    display: flex;
+                    align-items: center;
+                    font-size: 14px;
+                    margin: 5px 0;
+                    text-decoration: none;
+
+                    @include media-breakpoint-down(lg) {
+                        font-size: 12px;
+                    }
+
+                    i {
+                        margin-right: 5px;
+                    }
+
+                    &.green {
+                        color: #0e974f;
+                    }
+                }
+            }
+        }
+
+        .slick-slide {
+            padding-bottom: 90px;
+            position: relative;
+        }
+
+        .slick-arrow {
+            bottom: 0;
+            top: 103%;
+            height: 25px;
+            width: 25px;
+
+            &:before {
+                font-size: 25px;
+            }
+
+            &.slick-prev {
+                left: calc(100% - 30px);
+            }
+
+            &.slick-next {
+                left: 100%;
+            }
+        }
+    }
+}
+
+.pv-mainFullBanners {
+    margin-bottom: 70px !important;
+
+    .pv-mainFullBanner {
+        color: #ffffff;
+        height: 300px;
+        background-color: #000000;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex !important;
+        justify-content: center;
+        flex-flow: column;
+        padding: 30px 80px;
+
+        @include media-breakpoint-down(lg) {
+            height: 270px;
+        }
+
+        @include media-breakpoint-down(xs) {
+            height: 540px;
+            justify-content: start;
+        }
+
+        &.pv-mainFullBanner_left {
+            background-image: url(images/banner_left.png);
+        }
+
+        &.pv-mainFullBanner_1 {
+            background-image: url(images/slider_large_1.jpg);
+
+            @include media-breakpoint-down(lg) {
+                background-image: url(images/slider_mid_1.jpg);
+            }
+
+            @include media-breakpoint-down(xs) {
+                background-image: url(images/slider_small_1.jpg);
+            }
+        }
+
+        &.pv-mainFullBanner_2 {
+            background-image: url(images/slider_large_2.jpg);
+
+            @include media-breakpoint-down(lg) {
+                background-image: url(images/slider_mid_2.jpg);
+            }
+
+            @include media-breakpoint-down(xs) {
+                background-image: url(images/slider_small_2.jpg);
+            }
+        }
+
+        &.pv-mainFullBanner_3 {
+            background-image: url(images/slider_large_3.jpg);
+
+            @include media-breakpoint-down(lg) {
+                background-image: url(images/slider_mid_3.jpg);
+            }
+
+            @include media-breakpoint-down(xs) {
+                background-image: url(images/slider_small_3.jpg);
+            }
+        }
+
+        .pv-mainFullBanner__title {
+            font-family: "Trebuchet MS";
+            font-size: 34px;
+
+            @include media-breakpoint-down(lg) {
+                font-size: 28px;
+            }
+        }
+
+        .pv-mainFullBanner__text {
+            margin-top: 25px;
+        }
+
+        .pv-mainFullBanner__button {
+            margin: 25px 0 0 0;
+            width: fit-content;
+            color: #ffffff;
+            text-decoration: none;
+        }
+    }
+
+    .slick-arrow {
+        height: 25px;
+        width: 25px;
+
+        &:before {
+            font-size: 25px;
+        }
+    }
+
+    .slick-prev,
+    .slick-next {
+        z-index: 100;
+    }
+
+    .slick-prev {
+        left: 20px;
+    }
+
+    .slick-next {
+        right: 20px;
+    }
+
+    .slick-dots {
+        bottom: -50px;
+
+        li {
+            button {
+                &:before {
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+}

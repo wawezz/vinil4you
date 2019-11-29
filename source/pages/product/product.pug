@@ -1,0 +1,454 @@
+extends ../../components/base/base
+block title
+    | Product page
+block main
+    .container
+        .row
+            ul.col-12.pv-breadcrumb 
+                li.pv-breadcrumb__item 
+                    a(href="#").pv-breadcrumb__link Главная страница
+                li.pv-breadcrumb__item 
+                    a(href="#").pv-breadcrumb__link Категория
+                li.pv-breadcrumb__item 
+                    a(href="#").pv-breadcrumb__link Подкатегория                    
+                li.pv-breadcrumb__item Страница товара
+    .pv-product
+        .container
+            .row
+                .col-12
+                    h2.pv-product__title Пленка Матовый хром Шампань
+            .row
+                .col-12.pv-product__nav
+                    img(src=require("./images/logo_rayno.svg")).pv-product__navLogo
+                    .pv-product__navStars
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        i.fa.fa-star
+                    .pv-product__navFeedbacks 14 отзывов
+                    .pv-product__navFavorites
+                        i.fa.fa-heart
+                        | В избранное
+                    .pv-product__navCompare
+                        i.fa.fa-balance-scale
+                        | В сравнении  
+            .row.pv-product__data
+                .col-12.col-md-6.col-xl-9
+                    .row
+                        .col-12.col-xl-5.pv-product__sliderWrap
+                            .pv-product__slider
+                                img(src=require("./images/productPic.png"))
+                                img(src=require("./images/productPic.png"))
+                                img(src=require("./images/productPic.png"))
+                                img(src=require("./images/productPic.png"))
+                                img(src=require("./images/productPic.png"))
+                                img(src=require("./images/productPic.png"))
+                                img(src=require("./images/productPic.png"))
+                                img(src=require("./images/productPic.png"))
+                            .pv-product__sliderNav_wrap
+                                .pv-product__sliderNav
+                                    .pv-product__sliderNav_item
+                                        img(src=require("./images/productPic.png"))
+                                    .pv-product__sliderNav_item
+                                        img(src=require("./images/productPic.png"))
+                                    .pv-product__sliderNav_item
+                                        img(src=require("./images/productPic.png"))
+                                    .pv-product__sliderNav_item
+                                        img(src=require("./images/productPic.png"))
+                                    .pv-product__sliderNav_item
+                                        img(src=require("./images/productPic.png"))
+                                    .pv-product__sliderNav_item
+                                        img(src=require("./images/productPic.png"))
+                                    .pv-product__sliderNav_item
+                                        img(src=require("./images/productPic.png"))
+                                    .pv-product__sliderNav_item
+                                        img(src=require("./images/productPic.png"))
+                        .col-12.col-xl-7.pv-product__info
+                            .pv-product__details
+                                table.pv-product__technical.d-none.d-xl-block
+                                    tr.pv-product__technical_row.pv-product__technical_row-first
+                                        td.pv-product__technical_column 
+                                            span Характеристики
+                                        td.pv-product__technical_column 
+                                            span.pv-product__technical_columnAll Все характеристики
+                                    tr.pv-product__technical_row.pv-product__technical_row-second
+                                        td.pv-product__technical_column
+                                            span Страна производитель
+                                        td.pv-product__technical_column
+                                            span Южная Корея                                
+                                    tr.pv-product__technical_row
+                                        td.pv-product__technical_column
+                                            span Вес, кг
+                                        td.pv-product__technical_column
+                                            span 0.6
+                                    tr.pv-product__technical_row
+                                        td.pv-product__technical_column
+                                            span Цвет
+                                        td.pv-product__technical_column
+                                            span Черный
+                                    tr.pv-product__technical_row
+                                        td.pv-product__technical_column
+                                            span Длина рулона, м
+                                        td.pv-product__technical_column
+                                            span 15                                     
+                                    tr.pv-product__technical_row
+                                        td.pv-product__technical_column
+                                            span Наличие клеевого слоя
+                                        td.pv-product__technical_column
+                                            span Нет
+                                    tr.pv-product__technical_row
+                                        td.pv-product__technical_column
+                                            span Наличие поролоновой подложки
+                                        td.pv-product__technical_column
+                                            span Нет
+                                .pv-product__car CAR
+                .col-12.col-md-6.col-xl-3.pv-product__asside
+                    .pv-product__asside_wrap
+                        .pv-product__asside_header
+                            .pv-product__assideCode Код товара: #[span 71093648]
+                            .pv-product__assideOptions
+                                .pv-product__assideTitle Выбрать вариант #[span *]
+                                .pv-product__assideNav
+                                    select.pv-product__assideNav_select
+                                        option(selected="selected").pv-product__assideNav_select Метраж
+                                        option.pv-product__assideNav_select Метраж
+                                    .pv-product__assideNav_count
+                                        i.fa.fa-minus
+                                        .pv-product__assideNav_count_num 1
+                                        i.fa.fa-plus
+                            .pv-product__assideOldPrice
+                                .pv-product__assideOldPrice_value 25000
+                                .pv-product__assideOldPrice_label -59%
+                            .pv-product__assideNewPrice
+                                .pv-product__assideNewPrice_info ?
+                                .pv-product__assideNewPrice_value 12950 ₽/#[span п.м.]
+                            .pv-product__assideBonus #[span 510 бонусов ] на бонусную карту                    
+                            .pv-product__assideCart.pv-main_btn В КОРЗИНУ
+                            .pv-product__assideBay.pv-main_btn КУПИТЬ В 1 КЛИК
+                        .pv-product__asside_footer                            
+                            .pv-product__asside_footerRow.stock
+                                i.fa.fa-check-square
+                                .pv-product__asside_footerText В наличии на складе
+                            .pv-product__asside_footerRow.chipper
+                                i.fa.fa-percent
+                                .pv-product__asside_footerText Нашли дешевле? #[span Гарантия лучшей цены!]
+                            .pv-product__asside_footerRow.delivery
+                                i.fa.fa-truck
+                                .pv-product__asside_footerText Рассчитать доставку
+                            .pv-product__asside_footerDesc Цвет изображений материала может отличаться в зависимости от цветопередачи монитора.
+            .row.pv-product__allInfo
+                .col-12.col-xl-9
+                    div(role="tablist")#nav-tab.nav.nav-fill.pv-product__allInfo_nav
+                        a(data-toggle="tab" href="#nav-productInfo" role="tab" aria-controls="nav-productInfo" aria-selected="true")#nav-productInfo-tab.pv-product__allInfo_navItem.active Oписание
+                        a(data-toggle="tab" href="#nav-productTech" role="tab" aria-controls="nav-productTech" aria-selected="true")#nav-productTech-tab.pv-product__allInfo_navItem Характеристики
+                        a(data-toggle="tab" href="#nav-productStock" role="tab" aria-controls="nav-productStock" aria-selected="true")#nav-productStock-tab.pv-product__allInfo_navItem Наличие
+                        a(href="#productVideo").d-none.d-md-block.pv-product__allInfo_navItem Видео
+                        a(href="#productSame").d-none.d-md-block.pv-product__allInfo_navItem Похожие товары
+                    #nav-tabContent.tab-content
+                        div(role="tabpanel" aria-labelledby="nav-productInfo-tab")#nav-productInfo.tab-pane.fade.show.active
+                            | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        div(role="tabpanel" aria-labelledby="nav-productTech-tab")#nav-productTech.tab-pane.fade
+                            table.pv-product__mainTech
+                                tr.pv-product__mainTech_row
+                                    td.pv-product__mainTech_col Производитель
+                                    td.pv-product__mainTech_col
+                                        a(href="#") Scorpio Premium / FiveStar
+                                tr.pv-product__mainTech_row
+                                    td.pv-product__mainTech_col Вес, кг
+                                    td.pv-product__mainTech_col 0.51
+                                tr.pv-product__mainTech_row
+                                    td.pv-product__mainTech_col Материал
+                                    td.pv-product__mainTech_col ПВХ
+                                tr.pv-product__mainTech_row
+                                    td.pv-product__mainTech_col Поверхность
+                                    td.pv-product__mainTech_col Матовая
+                                tr.pv-product__mainTech_row
+                                    td.pv-product__mainTech_col Цвет
+                                    td.pv-product__mainTech_col Бежевый / Серый / Шампань / Золото	
+                                tr.pv-product__mainTech_row
+                                    td.pv-product__mainTech_col Длина рулона, м	
+                                    td.pv-product__mainTech_col 20
+                                tr.pv-product__mainTech_row
+                                    td.pv-product__mainTech_col Ширина
+                                    td.pv-product__mainTech_col 152 см
+                                tr.pv-product__mainTech_row
+                                    td.pv-product__mainTech_col Воздушные каналы
+                                    td.pv-product__mainTech_col Есть
+                                tr.pv-product__mainTech_row
+                                    td.pv-product__mainTech_col Коэффициент растяжения
+                                    td.pv-product__mainTech_col Нет
+                                tr.pv-product__mainTech_row
+                                    td.pv-product__mainTech_col Защитный слой
+                                    td.pv-product__mainTech_col 150%
+                                tr.pv-product__mainTech_row
+                                    td.pv-product__mainTech_col Наличие клеевого слоя
+                                    td.pv-product__mainTech_col Есть
+                                tr.pv-product__mainTech_row
+                                    td.pv-product__mainTech_col Срок эксплуатации
+                                    td.pv-product__mainTech_col 5 лет
+                                tr.pv-product__mainTech_row
+                                    td.pv-product__mainTech_col Толщина пленки
+                                    td.pv-product__mainTech_col 150 мкр	
+                        div(role="tabpanel" aria-labelledby="nav-productStock-tab")#nav-productStock.tab-pane.fade 
+                            .pv-product__stock_wrap.list
+                                .pv-product__stock_head
+                                    h3.pv-product__stock_headTitle Наличие в магазинах
+                                    .pv-product__stock_headView
+                                        .pv-product__stock_headView-item.pv-product__stock_head-listView
+                                            i.fa.fa-list
+                                            | Список
+                                        .pv-product__stock_headView-item.pv-product__stock_head-mapView
+                                            i.fa.fa-map-marker
+                                            | Карта
+                                .pv-product__stock_body
+                                    table.pv-product__mainStock
+                                        tr.pv-product__mainStock_row.pv-product__mainStock_row-header
+                                            th.pv-product__mainStock_col Название
+                                            th.pv-product__mainStock_col Станция метро
+                                            th.pv-product__mainStock_col График работы
+                                            th.pv-product__mainStock_col Телефон
+                                            th.pv-product__mainStock_col Наличие
+                                        tr.pv-product__mainStock_row
+                                            td.pv-product__mainStock_col 
+                                                .pv-product__mainStock_shopName Магазин Алтушка
+                                                .pv-product__mainStock_shopAddress (Алтуфьевское шоссе 37с10)
+                                                .pv-product__mainStock_shopScheme Схема проезда
+                                            td.pv-product__mainStock_col Владыкино
+                                            td.pv-product__mainStock_col.pv-product__mainStock_working пн-пт: 10:00 – 19:00#[br]сб: 10:00 – 18:00#[br]#[span.red вс – выходной]
+                                            td.pv-product__mainStock_col 8 (499) 288-14-52
+                                            td.pv-product__mainStock_col.pv-product__mainStock_count
+                                                .pv-product__mainStock_countWrap
+                                                    .pv-bars
+                                                        .pv-bar.green |
+                                                        .pv-bar.green |
+                                                        .pv-bar.green |
+                                                        .pv-bar.green |
+                                                        .pv-bar.green |
+                                                        .pv-bar.green |
+                                                        .pv-bar.green |
+                                                    .pv-product__mainStock_count-green Достаточно
+                                        tr.pv-product__mainStock_row
+                                            td.pv-product__mainStock_col 
+                                                .pv-product__mainStock_shopName Магазин АТЦ Москва
+                                                .pv-product__mainStock_shopAddress (Каширское шоссе, 61 корпус 3А)
+                                                .pv-product__mainStock_shopScheme Схема проезда
+                                            td.pv-product__mainStock_col Кожуховская
+                                            td.pv-product__mainStock_col.pv-product__mainStock_working пн-пт: 10:00 – 20:00#[br]сб: 10:00 – 18:00
+                                            td.pv-product__mainStock_col 8 (499) 288-26-42	
+                                            td.pv-product__mainStock_col.pv-product__mainStock_count 
+                                                .pv-product__mainStock_countWrap                                    
+                                                    .pv-bars
+                                                        .pv-bar.orange |
+                                                        .pv-bar.orange |
+                                                        .pv-bar |
+                                                        .pv-bar |
+                                                        .pv-bar |
+                                                        .pv-bar |
+                                                        .pv-bar |
+                                                    .pv-product__mainStock_count-orange Мало
+                                        tr.pv-product__mainStock_row
+                                            td.pv-product__mainStock_col 
+                                                .pv-product__mainStock_shopName Магазин Кунцево
+                                                .pv-product__mainStock_shopAddress (55-й км МКАД, с39 павильон 10)
+                                                .pv-product__mainStock_shopScheme Схема проезда
+                                            td.pv-product__mainStock_col Молодежная
+                                            td.pv-product__mainStock_col.pv-product__mainStock_working пн-пт: 10:00 – 19:00
+                                            td.pv-product__mainStock_col 8 (499) 288-14-32
+                                            td.pv-product__mainStock_col.pv-product__mainStock_count 
+                                                .pv-product__mainStock_countWrap                                    
+                                                    .pv-bars
+                                                        .pv-bar.green |
+                                                        .pv-bar.green |
+                                                        .pv-bar.green |
+                                                        .pv-bar.green |
+                                                        .pv-bar |
+                                                        .pv-bar |
+                                                        .pv-bar |
+                                                    .pv-product__mainStock_count-green Много
+                                        tr.pv-product__mainStock_row
+                                            td.pv-product__mainStock_col 
+                                                .pv-product__mainStock_shopName Магазин ЮжныйПорт
+                                                .pv-product__mainStock_shopAddress (ул. Южнопортовая 22, корпус 1)
+                                                .pv-product__mainStock_shopScheme Схема проезда
+                                            td.pv-product__mainStock_col Домодедовская
+                                            td.pv-product__mainStock_col.pv-product__mainStock_working пн-пт: 9:00 – 20:00#[br]сб: 9:00 – 18:00
+                                            td.pv-product__mainStock_col 8 (499) 288-14-52
+                                            td.pv-product__mainStock_col.pv-product__mainStock_count 
+                                                .pv-product__mainStock_countWrap                                    
+                                                    .pv-bars
+                                                        .pv-bar |
+                                                        .pv-bar |
+                                                        .pv-bar |
+                                                        .pv-bar |
+                                                        .pv-bar |
+                                                        .pv-bar |
+                                                        .pv-bar |
+                                                    .pv-product__mainStock_count-red Под заказ
+                                    .pv-product__stock_map
+            .row.pv-product__docs
+                .col-12.col-xl-9
+                    .pv-product__docsTitle Документы
+                    .pv-product__docsRow 
+                        a(href="#").pv-product__docsItem
+                            i.fa.fa-file
+                            | Сертификат соответствия
+                        a(href="#").pv-product__docsItem 
+                            i.fa.fa-file
+                            |  Характеристики  EN
+            .row.pv-product__videos#productVideo
+                .col-12.col-xl-9
+                    .pv-product__videosTitle Видео
+                    .pv-product__videosRow 
+                        .pv-product__videosItem
+                        .pv-product__videosItem
+            .row.pv-product__examples
+                .col-12.col-xl-9
+                    .pv-product__examplesTitle Примеры работ
+                    div(role="tablist")#nav-tab.nav.nav-fill.pv-product__examplesNav
+                        a(data-toggle="tab" href="#nav-exampleProject1" role="tab" aria-controls="nav-exampleProject1" aria-selected="true")#nav-exampleProject1-tab.pv-product__examplesNav_item.active проект №1
+                        a(data-toggle="tab" href="#nav-exampleProject2" role="tab" aria-controls="nav-exampleProject2" aria-selected="true")#nav-exampleProject2-tab.pv-product__examplesNav_item проект №2
+                        a(data-toggle="tab" href="#nav-exampleProject3" role="tab" aria-controls="nav-exampleProject3" aria-selected="true")#nav-exampleProject3-tab.pv-product__examplesNav_item проект №3
+                    #nav-tabContent.tab-content
+                        div(role="tabpanel" aria-labelledby="nav-exampleProject1-tab")#nav-exampleProject1.tab-pane.fade.show.active.pv-product__examplesRow 
+                            .pv-product__examplesRow-wrap
+                                .pv-product__examplesItem
+                                .pv-product__examplesItem
+                                .pv-product__examplesItem
+                        div(role="tabpanel" aria-labelledby="nav-exampleProject2-tab")#nav-exampleProject2.tab-pane.fade.pv-product__examplesRow 
+                            .pv-product__examplesRow-wrap
+                                .pv-product__examplesItem
+                                .pv-product__examplesItem
+                                .pv-product__examplesItem
+                        div(role="tabpanel" aria-labelledby="nav-exampleProject3-tab")#nav-exampleProject3.tab-pane.fade.pv-product__examplesRow 
+                            .pv-product__examplesRow-wrap
+                                .pv-product__examplesItem
+                                .pv-product__examplesItem
+                                .pv-product__examplesItem
+            .row.pv-product__whyVfy
+                .col-12.col-xl-9
+                    .pv-product__whyVfyTitle Почему VINYL4YOU
+                    .row.pv-product__whyVfyRow
+                        .col-12.col-sm-6.pv-product__whyVfyItem 
+                            img(src=require("./images/hex-confirmation.svg"))
+                            | Мы предлагаем лучшие цены на рынке автомобильных пленок
+                        .col-12.col-sm-6.pv-product__whyVfyItem 
+                            img(src=require("./images/hex-confirmation.svg"))                        
+                            | Мы являемся производителями и представителями продаваемых брендов
+                        .col-12.col-sm-6.pv-product__whyVfyItem 
+                            img(src=require("./images/hex-confirmation.svg"))                        
+                            | С вами работает команда профессионалов с многолетним опытом
+                        .col-12.col-sm-6.pv-product__whyVfyItem 
+                            img(src=require("./images/hex-confirmation.svg"))                        
+                            | Товар всегда в наличии и готов к отправке в любую точку РФ и СНГ
+            .row.pv-product__seeAlso#productSame
+                .col-12.col-xl-9
+                    .pv-product__seeAlsoTitle Также может быть интересно  
+                    .pv-mainProducts
+                        div(role="tablist")#nav-tab.nav.nav-fill.pv-mainProducts__nav
+                            a(data-toggle="tab" href="#nav-mainAnalog" role="tab" aria-controls="nav-mainAnalog" data-slider="pv-mainAnalog" aria-selected="true")#nav-mainAnalog-tab.pv-mainProducts__navItem.active Аналоги
+                            a(data-toggle="tab" href="#nav-mainAcsesuar" role="tab" aria-controls="nav-mainAcsesuar" data-slider="pv-mainAcsesuar" aria-selected="true")#nav-mainAcsesuar-tab.pv-mainProducts__navItem Аксесуары
+                            a(data-toggle="tab" href="#nav-mainLike" role="tab" aria-controls="nav-mainLike" data-slider="pv-mainLike" aria-selected="true")#nav-mainLike-tab.pv-mainProducts__navItem Похожие
+                        #nav-tabContent.tab-content
+                            div(role="tabpanel" aria-labelledby="nav-mainAnalog-tab")#nav-mainAnalog.tab-pane.fade.show.active.pv-mainProductsSlider.pv-mainAnalog
+                                - for(var x = 0; x < 10; x++)
+                                    .pv-mainProducts__item
+                                        .pv-mainProducts__itemWrapper
+                                            .pv-mainProducts__itemImg_wrap
+                                                .pv-mainProducts__itemImg_info_wrap                        
+                                                    .pv-mainProducts__itemImg_info.pv-mainProducts__itemImg_infoHit Хит
+                                                    .pv-mainProducts__itemImg_info.pv-mainProducts__itemImg_infoNew Новинка
+                                                img(src=require("./images/productPic.jpg")).pv-mainProducts__itemImg
+                                            .pv-mainProducts__itemStars
+                                                i.fa.fa-star.green
+                                                i.fa.fa-star.green
+                                                i.fa.fa-star.green
+                                                i.fa.fa-star.green
+                                                i.fa.fa-star
+                                            .pv-mainProducts__itemTitle Пленка Суперглянец для панорамной крыши черный
+                                            .pv-mainProducts__itemData
+                                                .pv-mainProducts__itemPrice
+                                                    .pv-mainProducts__itemPrice_old 25000
+                                                    .pv-mainProducts__itemPrice_new 12950 ₽/п.м.
+                                                .pv-mainProducts__itemBtn.pv-main_btn В корзину
+                                            .pv-mainProducts__itemLinks
+                                                a(href="").pv-mainProducts__itemLink 
+                                                    i.fa.fa-shopping-bag
+                                                    | Купить в 1 клик
+                                                a(href="").pv-mainProducts__itemLink 
+                                                    i.fa.fa-balance-scale
+                                                    | К сравнению
+                                                a(href="").pv-mainProducts__itemLink 
+                                                    i.fa.fa-heart
+                                                    | В избранное                                                 
+                                                .pv-mainProducts__itemLink.green
+                                                    i.fa.fa-check
+                                                    | В наличии   
+                            div(role="tabpanel" aria-labelledby="nav-mainAcsesuar-tab")#nav-mainAcsesuar.tab-pane.pv-mainProductsSlider.pv-mainAcsesuar.fade
+                                - for(var x = 0; x < 10; x++)
+                                    .pv-mainProducts__item
+                                        .pv-mainProducts__itemWrapper
+                                            .pv-mainProducts__itemImg_wrap
+                                                .pv-mainProducts__itemImg_info_wrap                        
+                                                    .pv-mainProducts__itemImg_info.pv-mainProducts__itemImg_infoHit Хит
+                                                    .pv-mainProducts__itemImg_info.pv-mainProducts__itemImg_infoNew Новинка
+                                                img(src=require("./images/productPic.jpg")).pv-mainProducts__itemImg
+                                            .pv-mainProducts__itemStars
+                                                i.fa.fa-star.green
+                                                i.fa.fa-star.green
+                                                i.fa.fa-star.green
+                                                i.fa.fa-star.green
+                                                i.fa.fa-star
+                                            .pv-mainProducts__itemTitle Пленка Суперглянец для панорамной крыши черный
+                                            .pv-mainProducts__itemData
+                                                .pv-mainProducts__itemPrice
+                                                    .pv-mainProducts__itemPrice_old 25000
+                                                    .pv-mainProducts__itemPrice_new 12950 ₽/п.м.
+                                                .pv-mainProducts__itemBtn.pv-main_btn В корзину
+                                            .pv-mainProducts__itemLinks
+                                                a(href="").pv-mainProducts__itemLink 
+                                                    i.fa.fa-shopping-bag
+                                                    | Купить в 1 клик
+                                                a(href="").pv-mainProducts__itemLink 
+                                                    i.fa.fa-balance-scale
+                                                    | К сравнению
+                                                a(href="").pv-mainProducts__itemLink 
+                                                    i.fa.fa-heart
+                                                    | В избранное                                                 
+                                                .pv-mainProducts__itemLink.green
+                                                    i.fa.fa-check
+                                                    | В наличии              
+                            div(role="tabpanel" aria-labelledby="nav-mainLike-tab")#nav-mainLike.tab-pane.pv-mainProductsSlider.pv-mainLike.fade
+                                - for(var x = 0; x < 10; x++)
+                                    .pv-mainProducts__item
+                                        .pv-mainProducts__itemWrapper
+                                            .pv-mainProducts__itemImg_wrap
+                                                .pv-mainProducts__itemImg_info_wrap                        
+                                                    .pv-mainProducts__itemImg_info.pv-mainProducts__itemImg_infoHit Хит
+                                                    .pv-mainProducts__itemImg_info.pv-mainProducts__itemImg_infoNew Новинка
+                                                img(src=require("./images/productPic.jpg")).pv-mainProducts__itemImg
+                                            .pv-mainProducts__itemStars
+                                                i.fa.fa-star.green
+                                                i.fa.fa-star.green
+                                                i.fa.fa-star.green
+                                                i.fa.fa-star.green
+                                                i.fa.fa-star
+                                            .pv-mainProducts__itemTitle Пленка Суперглянец для панорамной крыши черный
+                                            .pv-mainProducts__itemData
+                                                .pv-mainProducts__itemPrice
+                                                    .pv-mainProducts__itemPrice_old 25000
+                                                    .pv-mainProducts__itemPrice_new 12950 ₽/п.м.
+                                                .pv-mainProducts__itemBtn.pv-main_btn В корзину
+                                            .pv-mainProducts__itemLinks
+                                                a(href="").pv-mainProducts__itemLink 
+                                                    i.fa.fa-shopping-bag
+                                                    | Купить в 1 клик
+                                                a(href="").pv-mainProducts__itemLink 
+                                                    i.fa.fa-balance-scale
+                                                    | К сравнению
+                                                a(href="").pv-mainProducts__itemLink 
+                                                    i.fa.fa-heart
+                                                    | В избранное                                                 
+                                                .pv-mainProducts__itemLink.green
+                                                    i.fa.fa-check
+                                                    | В наличии 

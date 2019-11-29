@@ -22,6 +22,9 @@ const common = merge([{
             'about': PATHS.source + '/pages/about/about.js',
             'contacts': PATHS.source + '/pages/contacts/contacts.js',
             'feedbacks': PATHS.source + '/pages/feedbacks/feedbacks.js',
+            'product': PATHS.source + '/pages/product/product.js',
+            'catalog': PATHS.source + '/pages/catalog/catalog.js',
+            'optovikam-i-dileram': PATHS.source + '/pages/optovikam-i-dileram/optovikam-i-dileram.js',
         },
         output: {
             path: PATHS.build,
@@ -52,6 +55,21 @@ const common = merge([{
                 filename: 'feedbacks.html',
                 chunks: ['feedbacks', 'common'],
                 template: PATHS.source + '/pages/feedbacks/feedbacks.pug'
+            }),
+            new HtmlWebpackPlugin({
+                filename: 'product.html',
+                chunks: ['product', 'common'],
+                template: PATHS.source + '/pages/product/product.pug'
+            }),
+            new HtmlWebpackPlugin({
+                filename: 'catalog.html',
+                chunks: ['catalog', 'common'],
+                template: PATHS.source + '/pages/catalog/catalog.pug'
+            }),
+            new HtmlWebpackPlugin({
+                filename: 'optovikam-i-dileram.html',
+                chunks: ['optovikam-i-dileram', 'common'],
+                template: PATHS.source + '/pages/optovikam-i-dileram/optovikam-i-dileram.pug'
             }),
             new webpack.optimize.CommonsChunkPlugin({
                 name: 'common',

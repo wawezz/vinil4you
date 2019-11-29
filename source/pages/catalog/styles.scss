@@ -1,0 +1,192 @@
+@import "../../common/styles/styles";
+
+.pv-catalog {
+    .pv-catalogTitle {
+        font-family: "Trebuchet MS";
+        font-size: 36px;
+    }
+
+    .pv-catalogCats {
+        margin-top: 50px;
+
+        .pv-catalogCat__top {
+            border: solid 1px #e9eaec;
+            background-color: #ffffff;
+            cursor: pointer;
+            display: block;
+            width: 100%;
+            color: #000000;
+            text-decoration: none;
+
+            &:hover {
+                box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.25);
+            }
+
+            .pv-catalogCat__image {
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                height: 348px;
+
+                @include media-breakpoint-down(lg) {
+                    height: 290px;
+                }
+
+                @include media-breakpoint-down(md) {
+                    height: 220px;
+                }
+
+                &.cat1 {
+                    background-image: url(images/cat1.jpg);
+                }
+
+                &.cat2 {
+                    background-image: url(images/cat2.jpg);
+                }
+
+                &.cat3 {
+                    background-image: url(images/cat3.jpg);
+                }
+            }
+
+            .pv-catalogCat__title {
+                font-family: "Trebuchet MS";
+                font-size: 22px;
+                padding: 25px;
+
+                @include media-breakpoint-down(md) {
+                    font-size: 16px;
+                    padding: 17px;
+                }
+            }
+        }
+
+        .pv-catalogCat__nav {
+            margin-top: 45px;
+            transition: all .5 ease-in-out;
+
+            &.show {
+                .pv-catalogCat__navItem {
+                    display: flex;
+                }
+            }
+
+            .pv-catalogCat__navItem {
+                border: solid 1px #e9eaec;
+                margin-bottom: -1px;
+                justify-content: space-between;
+                height: 50px;
+                display: none;
+
+                &:nth-child(-n+6) {
+                    display: flex;
+                }
+
+                &:after {
+                    content: "\F105";
+                    color: #0e974f;
+                    font-family: "FontAwesome";
+                    font-size: 18px;
+                    display: flex;
+                    align-items: center;
+                    margin-right: 15px;
+                }
+
+                .pv-catalogCat__navItem_wrap {
+                    color: #000000;
+                    text-decoration: none;
+                    display: flex;
+                    align-items: center;
+                    width: 100%;
+                    padding: 10px;
+
+                    &:hover {
+                        .pv-catalogCat__navImg {
+                            &.pv-catalogCat__navImg_plenki {
+                                background-image: url(images/cat_plenki-hov.jpg);
+                            }
+
+                            &.pv-catalogCat__navImg_plenkiTon {
+                                background-image: url(images/cat_plenkiTon-hov.jpg);
+                            }
+
+                            &.pv-catalogCat__navImg_plenkiAntigrav {
+                                background-image: url(images/cat_plenkiAntigrav-hov.jpg);
+                            }
+
+                            &.pv-catalogCat__navImg_alkantara {
+                                background-image: url(images/cat_alkantara-hov.jpg);
+                            }
+
+                            &.pv-catalogCat__navImg_ekoKoja {
+                                background-image: url(images/cat_ekoKoja-hov.jpg);
+                            }
+
+                            &.pv-catalogCat__navImg_rezina {
+                                background-image: url(images/cat_rezina-hov.jpg);
+                            }
+                        }
+                    }
+
+                    .pv-catalogCat__navImg {
+                        margin-right: 15px;
+                        width: 30px;
+                        height: 30px;
+                        background-position: center;
+                        background-size: cover;
+                        background-repeat: no-repeat;
+
+                        @include media-breakpoint-down(md) {
+                            display: none;
+                        }
+
+                        &.pv-catalogCat__navImg_plenki {
+                            background-image: url(images/cat_plenki.jpg);
+                        }
+
+                        &.pv-catalogCat__navImg_plenkiTon {
+                            background-image: url(images/cat_plenkiTon.jpg);
+                        }
+
+                        &.pv-catalogCat__navImg_plenkiAntigrav {
+                            background-image: url(images/cat_plenkiAntigrav.jpg);
+                        }
+
+                        &.pv-catalogCat__navImg_alkantara {
+                            background-image: url(images/cat_alkantara.jpg);
+                        }
+
+                        &.pv-catalogCat__navImg_ekoKoja {
+                            background-image: url(images/cat_ekoKoja.jpg);
+                        }
+
+                        &.pv-catalogCat__navImg_rezina {
+                            background-image: url(images/cat_rezina.jpg);
+                        }
+                    }
+
+                    .pv-catalogCat__navTitle {
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+
+        .pv-catalogCat__more {
+            color: #979797;
+            cursor: pointer;
+            text-decoration: underline;
+            text-transform: uppercase;
+            margin-top: 45px;
+            text-align: center;
+        }
+    }
+
+    .pv-mainFullBanners_wraper {
+        margin-top: 60px;
+    }
+}
+
+#pv-list1 li {
+    display: none;
+}
