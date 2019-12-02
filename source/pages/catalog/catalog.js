@@ -11,6 +11,7 @@ $(function () {
     });
 
     $('.pv-catalogCat__more').click(function () {
+        $(this).toggleClass('open');
         $(this).prev().toggleClass('show');
     });
 });

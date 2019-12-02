@@ -2,10 +2,10 @@ import "../../components/base/base";
 import "../../components/brands/brands";
 import "./styles.scss";
 
-$(function () {
+var carImage = 1;
+var carTimeout;
 
-    var carImage = 1;
-    var carTimeout;
+$(function () {
 
     $(".pv-mainTopBanner_slider").slick({
         slidesToShow: 1,
@@ -19,6 +19,7 @@ $(function () {
         slidesToScroll: 1,
         autoplay: false,
         centerMode: true,
+        initialSlide: 2,
         responsive: [{
                 breakpoint: 1200,
                 settings: {
@@ -90,44 +91,100 @@ $(function () {
     $(".pv-postsSlider").slick(getPostsSliderSettings());
     $(".pv-offersSlider").slick(getPostsSliderSettings());
 
-    preloadImages(["car_1.png", "car_2.png", "car_3.png", "car_4.png", "car_5.png", "car_6.png", "car_7.png", "car_8.png", "car_9.png"]);
-
-    changeCarBg();
-
     $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
         var target = $(e.target).data("slider");
         $("." + target).slick('resize');
     });
 
+
+    $('.pv-mainSliderMobile__more').click(function () {
+        $(this).toggleClass('open');
+        $(this).prev().toggleClass('show');
+    });
+
+    $('.pv-mainSliderNav__itemImg_plenki').mouseenter(function () {
+        changeCarBg('kuzov_colors', 8);
+    });
+
+    // $('.pv-mainSliderNav__itemImg_plenki').mouseleave(function () {
+    //     clearTimeout(carTimeout);
+    // });
+
+    $('.pv-mainSliderNav__itemImg_plenkiTon').mouseenter(function () {
+        changeCarBg('tonirovka', 6);
+    });
+
+    // $('.pv-mainSliderNav__itemImg_plenkiTon').mouseleave(function () {
+    //     clearTimeout(carTimeout);
+    // });
+
+    $('.pv-mainSliderNav__itemImg_rezina').mouseenter(function () {
+        changeCarBg('rezina', 8);
+    });
+
+    $('.pv-mainSliderNav__itemImg_plenkiAntigrav').mouseenter(function () {
+        if ($('.pv-carImage__conturWrap').hasClass('hode')) return;
+        $('.pv-carImage__conturWrap').addClass('hide');
+    });
+
+    $('.pv-mainSliderNav__itemImg_plenkiAntigrav').mouseleave(function () {
+        $('.pv-carImage__conturWrap').removeClass('hide');
+    });
+
+    $('.pv-mainSliderNav__itemImg_alkantara').mouseenter(function () {
+        setTimeout(function () {
+            $(".pv-carImage").addClass('hide');
+
+            setTimeout(function () {
+                $(".pv-carImage_alkantara").addClass('show');
+            }, 50)
+        }, 150)
+
+    });
+
+    $('.pv-mainSliderNav__itemImg_alkantara').mouseleave(function () {
+        setTimeout(function () {
+            $(".pv-carImage_alkantara").removeClass('show');
+            $(".pv-carImage_alkantara").removeClass('hide');
+
+
+            $(".pv-carImage").removeClass('hide');
+            $(".pv-carImage").removeClass('show');
+        }, 100)
+    });
+
+    $('.pv-mainSliderNav__itemImg_ekoKoja').mouseenter(function () {
+        setTimeout(function () {
+            $(".pv-carImage").addClass('hide');
+
+            setTimeout(function () {
+                $(".pv-carImage_ekoKoja").addClass('show');
+            }, 50)
+        }, 150)
+    });
+
+    $('.pv-mainSliderNav__itemImg_ekoKoja').mouseleave(function () {
+        setTimeout(function () {
+            $(".pv-carImage_ekoKoja").removeClass('show');
+            $(".pv-carImage_ekoKoja").removeClass('hide');
+
+
+            $(".pv-carImage").removeClass('hide');
+            $(".pv-carImage").removeClass('show');
+        }, 100)
+    });
+
 });
 
 
-function changeCarBg(num = 1) {
-    $(".pv-carImage").css('background-image', 'url(' + require("./images/car_" + num + ".png") + ')');
+function changeCarBg(path, num = 3) {
+    if (!path) return;
+    if (++carImage > num) carImage = 1;
+    $(".pv-carImage").css('background-image', 'url(' + require("./images/lamba_send/" + path + "_" + carImage + ".png") + ')');
 
-    if (++num > 9) num = 1;
-
-    setTimeout(() => {
-        changeCarBg(num);
-    }, 1700);
-}
-
-function preloadImages(array) {
-    if (!preloadImages.list) {
-        preloadImages.list = [];
-    }
-    var list = preloadImages.list;
-    for (var i = 0; i < array.length; i++) {
-        var img = new Image();
-        img.onload = function () {
-            var index = list.indexOf(this);
-            if (index !== -1) {
-                list.splice(index, 1);
-            }
-        }
-        list.push(img);
-        img.src = 'images/' + array[i];
-    }
+    // carTimeout = setTimeout(() => {
+    //     changeCarBg(path, num);
+    // }, 1700);
 }
 
 function getProductsSliderSettings() {

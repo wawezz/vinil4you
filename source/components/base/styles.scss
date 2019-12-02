@@ -596,6 +596,8 @@
         text-transform: uppercase;
         background-color: #ed1c24;
         cursor: pointer;
+        color: #ffffff;
+        text-decoration: none;
 
         @include media-breakpoint-down(lg) {
             font-size: 13px;
@@ -821,6 +823,7 @@
             color: #6d7278;
             padding: 10px 20px;
             text-decoration: none;
+            text-transform: uppercase;
 
             &.active,
             &:hover {
@@ -1113,5 +1116,35 @@
                 }
             }
         }
+    }
+}
+
+.slick-prev,
+.slick-next {
+    width: 25px !important;
+    height: 25px !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat;
+    opacity: .8;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.slick-prev {
+    background-image: url(images/slider_arrow_l.svg) !important;
+
+    &:before {
+        content: " " !important;
+    }
+}
+
+.slick-next {
+    background-image: url(images/slider_arrow_r.svg) !important;
+
+    &:before {
+        content: " " !important;
     }
 }

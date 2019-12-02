@@ -179,6 +179,24 @@
             text-transform: uppercase;
             margin-top: 45px;
             text-align: center;
+
+            &.open {
+                .show {
+                    display: none;
+                }
+
+                .hide {
+                    display: block;
+                }
+            }
+
+            .show {
+                display: block;
+            }
+
+            .hide {
+                display: none;
+            }
         }
     }
 

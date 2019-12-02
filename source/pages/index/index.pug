@@ -8,9 +8,12 @@ block main
                 .col-12.pv-mainTopBanner_slider
                     - for(var x = 0; x < 4; x++)
                         .pv-mainTopBanner_sliderItem
-                            h2.pv-mainInfo__title Готовимся к зимнему сезону выгодно
-                            .pv-mainInfo__desc Антигравийная пленка по специальной цене
-                            a(href="#").pv-main_btn Подробнее
+                            .container
+                                .row
+                                    .col-12
+                                        h2.pv-mainInfo__title Готовимся к зимнему сезону выгодно
+                                        .pv-mainInfo__desc Антигравийная пленка по специальной цене
+                                        a(href="#").pv-main_btn Подробнее
     .container.pv-mainCats
         .row.pv-mainCats_wrap
             .col-12
@@ -41,7 +44,25 @@ block main
                             a(href="#").pv-mainSliderMobile__navItem_wrap
                                 .pv-mainSliderMobile__navImg.pv-mainSliderMobile__navImg_rezina
                                 .pv-mainSliderMobile__navTitle Жидкая резина
-                    .pv-mainSliderMobile__more Показать все разделы
+                        li.pv-mainSliderMobile__navItem
+                            a(href="#").pv-mainSliderMobile__navItem_wrap
+                                .pv-mainSliderMobile__navImg.pv-mainSliderMobile__navImg_plenkiAntigrav
+                                .pv-mainSliderMobile__navTitle Антигравийные пленки
+                        li.pv-mainSliderMobile__navItem
+                            a(href="#").pv-mainSliderMobile__navItem_wrap
+                                .pv-mainSliderMobile__navImg.pv-mainSliderMobile__navImg_alkantara
+                                .pv-mainSliderMobile__navTitle Алькантара
+                        li.pv-mainSliderMobile__navItem
+                            a(href="#").pv-mainSliderMobile__navItem_wrap
+                                .pv-mainSliderMobile__navImg.pv-mainSliderMobile__navImg_ekoKoja
+                                .pv-mainSliderMobile__navTitle Эко-кожа
+                        li.pv-mainSliderMobile__navItem
+                            a(href="#").pv-mainSliderMobile__navItem_wrap
+                                .pv-mainSliderMobile__navImg.pv-mainSliderMobile__navImg_rezina
+                                .pv-mainSliderMobile__navTitle Жидкая резина                                
+                    .pv-mainSliderMobile__more 
+                        .show Показать все разделы
+                        .hide Скрыть
                 .d-none.d-md-block.pv-mainSliderNav
                     .pv-mainSliderNav__item 
                         .pv-mainSliderNav__itemImg_wrap
@@ -75,7 +96,11 @@ block main
                         .pv-mainSliderNav__itemTitle Жидкая резина
         .d-none.d-lg-block.row.pv-car
             .col-12
-                .pv-carImage
+                    .pv-carImage__contur
+                        .pv-carImage__conturWrap
+                        .pv-carImage
+                        .pv-carImage_alkantara                        
+                        .pv-carImage_ekoKoja                      
         .row.pv-mainProducts
             .col-12
                 div(role="tablist")#nav-tab.nav.nav-fill.pv-mainProducts__nav
