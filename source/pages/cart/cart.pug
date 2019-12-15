@@ -1,0 +1,213 @@
+extends ../../components/base/base
+block title
+    | Cart page
+block main
+    .container
+        .row
+            ul.col-12.pv-breadcrumb 
+                li.pv-breadcrumb__item 
+                    a(href="#").pv-breadcrumb__link Главная страница
+                li.pv-breadcrumb__item Корзина
+    .pv-cart
+        .container
+            .row
+                .col-12
+                    .pv-cartTop
+                        .pv-cartTitle Корзина
+                        a(href="#").d-flex.d-xl-none.pv-cart__back 
+                            img(src=require('./images/icon_back.svg')) 
+                            | Вернуться к покупкам
+            .row
+                .col-12.col-xl-8
+                    .pv-cartItems
+                        .pv-cartItem__row
+                            img(src=require("./images/cartItem1.jpg")).pv-cartItem__img
+                            .pv-cartItem__dataWrap
+                                .pv-cartItem__data
+                                    .pv-cartItem__info
+                                        .pv-cartItem__infoCode Код товара: 71093648
+                                        .pv-cartItem__infoName Пленка Суперглянец для панорамной крыши черный
+                                    .pv-cartItem__count
+                                        i.fa.fa-minus
+                                        .pv-cartItem__countNum 1
+                                        i.fa.fa-plus   
+                                .pv-cartItem__priceInfo
+                                    .pv-cartItem__priceOld_wrap
+                                        .pv-cartItem__priceOld 25000
+                                        .pv-cartItem__priceSale -49%
+                                    .pv-cartItem__priceCur 12950 
+                                        span ₽/п.м.
+                                    .pv-cartItem__remove Удалить
+                        .pv-cartItem__row
+                            img(src=require("./images/cartItem2.jpg")).pv-cartItem__img
+                            .pv-cartItem__dataWrap                            
+                                .pv-cartItem__data
+                                    .pv-cartItem__info
+                                        .pv-cartItem__infoCode Код товара: 71093648
+                                        .pv-cartItem__infoName Пленка Суперглянец для панорамной
+                                    .pv-cartItem__count
+                                        i.fa.fa-minus
+                                        .pv-cartItem__countNum 1
+                                        i.fa.fa-plus   
+                                .pv-cartItem__priceInfo
+                                    .pv-cartItem__priceCur 31550 
+                                        span ₽/рул.
+                                    .pv-cartItem__remove Удалить
+                    .pv-cartRecommended
+                        .pv-cartRecommended__title Вам может пригодиться
+                        .pv-cartRecommendedItem__row
+                            img(src=require("./images/cartAlso.jpg")).pv-cartRecommendedItem__img
+                            .pv-cartRecommendedItem__dataWrap
+                                .pv-cartRecommendedItem__data
+                                    .pv-cartRecommendedItem__info
+                                        .pv-cartRecommendedItem__infoCode Код товара: 71093648
+                                        .pv-cartRecommendedItem__infoName Валик прикаточный 35 мм
+                                    .pv-cartRecommendedItem__price 12950 
+                                        span ₽/п.м.
+                                .pv-cartRecommendedItem__add.pv-main_btn Добавить
+                        .pv-cartRecommendedItem__row
+                            img(src=require("./images/cartAlso.jpg")).pv-cartRecommendedItem__img
+                            .pv-cartRecommendedItem__dataWrap
+                                .pv-cartRecommendedItem__data
+                                    .pv-cartRecommendedItem__info
+                                        .pv-cartRecommendedItem__infoCode Код товара: 71093648
+                                        .pv-cartRecommendedItem__infoName Ракель Uzlex Ergonomic Squeege 4+ yellow полужесткий
+                                    .pv-cartRecommendedItem__price 12950 
+                                        span ₽/п.м.
+                                .pv-cartRecommendedItem__add.pv-main_btn Добавить                        
+                .col-12.col-xl-4
+                    .pv-cartAside
+                        .pv-cartAside__box
+                            .pv-cartAside__head
+                                .pv-cartAside__count В корзине 2 товара:
+                                .pv-cartAside__priceInfo
+                                    .pv-cartAside__priceOld 25000
+                                    .pv-cartAside__priceCur 12950 
+                                        span ₽
+                            .pv-cartAside__bonusWrap
+                                .d-block.d-xl-none.pv-cartAside__bonusText Скидки на следующий заказ
+                                .pv-cartAside__bonus
+                                    span +510 бонусов 
+                                    | на бонусную карту
+                                    .pv-cartAside__bonusInfo ?
+                            .pv-cartAside__Buttons
+                                .pv-cartAside__contBtn.pv-main_btn Продолжить оформление
+                                .pv-cartAside__buyBtn.pv-main_btn Купить в 1 клик
+                            a(href="#").d-none.d-xl-flex.pv-cartAside__back 
+                                img(src=require('./images/icon_back.svg')) 
+                                | Вернуться к покупкам
+                        .pv-cartAside__auth
+                            img(src=require('./images/icon_in.svg')).pv-cartAside__authIcon
+                            .pv-cartAside__authText Авторизуйтесь или зарегистрируйтесь и получите до 10% от стоимости заказа Бонусными рублями
+
+            .row
+                .col-12.pv-cart__seeAlso
+                    .pv-cart__seeAlsoTitle Также может быть интересно  
+                    .pv-mainProducts
+                        div(role="tablist")#nav-tab.nav.nav-fill.pv-mainProducts__nav
+                            a(data-toggle="tab" href="#nav-mainAnalog" role="tab" aria-controls="nav-mainAnalog" data-slider="pv-mainAnalog" aria-selected="true")#nav-mainAnalog-tab.pv-mainProducts__navItem.active Аналоги
+                            a(data-toggle="tab" href="#nav-mainAcsesuar" role="tab" aria-controls="nav-mainAcsesuar" data-slider="pv-mainAcsesuar" aria-selected="true")#nav-mainAcsesuar-tab.pv-mainProducts__navItem Аксесуары
+                            a(data-toggle="tab" href="#nav-mainLike" role="tab" aria-controls="nav-mainLike" data-slider="pv-mainLike" aria-selected="true")#nav-mainLike-tab.pv-mainProducts__navItem Похожие
+                        #nav-tabContent.tab-content
+                            div(role="tabpanel" aria-labelledby="nav-mainAnalog-tab")#nav-mainAnalog.tab-pane.fade.show.active.pv-mainProductsSlider.pv-mainAnalog
+                                - for(var x = 0; x < 10; x++)
+                                    .pv-mainProducts__item
+                                        .pv-mainProducts__itemWrapper
+                                            .pv-mainProducts__itemImg_wrap
+                                                .pv-mainProducts__itemImg_info_wrap                        
+                                                    .pv-mainProducts__itemImg_info.pv-mainProducts__itemImg_infoHit Хит
+                                                    .pv-mainProducts__itemImg_info.pv-mainProducts__itemImg_infoNew Новинка
+                                                img(src=require("./images/productPic.jpg")).pv-mainProducts__itemImg
+                                            .pv-mainProducts__itemStars
+                                                i.fa.fa-star.green
+                                                i.fa.fa-star.green
+                                                i.fa.fa-star.green
+                                                i.fa.fa-star.green
+                                                i.fa.fa-star
+                                            .pv-mainProducts__itemTitle Пленка Суперглянец для панорамной крыши черный
+                                            .pv-mainProducts__itemData
+                                                .pv-mainProducts__itemPrice
+                                                    .pv-mainProducts__itemPrice_old 25000
+                                                    .pv-mainProducts__itemPrice_new 12950 ₽/п.м.
+                                                .pv-mainProducts__itemBtn.pv-main_btn В корзину
+                                            .pv-mainProducts__itemLinks
+                                                a(href="#").pv-mainProducts__itemLink 
+                                                    i.fa.fa-shopping-bag
+                                                    | Купить в 1 клик
+                                                a(href="#").pv-mainProducts__itemLink 
+                                                    i.fa.fa-balance-scale
+                                                    | К сравнению
+                                                a(href="#").pv-mainProducts__itemLink 
+                                                    i.fa.fa-heart
+                                                    | В избранное                                                 
+                                                .pv-mainProducts__itemLink.green
+                                                    i.fa.fa-check
+                                                    | В наличии   
+                            div(role="tabpanel" aria-labelledby="nav-mainAcsesuar-tab")#nav-mainAcsesuar.tab-pane.pv-mainProductsSlider.pv-mainAcsesuar.fade
+                                - for(var x = 0; x < 10; x++)
+                                    .pv-mainProducts__item
+                                        .pv-mainProducts__itemWrapper
+                                            .pv-mainProducts__itemImg_wrap
+                                                .pv-mainProducts__itemImg_info_wrap                        
+                                                    .pv-mainProducts__itemImg_info.pv-mainProducts__itemImg_infoHit Хит
+                                                    .pv-mainProducts__itemImg_info.pv-mainProducts__itemImg_infoNew Новинка
+                                                img(src=require("./images/productPic.jpg")).pv-mainProducts__itemImg
+                                            .pv-mainProducts__itemStars
+                                                i.fa.fa-star.green
+                                                i.fa.fa-star.green
+                                                i.fa.fa-star.green
+                                                i.fa.fa-star.green
+                                                i.fa.fa-star
+                                            .pv-mainProducts__itemTitle Пленка Суперглянец для панорамной крыши черный
+                                            .pv-mainProducts__itemData
+                                                .pv-mainProducts__itemPrice
+                                                    .pv-mainProducts__itemPrice_old 25000
+                                                    .pv-mainProducts__itemPrice_new 12950 ₽/п.м.
+                                                .pv-mainProducts__itemBtn.pv-main_btn В корзину
+                                            .pv-mainProducts__itemLinks
+                                                a(href="#").pv-mainProducts__itemLink 
+                                                    i.fa.fa-shopping-bag
+                                                    | Купить в 1 клик
+                                                a(href="#").pv-mainProducts__itemLink 
+                                                    i.fa.fa-balance-scale
+                                                    | К сравнению
+                                                a(href="#").pv-mainProducts__itemLink 
+                                                    i.fa.fa-heart
+                                                    | В избранное                                                 
+                                                .pv-mainProducts__itemLink.green
+                                                    i.fa.fa-check
+                                                    | В наличии              
+                            div(role="tabpanel" aria-labelledby="nav-mainLike-tab")#nav-mainLike.tab-pane.pv-mainProductsSlider.pv-mainLike.fade
+                                - for(var x = 0; x < 10; x++)
+                                    .pv-mainProducts__item
+                                        .pv-mainProducts__itemWrapper
+                                            .pv-mainProducts__itemImg_wrap
+                                                .pv-mainProducts__itemImg_info_wrap                        
+                                                    .pv-mainProducts__itemImg_info.pv-mainProducts__itemImg_infoHit Хит
+                                                    .pv-mainProducts__itemImg_info.pv-mainProducts__itemImg_infoNew Новинка
+                                                img(src=require("./images/productPic.jpg")).pv-mainProducts__itemImg
+                                            .pv-mainProducts__itemStars
+                                                i.fa.fa-star.green
+                                                i.fa.fa-star.green
+                                                i.fa.fa-star.green
+                                                i.fa.fa-star.green
+                                                i.fa.fa-star
+                                            .pv-mainProducts__itemTitle Пленка Суперглянец для панорамной крыши черный
+                                            .pv-mainProducts__itemData
+                                                .pv-mainProducts__itemPrice
+                                                    .pv-mainProducts__itemPrice_old 25000
+                                                    .pv-mainProducts__itemPrice_new 12950 ₽/п.м.
+                                                .pv-mainProducts__itemBtn.pv-main_btn В корзину
+                                            .pv-mainProducts__itemLinks
+                                                a(href="#").pv-mainProducts__itemLink 
+                                                    i.fa.fa-shopping-bag
+                                                    | Купить в 1 клик
+                                                a(href="#").pv-mainProducts__itemLink 
+                                                    i.fa.fa-balance-scale
+                                                    | К сравнению
+                                                a(href="#").pv-mainProducts__itemLink 
+                                                    i.fa.fa-heart
+                                                    | В избранное                                                 
+                                                .pv-mainProducts__itemLink.green
+                                                    i.fa.fa-check
+                                                    | В наличии 

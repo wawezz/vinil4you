@@ -3,6 +3,7 @@ import "./styles.scss";
 import "normalize.css";
 import $ from "jquery";
 import "slick-carousel";
+import PerfectScrollbar from 'perfect-scrollbar';
 
 $(function () {
   $(document).on("click", ".pv-header__burgerBtn", function () {
@@ -47,6 +48,16 @@ $(function () {
     } else {
       sub.fadeOut(300);
     }
+  });
+
+  var pvBreadcrumb = document.querySelector('.pv-breadcrumb');
+
+  var ps = new PerfectScrollbar(pvBreadcrumb, {
+    wheelSpeed: 1,
+    wheelPropagation: true,
+    minScrollbarLength: 1,
+    useBothWheelAxes: true,
+    swipeEasing: true
   });
 
 });

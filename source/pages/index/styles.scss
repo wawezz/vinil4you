@@ -29,20 +29,48 @@
         .pv-mainTopBanner_sliderItem {
             color: #ffffff;
             font-family: "Trebuchet MS";
-            background-image: url(images/indexBg.jpg);
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
             padding: 140px;
 
+            @include media-breakpoint-down(lg) {
+                padding: 90px;
+            }
+
             @include media-breakpoint-down(md) {
                 padding: 40px;
+            }
+
+            &.pv-mainTopBanner_sliderItem-1 {
+                background-image: url(images/back_1.jpg);
+            }
+
+            &.pv-mainTopBanner_sliderItem-2 {
+                background-image: url(images/back_2.jpg);
+            }
+
+            &.pv-mainTopBanner_sliderItem-3 {
+                background-image: url(images/back_3.jpg);
+            }
+
+            &.pv-mainTopBanner_sliderItem-4 {
+                background-image: url(images/back_4.jpg);
+            }
+
+            &.pv-mainTopBanner_sliderItem-5 {
+                background-image: url(images/back_5.jpg);
+            }
+
+            &.pv-mainTopBanner_sliderItem-6 {
+                background-image: url(images/back_6.jpg);
             }
 
             .pv-main_btn {
                 display: block;
                 max-width: 200px;
                 margin: 50px 0 0 0;
+                box-shadow: 0px 0px 15px 0 rgba(0, 0, 0, 0.4);
 
                 @include media-breakpoint-down(md) {
                     margin: 30px 0 0 0;
@@ -76,16 +104,18 @@
                 @include media-breakpoint-down(xs) {
                     font-size: 27px;
                     line-height: 36px;
+                    width: 100%;
                 }
             }
 
             .pv-mainInfo__desc {
                 font-size: 20px;
-                width: 220px;
+                width: 350px;
                 margin-top: 20px;
 
                 @include media-breakpoint-down(md) {
                     font-size: 14px;
+                    width: 240px;
                 }
             }
         }
@@ -130,11 +160,17 @@
 .pv-mainCats {
     margin-top: 50px;
 
+    @include media-breakpoint-down(xs) {
+        margin-top: 20px;
+    }
+
     .pv-mainCats_wrap {
         margin-bottom: 30px;
     }
 
     .pv-mainSliderMobile {
+        margin-top: 20px;
+
         .pv-mainSliderMobile__title {
             font-family: "Trebuchet MS";
             font-size: 36px;
@@ -419,50 +455,135 @@
     .pv-carImage_alkantara {
         width: 100%;
         height: 445px;
-        background-size: contain;
-        background-position: center;
-        background-repeat: no-repeat;
-        transition: all .3s ease-in-out;
+        background-size: 100%;
+        background-position: 0 0;
         background-image: url(images/lamba_send/alkantara.jpg);
         position: absolute;
         z-index: 100;
         opacity: 0;
         transform: scale(0.5);
-        top: 0;
+        top: 10px;
 
         &.hide {
             transform: scale(0.5);
             opacity: 0;
+            transition: all .3s ease-in-out;
         }
 
         &.show {
             transform: scale(1);
             opacity: 1;
+            transition: all .3s ease-in-out;
+        }
+
+        &.slide {
+            background-position: 0 100%;
+            transition-delay: 1s;
+            transition: all 2s ease-in-out;
         }
     }
 
     .pv-carImage_ekoKoja {
         width: 100%;
         height: 445px;
-        background-size: contain;
-        background-position: center;
+        background-size: 100%;
+        background-position: 0 0;
         background-repeat: no-repeat;
-        transition: all .3s ease-in-out;
         background-image: url(images/lamba_send/ekokoja.jpg);
         position: absolute;
         z-index: 100;
         opacity: 0;
         transform: scale(0.5);
-        top: 0;
+        top: 10px;
 
         &.hide {
             transform: scale(0.5);
             opacity: 0;
+            transition: all .3s ease-in-out;
         }
 
         &.show {
             transform: scale(1);
             opacity: 1;
+            transition: all .3s ease-in-out;
+        }
+
+        &.slide {
+            background-position: 0 100%;
+            transition-delay: 1s;
+            transition: all 2s ease-in-out;
+        }
+    }
+
+    .pv-carImage_rocks {
+        position: absolute;
+        left: 0;
+        width: 50px;
+        height: 100px;
+        top: 80px;
+        opacity: 0;
+        transform: rotate(-15deg);
+        z-index: 10000;
+
+        @include media-breakpoint-down(lg) {
+            width: 35px;
+        }
+
+        &.animate {
+            -webkit-animation: slideRock 1.5s linear;
+            -webkit-animation-delay: 1s;
+            animation: slideRock 1.5s linear;
+            animation-delay: 1s;
+            animation-iteration-count: infinite;
+        }
+    }
+
+    @-webkit-keyframes slideRock {
+        30% {
+            left: 165px;
+            opacity: 1;
+            top: 140px;
+            transform: rotate(-15deg);
+
+            // @include media-breakpoint-down(lg) {
+            //     left: 80px;
+            // }
+
+        }
+
+        31% {
+            transform: rotate(-90deg);
+        }
+
+        100% {
+            left: 360px;
+            top: 0;
+            opacity: 0;
+            transform: rotate(-90deg);
+        }
+    }
+
+    @keyframes slideRock {
+        30% {
+            left: 165px;
+            opacity: 1;
+            top: 140px;
+            transform: rotate(-15deg);
+
+            // @include media-breakpoint-down(lg) {
+            //     left: 80px;
+            // }
+        }
+
+        31% {
+            transform: rotate(-90deg);
+        }
+
+        100% {
+            left: 360px;
+            top: 0;
+            opacity: 0;
+            transform: rotate(-90deg);
         }
     }
 
@@ -511,7 +632,6 @@
 
             @include media-breakpoint-down(md) {
                 height: auto;
-                justify-content: center;
             }
 
             @include media-breakpoint-down(xs) {
@@ -553,8 +673,9 @@
         }
 
         @include media-breakpoint-down(xs) {
-            height: 540px;
+            height: 375px;
             justify-content: start;
+            padding: 25px;
         }
 
         &.pv-mainFullBanner_left {
@@ -607,7 +728,7 @@
         }
 
         .pv-mainFullBanner__text {
-            margin-top: 25px;
+            margin-top: 10px;
         }
 
         .pv-mainFullBanner__button {
@@ -693,6 +814,10 @@
 
     .pv-mainPosts__nav {
         margin-bottom: 35px;
+        overflow: auto;
+        flex-wrap: nowrap;
+        white-space: nowrap;
+        position: relative;
 
         .pv-mainPosts__navItem {
             font-size: 15px;
@@ -700,11 +825,16 @@
             color: #6d7278;
             padding: 10px 20px;
             text-decoration: none;
+            text-transform: uppercase;
 
             &.active,
             &:hover {
                 border-bottom: 2px solid #0e974f;
             }
+        }
+
+        .ps__rail-x {
+            display: none;
         }
     }
 
@@ -712,11 +842,39 @@
         .pv-mainPosts__item {
             padding: 0 15px;
 
+            @include media-breakpoint-down(xs) {
+                padding: 0;
+            }
+
             .pv-mainPosts__itemWrap {
                 border: solid 1px #e0e7ee;
 
-                .pv-mainPosts__itemImg {
-                    width: 100%;
+                .pv-mainPosts__itemImg_wrap {
+                    .pv-mainPosts__itemImg {
+                        width: 100%;
+                    }
+
+                    .pv-mainPost__label {
+                        width: fit-content;
+                        padding: 3px 10px;
+                        position: absolute;
+                        top: 20px;
+                        color: #fff;
+                        font-size: 10px;
+                        text-transform: uppercase;
+
+                        &.green {
+                            background-color: #0e974f;
+                        }
+
+                        &.red {
+                            background-color: #ed1c24;
+                        }
+
+                        &.orange {
+                            background-color: #ff8a00;
+                        }
+                    }
                 }
 
                 .pv-mainPosts__info {
@@ -783,16 +941,7 @@
             line-height: 1.4;
             font-family: "Trebuchet MS";
 
-            @include media-breakpoint-down(md) {
-                font-size: 32px;
-            }
-
-            @include media-breakpoint-down(sm) {
-                font-size: 24px;
-            }
-
             @include media-breakpoint-down(xs) {
-                font-size: 20px;
                 padding-left: 25px;
             }
         }
@@ -818,11 +967,13 @@
                     margin-top: 24px;
                     font-size: 20px;
                     font-family: "Trebuchet MS";
+                    text-align: left;
                 }
 
                 .pv-mainVideoSlider__itemDesc {
                     font-size: 13px;
                     margin-top: 10px;
+                    text-align: left;
                 }
             }
         }
@@ -869,6 +1020,7 @@
     .pv-shopInfo__title {
         font-family: "Trebuchet MS";
         font-size: 36px;
+        line-height: 1.2;
 
         @include media-breakpoint-down(md) {
             font-size: 32px;
@@ -987,6 +1139,14 @@
     color: #ffffff;
     padding: 90px 0;
 
+    @include media-breakpoint-down(sm) {
+        padding: 80px 0;
+    }
+
+    @include media-breakpoint-down(xs) {
+        padding: 50px 0;
+    }
+
     .pv-mainFeedbacks__info {
         padding: 0 80px;
 
@@ -1002,9 +1162,14 @@
             font-family: "Trebuchet MS";
             font-size: 30px;
             margin-bottom: 20px;
+            line-height: 1.2;
 
             @include media-breakpoint-down(md) {
                 text-align: center;
+            }
+
+            @include media-breakpoint-down(xs) {
+                padding: 0 10px;
             }
         }
 
@@ -1107,6 +1272,10 @@
     background-color: #f8f8f8;
     padding: 25px 0;
 
+    @include media-breakpoint-down(xs) {
+        padding: 40px 0;
+    }
+
     .pv-mainFooter__phoneWrap {
         @include media-breakpoint-down(md) {
             margin-bottom: 20px;
@@ -1153,6 +1322,8 @@
         }
 
         .pv-mainFooter__bonusIcon {
+            margin-right: 15px;
+
             @include media-breakpoint-down(lg) {
                 width: 50px;
             }
@@ -1186,10 +1357,11 @@
         align-items: center;
         cursor: pointer;
         text-decoration: none;
+        width: 100%;
 
         @include media-breakpoint-down(lg) {
             height: 40px;
-            font-size: 11px;
+            font-size: 10px;
             padding: 0 10px;
         }
 
@@ -1201,6 +1373,7 @@
 
         @include media-breakpoint-down(xs) {
             margin-bottom: 20px;
+            max-width: 280px;
         }
     }
 

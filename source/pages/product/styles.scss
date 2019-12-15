@@ -11,43 +11,52 @@
         align-items: center;
         font-size: 12px;
         color: #6d7278;
+        flex-wrap: wrap;
 
         .pv-product__navLogo {
             height: 25px;
+            margin: 4px 25px 4px 0;
         }
 
-        .pv-product__navStars {
-            margin-left: 25px;
+        .pv-product__navStars_wrap {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 4px 25px 4px 0;
 
-            i {
-                color: #0e974f;
+            .pv-product__navStars {
+                i {
+                    color: #0e974f;
+                }
             }
-        }
 
-        .pv-product__navFeedbacks {
-            margin-left: 10px;
-            font-weight: 300;
+            .pv-product__navFeedbacks {
+                margin-left: 10px;
+                font-weight: 300;
+            }
         }
 
         .pv-product__navFavorites {
             font-weight: 300;
-            margin-left: 25px;
             cursor: pointer;
+            margin: 4px 25px 4px 0;
+            display: flex;
+            align-items: center;
 
-            i {
+            img {
                 margin-right: 5px;
-                color: #0e974f;
             }
         }
 
         .pv-product__navCompare {
             font-weight: 300;
-            margin-left: 25px;
             cursor: pointer;
+            margin: 4px 0;
+            display: flex;
+            align-items: center;
 
-            i {
+            img {
                 margin-right: 5px;
-                color: #0e974f;
             }
         }
     }
@@ -90,19 +99,22 @@
 
             }
 
+            .slick-prev,
+            .slick-next {
+                background-image: none !important;
+            }
+
             .slick-prev {
-                left: -15px;
 
                 &:before {
-                    content: "\F104";
+                    content: "\F104" !important;
                 }
             }
 
             .slick-next {
-                right: -15px;
 
                 &:before {
-                    content: "\F105";
+                    content: "\F105" !important;
                 }
             }
 
@@ -136,7 +148,7 @@
 
                                 &:nth-child(1) {
                                     span {
-                                        font-weight: 600;
+                                        font-weight: 500;
                                         font-size: 16px;
                                     }
                                 }
@@ -159,12 +171,16 @@
                             }
 
                             &:nth-child(1) {
+                                padding-right: 45px;
+
                                 span {
                                     width: fit-content;
                                 }
                             }
 
                             &:nth-child(2) {
+                                padding-left: 45px;
+
                                 span {
                                     padding-left: 5px;
                                 }
@@ -173,11 +189,83 @@
                     }
                 }
 
+                .pv-product__car {
+                    position: relative;
+                    height: 150px;
+                    margin: 30px auto 0 auto;
+                    width: 470px;
+
+                    @include media-breakpoint-down(md) {
+                        height: 110px;
+                        width: 345px;
+                    }
+
+                    @include media-breakpoint-down(sm) {
+                        margin: 30px auto;
+                        height: 180px;
+                        width: 564px;
+                    }
+
+                    @include media-breakpoint-down(xs) {
+                        height: 110px;
+                        width: 345px;
+                    }
+
+                    .pv-product__carImg {
+                        position: absolute;
+                        width: auto;
+                        height: auto;
+                        overflow: hidden;
+
+                        img {
+                            display: block;
+                            vertical-align: middle;
+                            height: 150px;
+
+                            @include media-breakpoint-down(md) {
+                                height: 110px;
+                            }
+
+                            @include media-breakpoint-down(sm) {
+                                height: 180px;
+                            }
+
+                            @include media-breakpoint-down(xs) {
+                                height: 110px;
+                            }
+                        }
+                    }
+
+
+                    .pv-product__carSlider {
+                        position: absolute;
+                        z-index: 9;
+                        cursor: pointer;
+                        width: 25px;
+                        background-position: center;
+                        background-image: url(images/compSlider.svg);
+
+                        height: 150px;
+
+                        @include media-breakpoint-down(md) {
+                            height: 110px;
+                        }
+
+                        @include media-breakpoint-down(sm) {
+                            height: 180px;
+                        }
+
+                        @include media-breakpoint-down(xs) {
+                            height: 110px;
+                        }
+                    }
+                }
             }
         }
 
         .pv-product__asside {
             position: relative;
+            z-index: 1000;
 
             &.fixed {
                 .pv-product__asside_wrap {
@@ -232,6 +320,7 @@
                             font-weight: 600;
                             text-decoration: line-through;
                             text-decoration-color: #ed1c24;
+                            font-family: "Roboto";
                         }
 
                         .pv-product__assideOldPrice_label {
@@ -244,6 +333,7 @@
                             line-height: 1;
                             align-items: center;
                             justify-content: center;
+                            font-family: "Roboto";
                         }
                     }
 
@@ -251,6 +341,7 @@
                         margin-top: 15px;
                         display: flex;
                         align-items: flex-start;
+                        font-family: "Roboto";
 
                         .pv-product__assideNewPrice_info {
                             color: #999999;
@@ -264,6 +355,59 @@
                             align-items: center;
                             justify-content: center;
                             cursor: pointer;
+
+                            &:hover {
+                                .pv-product__assideNewPrice_infoPopap {
+                                    display: block;
+                                }
+                            }
+
+                            .pv-product__assideNewPrice_infoPopap {
+                                position: absolute;
+                                width: 220px;
+                                padding: 17px;
+                                left: -200px;
+                                background-color: #ffffff;
+                                z-index: 100;
+                                display: none;
+                                box-shadow: -2px 2px 20px 0 rgba(0, 0, 0, 0.15);
+
+                                .pv-product__assideNewPrice_infoPopap-title {
+                                    font-weight: 500;
+                                    color: #000000;
+                                    font-size: 14px;
+                                    line-height: 1.4;
+                                }
+
+                                .pv-product__assideNewPrice_infoPopap-table {
+                                    margin-top: 15px;
+                                    width: 100%;
+
+                                    .pv-product__assideNewPrice_infoPopap-tableRow {
+                                        width: 100%;
+
+                                        &:nth-child(1) {
+                                            .pv-product__assideNewPrice_infoPopap-tableCol {
+                                                font-weight: 500;
+                                            }
+                                        }
+
+                                        &:nth-child(2n) {
+                                            background-color: #f2f2f2;
+                                        }
+
+                                        .pv-product__assideNewPrice_infoPopap-tableCol {
+                                            width: 50%;
+                                            height: 35px;
+                                            text-align: center;
+                                            border: solid 1px #e9eaec;
+                                            font-size: 12px;
+                                            font-weight: 300;
+                                            color: #000000;
+                                        }
+                                    }
+                                }
+                            }
                         }
 
                         .pv-product__assideNewPrice_value {
@@ -294,6 +438,10 @@
                     .pv-product__assideBay {
                         margin: 15px 0 0 0;
                         font-size: 15px;
+                        height: 50px;
+                        align-items: center;
+                        display: flex;
+                        justify-content: center;
                     }
 
                     .pv-product__assideCart {}
@@ -396,6 +544,7 @@
                         padding: 17px 25px;
                         border-bottom: 1px solid #e9eaec;
                         display: flex;
+                        align-items: center;
 
                         &.stock {
                             align-items: center;
@@ -403,9 +552,6 @@
                         }
 
                         &.chipper {
-                            i {
-                                color: #0e974f;
-                            }
 
                             span {
                                 color: #a2a2a2;
@@ -416,13 +562,7 @@
                             }
                         }
 
-                        &.delivery {
-                            i {
-                                color: #0e974f;
-                            }
-                        }
-
-                        i {
+                        img {
                             margin-right: 15px;
                         }
 
@@ -449,6 +589,9 @@
             background-color: #f2f2f2;
             margin-bottom: 30px;
             justify-content: space-between;
+            overflow: auto;
+            flex-wrap: nowrap;
+            position: relative;
 
             .pv-product__allInfo_navItem {
                 font-size: 15px;
@@ -465,6 +608,10 @@
                 &.active {
                     border-bottom: 2px solid #0e974f;
                 }
+            }
+
+            .ps__rail-x {
+                display: none;
             }
         }
     }
@@ -531,7 +678,7 @@
 
                     .fa {
                         font-size: 10px;
-                        margin-right: 3px;
+                        margin-right: 8px;
                     }
 
                     .fa-map-marker {
@@ -562,7 +709,8 @@
         }
 
         .pv-product__mainStock {
-            width: 100%;
+            margin: 0 auto;
+            width: fit-content;
             display: none;
 
             .pv-product__mainStock_row {
@@ -576,7 +724,19 @@
                 }
 
                 .pv-product__mainStock_col {
-                    padding: 12px 0 12px 20px;
+                    padding: 12px 20px;
+
+                    @include media-breakpoint-down(lg) {
+                        padding: 12px 30px;
+                    }
+
+                    @include media-breakpoint-down(md) {
+                        padding: 12px 20px;
+                    }
+
+                    @include media-breakpoint-down(xs) {
+                        padding: 12px;
+                    }
 
                     .pv-product__mainStock_shopName {
                         font-weight: 500;
@@ -609,6 +769,24 @@
                     .pv-product__mainStock_countWrap {
                         display: flex;
                     }
+
+                    &:nth-child(2) {
+                        @include media-breakpoint-down(md) {
+                            display: none;
+                        }
+                    }
+
+                    &:nth-child(3) {
+                        @include media-breakpoint-down(sm) {
+                            display: none;
+                        }
+                    }
+
+                    &:nth-child(4) {
+                        @include media-breakpoint-down(xs) {
+                            display: none;
+                        }
+                    }
                 }
             }
         }
@@ -636,14 +814,16 @@
             display: flex;
             align-self: center;
             margin-top: 25px;
+            flex-wrap: wrap;
 
             .pv-product__docsItem {
-                margin-right: 20px;
+                margin: 10px 20px 10px 0;
                 color: #000000;
                 text-decoration: none;
+                display: flex;
+                align-items: center;
 
-                i {
-                    color: #0e974f;
+                img {
                     margin-right: 10px;
                 }
             }
@@ -685,6 +865,10 @@
 
         .pv-product__examplesNav {
             margin: 15px 0 35px 0;
+            overflow: auto;
+            flex-wrap: nowrap;
+            white-space: nowrap;
+            position: relative;
 
             .pv-product__examplesNav_item {
                 font-size: 15px;
@@ -698,6 +882,10 @@
                 &:hover {
                     border-bottom: 2px solid #0e974f;
                 }
+            }
+
+            .ps__rail-x {
+                display: none;
             }
         }
 
@@ -761,4 +949,8 @@
             font-size: 24px;
         }
     }
+}
+
+.pv-footer {
+    height: 400px;
 }

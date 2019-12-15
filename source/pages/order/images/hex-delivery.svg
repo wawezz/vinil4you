@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="88px" height="98px" viewBox="0 0 88 98" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>Icons/delivery_icon</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="DELIVERY:-Extra-Large:-Desktops-≥1200" transform="translate(-699.000000, -2001.000000)">
+            <g id="Как-мы-работаем-Copy" transform="translate(0.000000, 1852.000000)">
+                <g id="3" transform="translate(615.000000, 148.000000)">
+                    <g id="Icons/step3" transform="translate(78.000000, 0.000000)">
+                        <path d="M54.5,3.75277675 C51.7153903,2.1450816 48.2846097,2.1450816 45.5,3.75277675 L12.1987298,22.9792741 C9.41412012,24.5869692 7.69872981,27.5581124 7.69872981,30.7735027 L7.69872981,69.2264973 C7.69872981,72.4418876 9.41412012,75.4130308 12.1987298,77.0207259 L45.5,96.2472233 C48.2846097,97.8549184 51.7153903,97.8549184 54.5,96.2472233 L87.8012702,77.0207259 C90.5858799,75.4130308 92.3012702,72.4418876 92.3012702,69.2264973 L92.3012702,30.7735027 C92.3012702,27.5581124 90.5858799,24.5869692 87.8012702,22.9792741 L54.5,3.75277675 Z" id="Polygon" stroke="#0E974F" stroke-width="2"></path>
+                        <g id="Group-2" stroke-width="1" fill-rule="evenodd" transform="translate(19.000000, 31.000000)" stroke="#FFFFFF" stroke-linejoin="round">
+                            <g id="Group" transform="translate(19.837288, 0.000000)" stroke-width="1.89999998">
+                                <polygon id="Polygon" stroke-linecap="round" points="17.8440678 0 35.3084746 8.84615385 17.8440678 17.6923077 0.379661017 8.84615385"></polygon>
+                                <polyline id="Shape" stroke-linecap="round" points="35.3084746 31.1538462 17.8440678 40 0.379661017 31.1538462"></polyline>
+                                <path d="M0.379661017,8.46153846 L0.379661017,31.5384615" id="Path-4"></path>
+                                <path d="M17.8440678,17.6923077 L17.8440678,40" id="Path-4-Copy"></path>
+                                <path d="M35.3084746,8.46153846 L35.3084746,31.5384615" id="Path-4-Copy-2"></path>
+                            </g>
+                            <path d="M7.59322034,27.6190476 L14.2372881,27.6190476" id="Path-6" stroke-width="1.89999998" stroke-linecap="round"></path>
+                            <path d="M0,12.8571429 L14.2372881,12.8571429" id="Path-6" stroke-width="1.89999998" stroke-linecap="round"></path>
+                            <path d="M3.79661017,20 L14.2372881,20" id="Path-6" stroke-width="1.89999998" stroke-linecap="round"></path>
+                            <path d="M43,17 L49.6440678,17" id="Path-6" stroke-width="1.89999998" stroke-linecap="round" transform="translate(46.322034, 17.000000) rotate(-270.000000) translate(-46.322034, -17.000000) "></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -6,19 +6,53 @@ block main
         .container-fluid
             .row
                 .col-12.pv-mainTopBanner_slider
-                    - for(var x = 0; x < 4; x++)
-                        .pv-mainTopBanner_sliderItem
-                            .container
-                                .row
-                                    .col-12
-                                        h2.pv-mainInfo__title Готовимся к зимнему сезону выгодно
-                                        .pv-mainInfo__desc Антигравийная пленка по специальной цене
-                                        a(href="#").pv-main_btn Подробнее
+                    .pv-mainTopBanner_sliderItem.pv-mainTopBanner_sliderItem-1
+                        .container
+                            .row
+                                .col-12
+                                    h2.pv-mainInfo__title Готовимся к зимнему#[br]сезону выгодно
+                                    .pv-mainInfo__desc Антигравийная пленка по специальной цене
+                                    a(href="#").pv-main_btn Подробнее
+                    .pv-mainTopBanner_sliderItem.pv-mainTopBanner_sliderItem-2
+                        .container
+                            .row
+                                .col-12
+                                    h2.pv-mainInfo__title Готовимся к зимнему#[br]сезону выгодно
+                                    .pv-mainInfo__desc Антигравийная пленка по специальной цене
+                                    a(href="#").pv-main_btn Подробнее
+                    .pv-mainTopBanner_sliderItem.pv-mainTopBanner_sliderItem-3
+                        .container
+                            .row
+                                .col-12
+                                    h2.pv-mainInfo__title Индивидуалоность#[br]будет замечена
+                                    .pv-mainInfo__desc Бонусная программа VINYL4YOU – приятная экономия 
+                                    a(href="#").pv-main_btn Подробнее                                                                        
+                    .pv-mainTopBanner_sliderItem.pv-mainTopBanner_sliderItem-4
+                        .container
+                            .row
+                                .col-12
+                                    h2.pv-mainInfo__title Комфорт#[br]в мелочах
+                                    .pv-mainInfo__desc Тонировочная пленка для здоровья глаз и внешнего вида авто
+                                    a(href="#").pv-main_btn Подробнее
+                    .pv-mainTopBanner_sliderItem.pv-mainTopBanner_sliderItem-5
+                        .container
+                            .row
+                                .col-12
+                                    h2.pv-mainInfo__title Бонусная карта#[br]с выгодой до 50% 
+                                    .pv-mainInfo__desc Бонусная программа VINYL4YOU – приятная экономия 
+                                    a(href="#").pv-main_btn Подробнее
+                    .pv-mainTopBanner_sliderItem.pv-mainTopBanner_sliderItem-6
+                        .container
+                            .row
+                                .col-12
+                                    h2.pv-mainInfo__title Максимальная выгода#[br]только в октябре!
+                                    .pv-mainInfo__desc Дарим скидки и подарки для покупателей интернет-магазина
+                                    a(href="#").pv-main_btn Подробнее
     .container.pv-mainCats
         .row.pv-mainCats_wrap
             .col-12
                 .d-block.d-md-none.pv-mainSliderMobile
-                    .pv-mainSliderMobile__title Популярные категории
+                    h2.pv-mainSliderMobile__title Популярные категории
                     ul.pv-mainSliderMobile__nav
                         li.pv-mainSliderMobile__navItem
                             a(href="#").pv-mainSliderMobile__navItem_wrap
@@ -100,7 +134,8 @@ block main
                         .pv-carImage__conturWrap
                         .pv-carImage
                         .pv-carImage_alkantara                        
-                        .pv-carImage_ekoKoja                      
+                        .pv-carImage_ekoKoja   
+                        img(src=require('./images/rocks.svg')).pv-carImage_rocks
         .row.pv-mainProducts
             .col-12
                 div(role="tablist")#nav-tab.nav.nav-fill.pv-mainProducts__nav
@@ -123,20 +158,20 @@ block main
                                         i.fa.fa-star.green
                                         i.fa.fa-star.green
                                         i.fa.fa-star
-                                    .pv-mainProducts__itemTitle Пленка Суперглянец для панорамной крыши черный
+                                    a(href="#").pv-mainProducts__itemTitle Пленка Суперглянец для панорамной крыши черный
                                     .pv-mainProducts__itemData
                                         .pv-mainProducts__itemPrice
                                             .pv-mainProducts__itemPrice_old 25000
                                             .pv-mainProducts__itemPrice_new 12950 ₽/п.м.
                                         .pv-mainProducts__itemBtn.pv-main_btn В корзину
                                     .pv-mainProducts__itemLinks
-                                        a(href="").pv-mainProducts__itemLink 
+                                        a(href="#").pv-mainProducts__itemLink 
                                             i.fa.fa-shopping-bag
                                             | Купить в 1 клик
-                                        a(href="").pv-mainProducts__itemLink 
+                                        a(href="#").pv-mainProducts__itemLink 
                                             i.fa.fa-balance-scale
                                             | К сравнению
-                                        a(href="").pv-mainProducts__itemLink 
+                                        a(href="#").pv-mainProducts__itemLink 
                                             i.fa.fa-heart
                                             | В избранное                                                 
                                         .pv-mainProducts__itemLink.green
@@ -157,20 +192,20 @@ block main
                                         i.fa.fa-star.green
                                         i.fa.fa-star.green
                                         i.fa.fa-star
-                                    .pv-mainProducts__itemTitle Пленка Суперглянец для панорамной крыши черный
+                                    a(href="#").pv-mainProducts__itemTitle Пленка Суперглянец для панорамной крыши черный
                                     .pv-mainProducts__itemData
                                         .pv-mainProducts__itemPrice
                                             .pv-mainProducts__itemPrice_old 25000
                                             .pv-mainProducts__itemPrice_new 12950 ₽/п.м.
                                         .pv-mainProducts__itemBtn.pv-main_btn В корзину
                                     .pv-mainProducts__itemLinks
-                                        a(href="").pv-mainProducts__itemLink 
+                                        a(href="#").pv-mainProducts__itemLink 
                                             i.fa.fa-shopping-bag
                                             | Купить в 1 клик
-                                        a(href="").pv-mainProducts__itemLink 
+                                        a(href="#").pv-mainProducts__itemLink 
                                             i.fa.fa-balance-scale
                                             | К сравнению
-                                        a(href="").pv-mainProducts__itemLink 
+                                        a(href="#").pv-mainProducts__itemLink 
                                             i.fa.fa-heart
                                             | В избранное                                                 
                                         .pv-mainProducts__itemLink.green
@@ -191,20 +226,20 @@ block main
                                         i.fa.fa-star.green
                                         i.fa.fa-star.green
                                         i.fa.fa-star
-                                    .pv-mainProducts__itemTitle Пленка Суперглянец для панорамной крыши черный
+                                    a(href="#").pv-mainProducts__itemTitle Пленка Суперглянец для панорамной крыши черный
                                     .pv-mainProducts__itemData
                                         .pv-mainProducts__itemPrice
                                             .pv-mainProducts__itemPrice_old 25000
                                             .pv-mainProducts__itemPrice_new 12950 ₽/п.м.
                                         .pv-mainProducts__itemBtn.pv-main_btn В корзину
                                     .pv-mainProducts__itemLinks
-                                        a(href="").pv-mainProducts__itemLink 
+                                        a(href="#").pv-mainProducts__itemLink 
                                             i.fa.fa-shopping-bag
                                             | Купить в 1 клик
-                                        a(href="").pv-mainProducts__itemLink 
+                                        a(href="#").pv-mainProducts__itemLink 
                                             i.fa.fa-balance-scale
                                             | К сравнению
-                                        a(href="").pv-mainProducts__itemLink 
+                                        a(href="#").pv-mainProducts__itemLink 
                                             i.fa.fa-heart
                                             | В избранное                                                 
                                         .pv-mainProducts__itemLink.green
@@ -217,7 +252,6 @@ block main
                         .pv-mainFullBanner(class="pv-mainFullBanner_" + x)
                             .pv-mainFullBanner__title Доставка в день заказа –#[br]это наш конек!
                             .pv-mainFullBanner__text Сделали заказ до 15:00? Доставим сегодня!#[br]Мы доставляем более 100 заказов каждый день.
-                            a(href="#").pv-mainFullBanner__button.pv-main_btn Подробнее
         .row.pv-mainService
             .col-12.col-md-4.pv-mainService__item
                 img(src=require("./images/service_icon_1.svg")).pv-mainService__img
@@ -251,7 +285,9 @@ block main
                         - for(var x = 0; x < 10; x++)
                             .pv-mainPosts__item
                                 .pv-mainPosts__itemWrap
-                                    img(src=require("./images/postsPic1.png")).pv-mainPosts__itemImg
+                                    .pv-mainPosts__itemImg_wrap
+                                        img(src=require("./images/postsPic1.png")).pv-mainPosts__itemImg
+                                        .pv-mainPost__label.green Новости
                                     .pv-mainPosts__info
                                         .pv-mainPosts__itemTitle VINYL4YOU на выставке "Интеравто 2019"
                                         .pv-mainPosts__itemDesc Sunt autem nusquam hoc tenebo, si mihi probabis ea, quae ab eo est et rationibus confirmare, tantum satis esse, quid malum, sensu iudicari, sed uti oratione.
@@ -259,7 +295,9 @@ block main
                         - for(var x = 0; x < 10; x++)
                             .pv-mainPosts__item
                                 .pv-mainPosts__itemWrap
-                                    img(src=require("./images/postsPic2.png")).pv-mainPosts__itemImg
+                                    .pv-mainPosts__itemImg_wrap
+                                        img(src=require("./images/postsPic2.png")).pv-mainPosts__itemImg
+                                        .pv-mainPost__label.red Статьи                                        
                                     .pv-mainPosts__info
                                         .pv-mainPosts__itemTitle VINYL4YOU на выставке "Интеравто 2019"
                                         .pv-mainPosts__itemDesc Sunt autem nusquam hoc tenebo, si mihi probabis ea, quae ab eo est et rationibus confirmare, tantum satis esse, quid malum, sensu iudicari, sed uti oratione.                    
@@ -267,7 +305,9 @@ block main
                         - for(var x = 0; x < 10; x++)
                             .pv-mainPosts__item
                                 .pv-mainPosts__itemWrap
-                                    img(src=require("./images/postsPic1.png")).pv-mainPosts__itemImg
+                                    .pv-mainPosts__itemImg_wrap                                
+                                        img(src=require("./images/postsPic1.png")).pv-mainPosts__itemImg
+                                        .pv-mainPost__label.orange Акции                                                                                
                                     .pv-mainPosts__info
                                         .pv-mainPosts__itemTitle VINYL4YOU на выставке "Интеравто 2019"
                                         .pv-mainPosts__itemDesc Sunt autem nusquam hoc tenebo, si mihi probabis ea, quae ab eo est et rationibus confirmare, tantum satis esse, quid malum, sensu iudicari, sed uti oratione.                                                                                        

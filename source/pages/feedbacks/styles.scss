@@ -156,6 +156,8 @@
 
                 .slick-prev,
                 .slick-next {
+                    background-image: none !important;
+
                     &:before {
                         color: #0e974f;
                         font-family: "FontAwesome";
@@ -165,13 +167,13 @@
 
                 .slick-prev {
                     &:before {
-                        content: "\F104";
+                        content: "\F104" !important;
                     }
                 }
 
                 .slick-next {
                     &:before {
-                        content: "\F105";
+                        content: "\F105" !important;
                     }
                 }
             }

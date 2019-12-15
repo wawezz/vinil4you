@@ -20,18 +20,19 @@ block main
             .row
                 .col-12.pv-product__nav
                     img(src=require("./images/logo_rayno.svg")).pv-product__navLogo
-                    .pv-product__navStars
-                        i.fa.fa-star
-                        i.fa.fa-star
-                        i.fa.fa-star
-                        i.fa.fa-star
-                        i.fa.fa-star
-                    .pv-product__navFeedbacks 14 отзывов
+                    .pv-product__navStars_wrap
+                        .pv-product__navStars
+                            i.fa.fa-star
+                            i.fa.fa-star
+                            i.fa.fa-star
+                            i.fa.fa-star
+                            i.fa.fa-star
+                        .pv-product__navFeedbacks 14 отзывов
                     .pv-product__navFavorites
-                        i.fa.fa-heart
+                        img(src=require("./images/iconP-favorite-a.svg"))
                         | В избранное
                     .pv-product__navCompare
-                        i.fa.fa-balance-scale
+                        img(src=require("./images/iconP-compare-a.svg"))
                         | В сравнении  
             .row.pv-product__data
                 .col-12.col-md-6.col-xl-9
@@ -102,7 +103,11 @@ block main
                                             span Наличие поролоновой подложки
                                         td.pv-product__technical_column
                                             span Нет
-                                .pv-product__car CAR
+                                .pv-product__car
+                                    .pv-product__carImg
+                                        img(src=require("./images/lamba1.png"))
+                                    .pv-product__carImg.pv-product__carOverlay
+                                        img(src=require("./images/lamba2.png"))
                 .col-12.col-md-6.col-xl-3.pv-product__asside
                     .pv-product__asside_wrap
                         .pv-product__asside_header
@@ -122,19 +127,34 @@ block main
                                 .pv-product__assideOldPrice_label -59%
                             .pv-product__assideNewPrice
                                 .pv-product__assideNewPrice_info ?
+                                    .pv-product__assideNewPrice_infoPopap
+                                        .pv-product__assideNewPrice_infoPopap-title Возможные варианты цен на этот товар
+                                        table.pv-product__assideNewPrice_infoPopap-table
+                                            tr.pv-product__assideNewPrice_infoPopap-tableRow
+                                                td.pv-product__assideNewPrice_infoPopap-tableCol Ваша цена
+                                                td.pv-product__assideNewPrice_infoPopap-tableCol 12 950
+                                            tr.pv-product__assideNewPrice_infoPopap-tableRow
+                                                td.pv-product__assideNewPrice_infoPopap-tableCol от 4 до 8 шт
+                                                td.pv-product__assideNewPrice_infoPopap-tableCol 12 850
+                                            tr.pv-product__assideNewPrice_infoPopap-tableRow
+                                                td.pv-product__assideNewPrice_infoPopap-tableCol от 9 до 11 шт
+                                                td.pv-product__assideNewPrice_infoPopap-tableCol 12 750
+                                            tr.pv-product__assideNewPrice_infoPopap-tableRow
+                                                td.pv-product__assideNewPrice_infoPopap-tableCol от 12 шт
+                                                td.pv-product__assideNewPrice_infoPopap-tableCol 12 550                                                
                                 .pv-product__assideNewPrice_value 12950 ₽/#[span п.м.]
-                            .pv-product__assideBonus #[span 510 бонусов ] на бонусную карту                    
+                            .pv-product__assideBonus #[span + 510 бонусов ] на бонусную карту                    
                             .pv-product__assideCart.pv-main_btn В КОРЗИНУ
                             .pv-product__assideBay.pv-main_btn КУПИТЬ В 1 КЛИК
                         .pv-product__asside_footer                            
                             .pv-product__asside_footerRow.stock
-                                i.fa.fa-check-square
+                                img(src=require('./images/iconP-check.svg'))
                                 .pv-product__asside_footerText В наличии на складе
                             .pv-product__asside_footerRow.chipper
-                                i.fa.fa-percent
+                                img(src=require('./images/iconP-percent.svg'))
                                 .pv-product__asside_footerText Нашли дешевле? #[span Гарантия лучшей цены!]
                             .pv-product__asside_footerRow.delivery
-                                i.fa.fa-truck
+                                img(src=require('./images/iconP-delivery.svg'))
                                 .pv-product__asside_footerText Рассчитать доставку
                             .pv-product__asside_footerDesc Цвет изображений материала может отличаться в зависимости от цветопередачи монитора.
             .row.pv-product__allInfo
@@ -291,10 +311,10 @@ block main
                     .pv-product__docsTitle Документы
                     .pv-product__docsRow 
                         a(href="#").pv-product__docsItem
-                            i.fa.fa-file
+                            img(src=require("./images/file.svg"))
                             | Сертификат соответствия
                         a(href="#").pv-product__docsItem 
-                            i.fa.fa-file
+                            img(src=require("./images/file.svg"))
                             |  Характеристики  EN
             .row.pv-product__videos#productVideo
                 .col-12.col-xl-9
@@ -330,16 +350,16 @@ block main
                     .pv-product__whyVfyTitle Почему VINYL4YOU
                     .row.pv-product__whyVfyRow
                         .col-12.col-sm-6.pv-product__whyVfyItem 
-                            img(src=require("./images/hex-confirmation.svg"))
+                            img(src=require("./images/iconPHex-price.svg"))
                             | Мы предлагаем лучшие цены на рынке автомобильных пленок
                         .col-12.col-sm-6.pv-product__whyVfyItem 
-                            img(src=require("./images/hex-confirmation.svg"))                        
+                            img(src=require("./images/iconPHex-delivery.svg"))                        
                             | Мы являемся производителями и представителями продаваемых брендов
                         .col-12.col-sm-6.pv-product__whyVfyItem 
-                            img(src=require("./images/hex-confirmation.svg"))                        
+                            img(src=require("./images/iconPHex-team.svg"))                        
                             | С вами работает команда профессионалов с многолетним опытом
                         .col-12.col-sm-6.pv-product__whyVfyItem 
-                            img(src=require("./images/hex-confirmation.svg"))                        
+                            img(src=require("./images/iconPHex-stock.svg"))                        
                             | Товар всегда в наличии и готов к отправке в любую точку РФ и СНГ
             .row.pv-product__seeAlso#productSame
                 .col-12.col-xl-9
@@ -372,13 +392,13 @@ block main
                                                     .pv-mainProducts__itemPrice_new 12950 ₽/п.м.
                                                 .pv-mainProducts__itemBtn.pv-main_btn В корзину
                                             .pv-mainProducts__itemLinks
-                                                a(href="").pv-mainProducts__itemLink 
+                                                a(href="#").pv-mainProducts__itemLink 
                                                     i.fa.fa-shopping-bag
                                                     | Купить в 1 клик
-                                                a(href="").pv-mainProducts__itemLink 
+                                                a(href="#").pv-mainProducts__itemLink 
                                                     i.fa.fa-balance-scale
                                                     | К сравнению
-                                                a(href="").pv-mainProducts__itemLink 
+                                                a(href="#").pv-mainProducts__itemLink 
                                                     i.fa.fa-heart
                                                     | В избранное                                                 
                                                 .pv-mainProducts__itemLink.green
@@ -406,13 +426,13 @@ block main
                                                     .pv-mainProducts__itemPrice_new 12950 ₽/п.м.
                                                 .pv-mainProducts__itemBtn.pv-main_btn В корзину
                                             .pv-mainProducts__itemLinks
-                                                a(href="").pv-mainProducts__itemLink 
+                                                a(href="#").pv-mainProducts__itemLink 
                                                     i.fa.fa-shopping-bag
                                                     | Купить в 1 клик
-                                                a(href="").pv-mainProducts__itemLink 
+                                                a(href="#").pv-mainProducts__itemLink 
                                                     i.fa.fa-balance-scale
                                                     | К сравнению
-                                                a(href="").pv-mainProducts__itemLink 
+                                                a(href="#").pv-mainProducts__itemLink 
                                                     i.fa.fa-heart
                                                     | В избранное                                                 
                                                 .pv-mainProducts__itemLink.green
@@ -440,13 +460,13 @@ block main
                                                     .pv-mainProducts__itemPrice_new 12950 ₽/п.м.
                                                 .pv-mainProducts__itemBtn.pv-main_btn В корзину
                                             .pv-mainProducts__itemLinks
-                                                a(href="").pv-mainProducts__itemLink 
+                                                a(href="#").pv-mainProducts__itemLink 
                                                     i.fa.fa-shopping-bag
                                                     | Купить в 1 клик
-                                                a(href="").pv-mainProducts__itemLink 
+                                                a(href="#").pv-mainProducts__itemLink 
                                                     i.fa.fa-balance-scale
                                                     | К сравнению
-                                                a(href="").pv-mainProducts__itemLink 
+                                                a(href="#").pv-mainProducts__itemLink 
                                                     i.fa.fa-heart
                                                     | В избранное                                                 
                                                 .pv-mainProducts__itemLink.green

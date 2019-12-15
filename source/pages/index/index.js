@@ -1,6 +1,7 @@
 import "../../components/base/base";
 import "../../components/brands/brands";
 import "./styles.scss";
+import PerfectScrollbar from 'perfect-scrollbar';
 
 var carImage = 1;
 var carTimeout;
@@ -64,6 +65,7 @@ $(function () {
                 breakpoint: 450,
                 settings: {
                     slidesToShow: 1,
+                    centerMode: true,
                 }
             }
         ]
@@ -103,6 +105,8 @@ $(function () {
     });
 
     $('.pv-mainSliderNav__itemImg_plenki').mouseenter(function () {
+        if ($(".pv-car").is(":hidden")) return;
+
         changeCarBg('kuzov_colors', 8);
     });
 
@@ -111,6 +115,7 @@ $(function () {
     // });
 
     $('.pv-mainSliderNav__itemImg_plenkiTon').mouseenter(function () {
+        if ($(".pv-car").is(":hidden")) return;
         changeCarBg('tonirovka', 6);
     });
 
@@ -119,61 +124,72 @@ $(function () {
     // });
 
     $('.pv-mainSliderNav__itemImg_rezina').mouseenter(function () {
+        if ($(".pv-car").is(":hidden")) return;
         changeCarBg('rezina', 8);
     });
 
     $('.pv-mainSliderNav__itemImg_plenkiAntigrav').mouseenter(function () {
-        if ($('.pv-carImage__conturWrap').hasClass('hode')) return;
+        if ($(".pv-car").is(":hidden")) return;
+        if ($('.pv-carImage__conturWrap').hasClass('hide')) return;
         $('.pv-carImage__conturWrap').addClass('hide');
+        $('.pv-carImage_rocks').addClass('animate');
     });
 
     $('.pv-mainSliderNav__itemImg_plenkiAntigrav').mouseleave(function () {
+        if ($(".pv-car").is(":hidden")) return;
         $('.pv-carImage__conturWrap').removeClass('hide');
+        $('.pv-carImage_rocks').removeClass('animate');
     });
 
     $('.pv-mainSliderNav__itemImg_alkantara').mouseenter(function () {
+        if ($(".pv-car").is(":hidden")) return;
+        $(".pv-carImage").addClass('hide');
+        $(".pv-carImage_alkantara").addClass('show')
         setTimeout(function () {
-            $(".pv-carImage").addClass('hide');
-
-            setTimeout(function () {
-                $(".pv-carImage_alkantara").addClass('show');
-            }, 50)
-        }, 150)
+            $(".pv-carImage_alkantara").addClass('slide');
+        }, 400)
 
     });
 
     $('.pv-mainSliderNav__itemImg_alkantara').mouseleave(function () {
-        setTimeout(function () {
-            $(".pv-carImage_alkantara").removeClass('show');
-            $(".pv-carImage_alkantara").removeClass('hide');
-
-
-            $(".pv-carImage").removeClass('hide');
-            $(".pv-carImage").removeClass('show');
-        }, 100)
+        if ($(".pv-car").is(":hidden")) return;
+        $(".pv-carImage_alkantara").removeClass('slide').removeClass('show').removeClass('hide');
+        $(".pv-carImage").removeClass('hide').removeClass('show');
     });
 
     $('.pv-mainSliderNav__itemImg_ekoKoja').mouseenter(function () {
+        if ($(".pv-car").is(":hidden")) return;
+        $(".pv-carImage").addClass('hide');
+        $(".pv-carImage_ekoKoja").addClass('show');
         setTimeout(function () {
-            $(".pv-carImage").addClass('hide');
-
-            setTimeout(function () {
-                $(".pv-carImage_ekoKoja").addClass('show');
-            }, 50)
-        }, 150)
+            $(".pv-carImage_ekoKoja").addClass('slide');
+        }, 400)
     });
 
     $('.pv-mainSliderNav__itemImg_ekoKoja').mouseleave(function () {
-        setTimeout(function () {
-            $(".pv-carImage_ekoKoja").removeClass('show');
-            $(".pv-carImage_ekoKoja").removeClass('hide');
-
-
-            $(".pv-carImage").removeClass('hide');
-            $(".pv-carImage").removeClass('show');
-        }, 100)
+        if ($(".pv-car").is(":hidden")) return;
+        $(".pv-carImage_ekoKoja").removeClass('slide').removeClass('show').removeClass('hide');
+        $(".pv-carImage").removeClass('hide').removeClass('show');
     });
 
+    var pvProductsNav = document.querySelector('.pv-mainProducts__nav');
+    var pvPostsNav = document.querySelector('.pv-mainPosts__nav');
+
+    var ps = new PerfectScrollbar(pvProductsNav, {
+        wheelSpeed: 1,
+        wheelPropagation: true,
+        minScrollbarLength: 1,
+        useBothWheelAxes: true,
+        swipeEasing: true
+    });
+
+    var ps = new PerfectScrollbar(pvPostsNav, {
+        wheelSpeed: 1,
+        wheelPropagation: true,
+        minScrollbarLength: 1,
+        useBothWheelAxes: true,
+        swipeEasing: true
+    });
 });
 
 
@@ -203,6 +219,13 @@ function getProductsSliderSettings() {
                 breakpoint: 768,
                 settings: {
                     slidesToShow: 1,
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                    centerMode: false,
                 }
             }
         ]
