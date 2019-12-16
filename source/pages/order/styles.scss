@@ -1,1 +1,395 @@
 @import "../../common/styles/styles";
+
+.pv-order {
+    .pv-orderTop {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+
+        @include media-breakpoint-down(lg) {
+            margin-bottom: 30px;
+        }
+
+        .pv-orderTitle {
+            font-family: "Trebuchet MS";
+            font-size: 36px;
+            font-weight: 400;
+        }
+
+        .pv-order__back {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #000000;
+
+            img {
+                width: 20px;
+                margin-right: 10px;
+            }
+        }
+    }
+
+    .pv-orderDelivery {}
+
+    .pv-orderPayment {}
+
+    .pv-orderSale {
+        .pv-orderSale__row {
+            display: flex;
+            flex-flow: column;
+            width: 100%;
+            margin-bottom: 10px;
+
+            .pv-orderSale__top {
+                display: flex;
+                align-items: start;
+
+                .pv-orderSale__topIcon {
+                    width: 22px;
+                    height: 22px;
+                    display: block;
+                    border-radius: 50%;
+                    border: 1px solid #e0e7ee;
+                    margin-right: 10px;
+                    cursor: pointer;
+
+                    &.selected {
+                        background-image: url(images/selected.svg);
+                        background-position: center;
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                    }
+                }
+
+                .pv-orderSale__topName_wrap {
+                    margin-bottom: 5px;
+
+                    .pv-orderSale__topName {
+                        display: flex;
+
+                        .pv-orderSale__topInfo {
+                            color: #999999;
+                            border: 1px solid #999999;
+                            display: flex;
+                            font-size: 10px;
+                            line-height: 1;
+                            border-radius: 50%;
+                            width: 13px;
+                            height: 13px;
+                            align-items: center;
+                            justify-content: center;
+                            cursor: pointer;
+                            margin-left: 10px;
+                        }
+                    }
+
+                    .pv-orderSale__topDesc {
+                        color: #999999;
+                        margin-top: 5px;
+                    }
+                }
+
+            }
+
+            .pv-orderSale__form {
+                display: flex;
+                align-items: flex-end;
+
+                .pv-main_btn {
+                    width: 170px;
+                    margin: 0 25px;
+                }
+            }
+
+            .pv-orderSale__info {
+                display: flex;
+                align-items: flex-start;
+                margin-top: 10px;
+
+                .pv-orderSale__infoIcon {
+                    margin-right: 10px;
+                }
+
+                .pv-orderSale__infoText {}
+            }
+        }
+    }
+
+    .pv-orderBlockTitle {
+        font-family: "Trebuchet MS";
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 32px;
+    }
+
+    .pv-orderBlockWrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: 25px 0;
+    }
+
+    .pv-orderBlockRadio {
+        width: 362px;
+        border-radius: 5px;
+        border: 1px solid #e0e7ee;
+        padding: 15px 40px 15px 15px;
+        position: relative;
+        margin: 12px 0;
+        cursor: pointer;
+
+        &:after {
+            content: "";
+            width: 22px;
+            height: 22px;
+            display: block;
+            border-radius: 50%;
+            border: 1px solid #e0e7ee;
+            position: absolute;
+            right: 15px;
+            top: 15px;
+        }
+
+        &.selected {
+            &:after {
+                background-image: url(images/selected.svg);
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+        }
+
+        .pv-orderBlockRadio__title {
+            font-family: "Trebuchet MS";
+            font-size: 19px;
+        }
+
+        .pv-orderBlockRadio__desc {
+            color: #999999;
+        }
+    }
+
+    .pv-orderBlockRow {
+        width: 100%;
+        display: flex;
+        flex-flow: column;
+        margin: 10px 0;
+
+        &.short {
+            width: 362px;
+        }
+
+        .pv-orderBlockLabel {
+            font-weight: 300;
+            margin-bottom: 10px;
+
+            &.req {
+                &:after {
+                    content: "*";
+                    color: #ed1c24;
+                    font-weight: 400;
+                }
+            }
+
+        }
+
+        .pv-orderBlockInput {
+            background-color: #f1f3f6;
+            border-radius: 5px;
+            padding: 13px 16px;
+            color: #4a4a4a;
+        }
+
+        .pv-customSelect {
+            .select-selected {
+                background-color: #f1f3f6;
+                color: #4a4a4a;
+                font-size: 14px;
+            }
+
+            .select-items {
+                div {
+                    font-size: 14px;
+                    padding: 13px;
+                }
+            }
+        }
+    }
+
+    .pv-orderAside {
+        position: relative;
+
+        .pv-orderAside__wrap {
+            position: absolute;
+            width: 100%;
+            max-width: 316px;
+            right: 0;
+        }
+
+        &.fixed {
+            .pv-orderAside__wrap {
+                position: fixed;
+                top: 0;
+            }
+        }
+
+        .pv-orderAside__box {
+            background-color: #f1f3f6;
+            padding: 20px;
+
+            .pv-orderAside__row {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+                margin: 15px 0;
+
+                &:first-child {
+                    margin: 0 0 15px 0;
+                }
+
+                &:last-child {
+                    margin: 15px 0 0 0;
+                }
+
+                @include media-breakpoint-down(lg) {
+                    border-bottom: 1px dotted #e0e7ee;
+                }
+
+                .pv-orderAside__rowLeft,
+                .pv-orderAside__rowRight {
+
+                    @include media-breakpoint-down(lg) {
+                        background-color: #fff;
+                        margin-bottom: -1px;
+                    }
+                }
+            }
+
+            .pv-orderAside__item {
+                margin: 15px 0;
+
+                .pv-orderAside__itemName {
+                    margin-bottom: 5px;
+                }
+
+                .pv-orderAside__itemInfo {
+                    color: #999999;
+                    font-family: "Trebuchet MS";
+                    font-size: 12px;
+                    text-decoration: underline;
+                }
+            }
+
+
+            .pv-orderAside__bonus {
+                display: flex;
+                color: #6d7278;
+                font-family: 'Rubik';
+                font-size: 14px;
+                font-weight: 400;
+
+                @include media-breakpoint-down(lg) {
+                    background-color: #fff;
+                    margin-bottom: -1px;
+                }
+
+                span {
+                    color: #0e974f;
+                    font-weight: 500;
+                    margin-right: 5px;
+                }
+
+                .pv-orderAside__bonusInfo {
+                    color: #999999;
+                    border: 1px solid #999999;
+                    display: flex;
+                    font-size: 10px;
+                    line-height: 1;
+                    border-radius: 50%;
+                    width: 13px;
+                    height: 13px;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                    margin-left: 10px;
+                }
+            }
+        }
+
+        .pv-orderAside__auth {
+            display: flex;
+            align-items: flex-start;
+            margin-top: 30px;
+
+            @include media-breakpoint-down(lg) {
+                justify-content: center;
+            }
+
+            .pv-orderAside__authIcon {
+                width: 20px;
+            }
+
+            .pv-orderAside__authText {
+                margin-left: 10px;
+            }
+        }
+    }
+
+    .pv-orderConfirm {
+        border-top: 1px solid #e0e7ee;
+        padding-top: 30px;
+        margin-top: 10px;
+
+        .pv-orderConfirm__row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px dotted #c4c4c4;
+            margin: 15px 0;
+
+            &.total {
+                .pv-orderConfirm__rowLeft {
+                    line-height: 27px;
+                }
+
+                .pv-orderConfirm__rowRight {
+                    font-size: 27px;
+                    line-height: 1;
+                }
+            }
+
+            .pv-orderConfirm__rowLeft,
+            .pv-orderConfirm__rowRight {
+                margin-bottom: -1px;
+                background-color: #ffffff;
+                font-size: 16px;
+            }
+
+            .pv-orderConfirm__rowLeft {}
+
+            .pv-orderConfirm__rowRight {
+                font-weight: 700;
+
+                &.green {
+                    color: #0e974f;
+                }
+
+            }
+        }
+
+        .pv-orderConfirm__btn {
+            margin: 25px 0;
+        }
+
+        .pv-orderConfirm__footer {
+            font-size: 12px;
+
+            a {
+                color: #000000;
+                text-decoration: underline;
+            }
+        }
+    }
+}

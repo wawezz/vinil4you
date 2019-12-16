@@ -7,4 +7,154 @@ block main
             ul.col-12.pv-breadcrumb 
                 li.pv-breadcrumb__item 
                     a(href="#").pv-breadcrumb__link Главная страница
-                li.pv-breadcrumb__item Каталог товаров
+                li.pv-breadcrumb__item Корзина
+    .pv-order
+        .container
+            .row
+                .col-12
+                    .pv-orderTop
+                        .pv-orderTitle Оформление заказа
+                        a(href="#").pv-order__back 
+                            img(src=require('./images/icon_back.svg')) 
+                            | Вернуться к покупкам
+            .row
+                .col-12.col-xl-8
+                    .pv-orderDelivery
+                        .pv-orderBlockTitle 1. Способы получения заказа
+                        .pv-orderBlockWrap
+                            .pv-orderBlockRadio
+                                .pv-orderBlockRadio__title Забрать из 4 магазинов
+                                .pv-orderBlockRadio__desc Бесплатно!
+                            .pv-orderBlockRadio.selected
+                                .pv-orderBlockRadio__title Оформить доставку
+                                .pv-orderBlockRadio__desc От 400 ₽
+                            .pv-orderBlockRadio
+                                .pv-orderBlockRadio__title Доставка через ТК
+                                .pv-orderBlockRadio__desc СДЕК, Деловые линии, ПЭК, Почта России...
+                        .pv-orderBlockTitle Укажите адрес доставки
+                        .pv-orderBlockWrap
+                            .pv-orderBlockRow.short
+                                label.pv-orderBlockLabel.req Город
+                                input(type="text" value="Москва").pv-orderBlockInput
+                            .pv-orderBlockRow
+                                label.pv-orderBlockLabel.req Улица
+                                input(type="text" value="Тихвинская").pv-orderBlockInput
+                            .pv-orderBlockRow.short
+                                label.pv-orderBlockLabel.req Дом/корпус
+                                input(type="text" value="35").pv-orderBlockInput
+                            .pv-orderBlockRow.short
+                                label.pv-orderBlockLabel.req Квартира
+                                input(type="text" value="16").pv-orderBlockInput
+                            .pv-orderBlockRow.short
+                                label.pv-orderBlockLabel Дата доставки
+                                .pv-customSelect
+                                    select
+                                        option(selected="selected") Завтра, 19 ноября
+                                        option Завтра, 19 ноября
+                                        option Завтра, 19 ноября
+                            .pv-orderBlockRow.short
+                                label.pv-orderBlockLabel Время доставки
+                                .pv-customSelect
+                                    select.pv-orderBlockInput       
+                                        option 09:00-16:00 бесплатно
+                                        option 07:00-11:00 за 200 ₽
+                                        option 09:00-16:00 бесплатно
+                                        option 09:00-22:00 бесплатно
+                                        option 15:00-22:00 бесплатно
+                                        option 19:00-23:00 за 200 ₽ 
+                                        option 22:00-02:00 за 190 ₽
+                    .pv-orderPayment
+                        .pv-orderBlockTitle 2. Выбор способа оплаты
+                        .pv-orderBlockWrap
+                            .pv-orderBlockRadio.selected
+                                .pv-orderBlockRadio__title При получении
+                                .pv-orderBlockRadio__desc Наличными, банковской картой
+                            .pv-orderBlockRadio
+                                .pv-orderBlockRadio__title Онлайн
+                                .pv-orderBlockRadio__desc Картами Visa, MasterCard, Мир
+                            .pv-orderBlockRadio
+                                .pv-orderBlockRadio__title Электронными деньгами
+                                .pv-orderBlockRadio__desc Яндекс.Касса, Robokassa, Webmoney, Qiwi                    
+                    .pv-orderSale
+                        .pv-orderBlockTitle 3. Скидки к заказу 
+                        .pv-orderBlockWrap
+                            .pv-orderSale__row
+                                .pv-orderSale__top
+                                    .pv-orderSale__topIcon.selected
+                                    .pv-orderSale__topName_wrap
+                                        .pv-orderSale__topName Бонусные рубли, доступно 110 ₽
+                                            .pv-orderSale__topInfo ?
+                                        .pv-orderSale__topDesc Оплачивайте до 50% от стоимости покупки
+                                .pv-orderSale__form
+                                    .pv-orderBlockRow.short
+                                        label.pv-orderBlockLabel Сумма
+                                        input(type="text" value="110").pv-orderBlockInput
+                                    .pv-orderBlockRow.short
+                                        .pv-main_btn Подтвердить
+                            .pv-orderSale__row
+                                .pv-orderSale__top
+                                    .pv-orderSale__topIcon.selected
+                                    .pv-orderSale__topName_wrap
+                                        .pv-orderSale__topName Промо-код
+                                            .pv-orderSale__topInfo ? 
+                                .pv-orderSale__form
+                                    .pv-orderBlockRow.short
+                                        input(type="text" placeholder="Введите номер промокода").pv-orderBlockInput
+                                    .pv-orderBlockRow.short
+                                        .pv-main_btn Применить                                
+                                .pv-orderSale__info
+                                    img(src=require("./images/icon_info.svg")).pv-orderSale__infoIcon
+                                    .pv-orderSale__infoText К заказу можно применить только одну скидку. Применение дополнительных скидок в магазине недоступно.                                    
+                    .pv-orderUser
+                        .pv-orderBlockTitle 4. Укажите данные получателя заказа
+                        .pv-orderBlockWrap
+                            .pv-orderBlockRow.short
+                                label.pv-orderBlockLabel.req Email
+                                input(type="text" value="armi_manoo@yahoo.com").pv-orderBlockInput                        
+                            .pv-orderBlockRow.short
+                                label.pv-orderBlockLabel.req Телефон
+                                input(type="text" value="+7 968 0970507").pv-orderBlockInput                        
+                            .pv-orderBlockRow.short
+                                label.pv-orderBlockLabel.req Имя
+                                input(type="text" value="Армен").pv-orderBlockInput                                                        
+                .col-12.col-xl-4.pv-orderAside
+                    .pv-orderAside__wrap
+                        .pv-orderAside__box
+                            .pv-orderAside__row
+                                .pv-orderAside__rowLeft В заказе 2 товара на сумму
+                                .pv-orderAside__rowRight.font-weight-bold 12950 ₽
+                            .pv-orderAside__row
+                                .pv-orderAside__rowLeft Общий вес:
+                                .pv-orderAside__rowRight 0.5 кг
+                            .pv-orderAside__item
+                                .pv-orderAside__itemName Кофемашина Siemens EQ.6 plus s100 (71093648)
+                                .pv-orderAside__itemInfo 1 шт. x 12 950
+                            .pv-orderAside__item
+                                .pv-orderAside__itemName Пленка Суперглянец для панорамной крыши черный (71093648)
+                                .pv-orderAside__itemInfo 1 шт. x 31 550                             
+                            .pv-orderAside__row
+                                .d-block.d-xl-none.pv-orderAside__rowLeft Скидки на следующий заказ
+                                .pv-orderAside__rowRight.pv-orderAside__bonus
+                                    span +510 бонусов 
+                                    | на бонусную карту 
+                                    .pv-orderAside__bonusInfo ?                                
+                        .pv-orderAside__auth
+                            img(src=require('./images/icon_in.svg')).pv-orderAside__authIcon
+                            .pv-orderAside__authText Авторизуйтесь или зарегистрируйтесь и получите до 10% от стоимости заказа Бонусными рублями
+            .row                            
+                .col-12.col-xl-8
+                    .pv-orderConfirm
+                        .pv-orderConfirm__row
+                            .pv-orderConfirm__rowLeft Товары
+                            .pv-orderConfirm__rowRight 12950 ₽
+                        .pv-orderConfirm__row
+                            .pv-orderConfirm__rowLeft Скидка
+                            .pv-orderConfirm__rowRight.green -2950 ₽
+                        .pv-orderConfirm__row
+                            .pv-orderConfirm__rowLeft Доставка курьером
+                            .pv-orderConfirm__rowRight 400 ₽
+                        .pv-orderConfirm__row.total
+                            .pv-orderConfirm__rowLeft Итого к оплате
+                            .pv-orderConfirm__rowRight 12950 ₽
+                        .pv-orderConfirm__btn.pv-main_btn  Оформить заказ  
+                        .pv-orderConfirm__footer Завершая оформление заказа, я даю своё согласие на обработку персональных данных и подтверждаю ознакомление со сроками хранения товара в соответствии с #[a(href="#") указанными здесь условиями].#[br]В соответствии с ФЗ №54-ФЗ кассовый чек при онлайн-оплате на сайте будет предоставлен в электронном виде на указанный при оформлении заказа номер телефона.

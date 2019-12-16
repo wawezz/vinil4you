@@ -105,9 +105,9 @@ block main
                                             span Нет
                                 .pv-product__car
                                     .pv-product__carImg
-                                        img(src=require("./images/lamba1.png"))
-                                    .pv-product__carImg.pv-product__carOverlay
                                         img(src=require("./images/lamba2.png"))
+                                    .pv-product__carImg.pv-product__carOverlay
+                                        img(src=require("./images/lamba1.png"))
                 .col-12.col-md-6.col-xl-3.pv-product__asside
                     .pv-product__asside_wrap
                         .pv-product__asside_header
@@ -115,9 +115,12 @@ block main
                             .pv-product__assideOptions
                                 .pv-product__assideTitle Выбрать вариант #[span *]
                                 .pv-product__assideNav
-                                    select.pv-product__assideNav_select
-                                        option(selected="selected").pv-product__assideNav_select Метраж
-                                        option.pv-product__assideNav_select Метраж
+                                    .pv-customSelect
+                                        select
+                                            option(selected="selected") Метраж
+                                            option Метраж
+                                            option Метраж
+                                            option Метраж
                                     .pv-product__assideNav_count
                                         i.fa.fa-minus
                                         .pv-product__assideNav_count_num 1
