@@ -1,5 +1,13 @@
 @import "../../common/styles/styles";
 
+body {
+    &.modal-open {
+        .pv-contentWrap {
+            z-index: inherit;
+        }
+    }
+}
+
 #pv-Wrapper {
     display: flex;
     overflow: hidden;

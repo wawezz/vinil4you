@@ -1,537 +1,555 @@
 @import "../../common/styles/styles";
 
 .pv-cart {
-    .pv-cartTop {
+  .pv-cartTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 30px;
+    }
+
+    .pv-cartTitle {
+      font-family: "Trebuchet MS";
+      font-size: 36px;
+      font-weight: 400;
+    }
+
+    .pv-cart__back {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #000000;
+
+      img {
+        width: 20px;
+        margin-right: 10px;
+      }
+    }
+  }
+
+  .pv-cartItems {
+    border-bottom: 1px solid #e0e7ee;
+
+    @include media-breakpoint-down(sm) {
+      border-bottom: none;
+    }
+
+    .pv-cartItem__row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+      justify-content: space-between;
+
+      @include media-breakpoint-down(sm) {
+        align-items: start;
+        padding: 20px 0;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #e0e7ee;
+      }
+
+      .pv-cartItem__dataWrap {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin-bottom: 20px;
+        width: 100%;
 
-        @include media-breakpoint-down(lg) {
-            margin-bottom: 30px;
+        @include media-breakpoint-down(xs) {
+          flex-flow: column;
+          align-items: start;
         }
+      }
 
-        .pv-cartTitle {
-            font-family: "Trebuchet MS";
-            font-size: 36px;
-            font-weight: 400;
-        }
-
-        .pv-cart__back {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #000000;
-
-            img {
-                width: 20px;
-                margin-right: 10px;
-            }
-        }
-    }
-
-    .pv-cartItems {
-        border-bottom: 1px solid #e0e7ee;
+      .pv-cartItem__data {
+        display: flex;
+        align-items: center;
 
         @include media-breakpoint-down(sm) {
-            border-bottom: none;
+          flex-flow: column;
+          align-items: start;
+        }
+      }
+
+      .pv-cartItem__img {
+        width: 100px;
+
+        @include media-breakpoint-down(md) {
+          width: 60px;
+        }
+      }
+
+      .pv-cartItem__info {
+        margin-left: 20px;
+        width: 300px;
+
+        @include media-breakpoint-down(xs) {
+          width: 100%;
         }
 
-        .pv-cartItem__row {
-            display: flex;
-            align-items: center;
-            margin-bottom: 30px;
-            justify-content: space-between;
-
-            @include media-breakpoint-down(sm) {
-                align-items: start;
-                padding: 20px 0;
-                margin-bottom: 20px;
-                border-bottom: 1px solid #e0e7ee;
-            }
-
-            .pv-cartItem__dataWrap {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                width: 100%;
-
-                @include media-breakpoint-down(xs) {
-                    flex-flow: column;
-                    align-items: start;
-                }
-            }
-
-            .pv-cartItem__data {
-                display: flex;
-                align-items: center;
-
-                @include media-breakpoint-down(sm) {
-                    flex-flow: column;
-                    align-items: start;
-                }
-            }
-
-            .pv-cartItem__img {
-                width: 100px;
-
-                @include media-breakpoint-down(md) {
-                    width: 60px;
-                }
-            }
-
-            .pv-cartItem__info {
-                margin-left: 20px;
-                width: 300px;
-
-                @include media-breakpoint-down(xs) {
-                    width: 100%;
-                }
-
-                .pv-cartItem__infoCode {
-                    color: #999999;
-                    font-family: "Trebuchet MS";
-                    font-size: 12px;
-                    font-weight: 400;
-                    text-decoration: underline;
-                }
-
-                .pv-cartItem__infoName {
-                    font-family: "Trebuchet MS";
-                    font-size: 16px;
-                    font-weight: 400;
-                    margin-top: 10px;
-                    line-height: 1.2;
-                }
-            }
-
-            .pv-cartItem__count {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                padding: 10px 20px 10px 20px;
-                background-color: #ffffff;
-                border: 1px solid #e0e7ee;
-                border-radius: 5px;
-                color: #6d7278;
-                font-size: 12px;
-                margin-left: 20px;
-
-                @include media-breakpoint-down(sm) {
-                    margin-top: 30px;
-                }
-
-                i {
-                    cursor: pointer;
-                    color: #0e974f;
-                }
-
-                .pv-cartItem__countNum {
-                    margin: 0 15px
-                }
-            }
-
-            .pv-cartItem__priceInfo {
-                margin-left: 20px;
-
-                @include media-breakpoint-down(md) {
-                    text-align: right;
-                }
-
-                @include media-breakpoint-down(xs) {
-                    display: flex;
-                    align-items: center;
-                    text-align: left;
-                    margin-top: 20px;
-                    flex-wrap: wrap;
-                }
-
-                .pv-cartItem__priceOld_wrap {
-                    display: flex;
-                    align-items: center;
-
-                    @include media-breakpoint-down(md) {
-                        justify-content: flex-end;
-                    }
-
-                    @include media-breakpoint-down(xs) {
-                        margin-right: 20px;
-                    }
-
-                    .pv-cartItem__priceOld {
-                        color: #999999;
-                        font-family: "Roboto";
-                        font-size: 15px;
-                        font-weight: 700;
-                        text-decoration: line-through;
-                        text-decoration-color: #ff3f47;
-                    }
-
-                    .pv-cartItem__priceSale {
-                        background-color: #0e974f;
-                        color: #ffffff;
-                        font-family: "Roboto";
-                        font-size: 15px;
-                        font-weight: 700;
-                        margin-left: 10px;
-                        padding: 2px 5px;
-                    }
-                }
-
-                .pv-cartItem__priceCur {
-                    font-family: "Roboto";
-                    font-size: 22px;
-                    font-weight: 700;
-
-                    @include media-breakpoint-down(xs) {
-                        margin-right: 20px;
-                    }
-
-                    span {
-                        font-size: 15px;
-                        font-weight: 700;
-                    }
-                }
-
-                .pv-cartItem__remove {
-                    color: #999999;
-                    font-family: "Trebuchet MS";
-                    font-size: 12px;
-                    font-weight: 400;
-                    text-decoration: underline;
-                    cursor: pointer;
-                }
-            }
+        .pv-cartItem__infoCode {
+          color: #999999;
+          font-family: "Trebuchet MS";
+          font-size: 12px;
+          font-weight: 400;
+          text-decoration: underline;
         }
+
+        .pv-cartItem__infoName {
+          font-family: "Trebuchet MS";
+          font-size: 16px;
+          font-weight: 400;
+          margin-top: 10px;
+          line-height: 1.2;
+        }
+      }
+
+      .pv-cartItem__count {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 20px 10px 20px;
+        background-color: #ffffff;
+        border: 1px solid #e0e7ee;
+        border-radius: 5px;
+        color: #6d7278;
+        font-size: 12px;
+        margin-left: 20px;
+
+        @include media-breakpoint-down(sm) {
+          margin-top: 30px;
+        }
+
+        i {
+          cursor: pointer;
+          color: #0e974f;
+        }
+
+        .pv-cartItem__countNum {
+          margin: 0 15px;
+        }
+      }
+
+      .pv-cartItem__priceInfo {
+        margin-left: 20px;
+
+        @include media-breakpoint-down(md) {
+          text-align: right;
+        }
+
+        @include media-breakpoint-down(xs) {
+          display: flex;
+          align-items: center;
+          text-align: left;
+          margin-top: 20px;
+          flex-wrap: wrap;
+        }
+
+        .pv-cartItem__priceOld_wrap {
+          display: flex;
+          align-items: center;
+
+          @include media-breakpoint-down(md) {
+            justify-content: flex-end;
+          }
+
+          @include media-breakpoint-down(xs) {
+            margin-right: 20px;
+          }
+
+          .pv-cartItem__priceOld {
+            color: #999999;
+            font-family: "Roboto";
+            font-size: 15px;
+            font-weight: 700;
+            text-decoration: line-through;
+            text-decoration-color: #ff3f47;
+          }
+
+          .pv-cartItem__priceSale {
+            background-color: #0e974f;
+            color: #ffffff;
+            font-family: "Roboto";
+            font-size: 15px;
+            font-weight: 700;
+            margin-left: 10px;
+            padding: 2px 5px;
+          }
+        }
+
+        .pv-cartItem__priceCur {
+          font-family: "Roboto";
+          font-size: 22px;
+          font-weight: 700;
+
+          @include media-breakpoint-down(xs) {
+            margin-right: 20px;
+          }
+
+          span {
+            font-size: 15px;
+            font-weight: 700;
+          }
+        }
+
+        .pv-cartItem__remove {
+          color: #999999;
+          font-family: "Trebuchet MS";
+          font-size: 12px;
+          font-weight: 400;
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .pv-cartRecommended {
+    margin-top: 25px;
+    border-bottom: 1px solid #e0e7ee;
+
+    .pv-cartRecommended__title {
+      font-family: "Trebuchet MS";
+      font-size: 24px;
+      font-weight: 400;
+      margin-bottom: 25px;
     }
 
-    .pv-cartRecommended {
-        margin-top: 25px;
-        border-bottom: 1px solid #e0e7ee;
+    .pv-cartRecommendedItem__row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 30px;
 
-        .pv-cartRecommended__title {
-            font-family: "Trebuchet MS";
-            font-size: 24px;
-            font-weight: 400;
-            margin-bottom: 25px;
+      @include media-breakpoint-down(sm) {
+        align-items: start;
+      }
+
+      .pv-cartRecommendedItem__dataWrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+
+        @include media-breakpoint-down(sm) {
+          flex-flow: column;
+          align-items: start;
+        }
+      }
+
+      .pv-cartRecommendedItem__data {
+        display: flex;
+        align-items: center;
+
+        @include media-breakpoint-down(xs) {
+          flex-flow: column;
+          align-items: start;
+        }
+      }
+
+      .pv-cartRecommendedItem__img {
+        width: 100px;
+
+        @include media-breakpoint-down(md) {
+          width: 60px;
+        }
+      }
+
+      .pv-cartRecommendedItem__info {
+        margin-left: 20px;
+        width: 300px;
+
+        @include media-breakpoint-down(xs) {
+          width: 100%;
         }
 
-        .pv-cartRecommendedItem__row {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 30px;
-
-            @include media-breakpoint-down(sm) {
-                align-items: start;
-            }
-
-            .pv-cartRecommendedItem__dataWrap {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                width: 100%;
-
-                @include media-breakpoint-down(sm) {
-                    flex-flow: column;
-                    align-items: start;
-                }
-
-            }
-
-            .pv-cartRecommendedItem__data {
-                display: flex;
-                align-items: center;
-
-                @include media-breakpoint-down(xs) {
-                    flex-flow: column;
-                    align-items: start;
-                }
-
-            }
-
-            .pv-cartRecommendedItem__img {
-                width: 100px;
-
-                @include media-breakpoint-down(md) {
-                    width: 60px;
-                }
-            }
-
-            .pv-cartRecommendedItem__info {
-                margin-left: 20px;
-                width: 300px;
-
-                @include media-breakpoint-down(xs) {
-                    width: 100%;
-                }
-
-                .pv-cartRecommendedItem__infoCode {
-                    color: #999999;
-                    font-family: "Trebuchet MS";
-                    font-size: 12px;
-                    font-weight: 400;
-                    text-decoration: underline;
-                }
-
-                .pv-cartRecommendedItem__infoName {
-                    color: #000000;
-                    font-family: "Trebuchet MS";
-                    font-size: 16px;
-                    font-weight: 400;
-                    line-height: 1.2;
-                    margin-top: 10px;
-                }
-            }
-
-            .pv-cartRecommendedItem__price {
-                font-family: "Roboto";
-                font-size: 22px;
-                font-weight: 700;
-                margin: 5px 0;
-
-                @include media-breakpoint-down(xs) {
-                    margin: 20px 0 0 20px;
-                }
-
-                span {
-                    font-size: 15px;
-                    font-weight: 700;
-                }
-            }
-
-            .pv-cartRecommendedItem__add {
-                margin: 0 0 0 20px;
-                height: 50px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-
-                @include media-breakpoint-down(sm) {
-                    margin: 20px 0 0 20px;
-                    width: -webkit-fill-available;
-                }
-
-                @include media-breakpoint-down(xs) {
-                    font-size: 15px;
-                }
-            }
+        .pv-cartRecommendedItem__infoCode {
+          color: #999999;
+          font-family: "Trebuchet MS";
+          font-size: 12px;
+          font-weight: 400;
+          text-decoration: underline;
         }
+
+        .pv-cartRecommendedItem__infoName {
+          color: #000000;
+          font-family: "Trebuchet MS";
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 1.2;
+          margin-top: 10px;
+        }
+      }
+
+      .pv-cartRecommendedItem__price {
+        font-family: "Roboto";
+        font-size: 22px;
+        font-weight: 700;
+        margin: 5px 0;
+
+        @include media-breakpoint-down(xs) {
+          margin: 20px 0 0 20px;
+        }
+
+        span {
+          font-size: 15px;
+          font-weight: 700;
+        }
+      }
+
+      .pv-cartRecommendedItem__add {
+        margin: 0 0 0 20px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include media-breakpoint-down(sm) {
+          margin: 20px 0 0 20px;
+          width: -webkit-fill-available;
+        }
+
+        @include media-breakpoint-down(xs) {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+
+  .pv-cartAside {
+    @include media-breakpoint-down(lg) {
+      padding: 30px 0;
+      border-bottom: 1px solid #e0e7ee;
     }
 
-    .pv-cartAside {
+    .pv-cartAside__box {
+      background-color: #f1f3f6;
+      padding: 20px;
+
+      @include media-breakpoint-down(lg) {
+        background-color: #ffffff;
+        padding: 0;
+      }
+
+      .pv-cartAside__head {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+
         @include media-breakpoint-down(lg) {
-            padding: 30px 0;
-            border-bottom: 1px solid #e0e7ee;
+          border-bottom: 1px dotted #e0e7ee;
         }
 
-        .pv-cartAside__box {
-            background-color: #f1f3f6;
-            padding: 20px;
-
-            @include media-breakpoint-down(lg) {
-                background-color: #ffffff;
-                padding: 0;
-            }
-
-            .pv-cartAside__head {
-                display: flex;
-                justify-content: space-between;
-                align-items: flex-end;
-
-                @include media-breakpoint-down(lg) {
-                    border-bottom: 1px dotted #e0e7ee;
-                }
-
-                @include media-breakpoint-down(xs) {
-                    border-bottom: none;
-                }
-
-                .pv-cartAside__count {
-                    @include media-breakpoint-down(lg) {
-                        background-color: #fff;
-                        margin-bottom: -1px;
-                    }
-                }
-
-                .pv-cartAside__priceInfo {
-                    text-align: right;
-
-                    @include media-breakpoint-down(lg) {
-                        background-color: #fff;
-                        margin-bottom: -1px;
-                    }
-
-                    .pv-cartAside__priceOld {
-                        color: #999999;
-                        font-family: 'Roboto';
-                        font-size: 15px;
-                        font-weight: 700;
-                        text-decoration: line-through;
-                        text-decoration-color: #ff3f47;
-                    }
-
-                    .pv-cartAside__priceCur {
-                        font-family: 'Roboto';
-                        font-size: 27px;
-                        font-weight: 700;
-
-                        span {
-                            font-size: 21px;
-                            font-weight: 700;
-                        }
-
-                    }
-                }
-
-            }
-
-            .pv-cartAside__bonusWrap {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                margin: 25px 0;
-
-                @include media-breakpoint-down(lg) {
-                    border-bottom: 1px dotted #e0e7ee;
-                }
-
-                @include media-breakpoint-down(xs) {
-                    border-bottom: none;
-                    flex-wrap: wrap;
-                }
-            }
-
-            .pv-cartAside__bonusText {
-                line-height: 2;
-                margin-right: 10px;
-
-                @include media-breakpoint-down(lg) {
-                    background-color: #fff;
-                    margin-bottom: -1px;
-                }
-            }
-
-            .pv-cartAside__bonus {
-                display: flex;
-                color: #6d7278;
-                font-family: 'Rubik';
-                font-size: 14px;
-                font-weight: 400;
-
-                @include media-breakpoint-down(lg) {
-                    background-color: #fff;
-                    margin-bottom: -1px;
-                }
-
-                span {
-                    color: #0e974f;
-                    font-weight: 500;
-                    margin-right: 5px;
-                }
-
-                .pv-cartAside__bonusInfo {
-                    color: #999999;
-                    border: 1px solid #999999;
-                    display: flex;
-                    font-size: 10px;
-                    line-height: 1;
-                    border-radius: 50%;
-                    width: 13px;
-                    height: 13px;
-                    align-items: center;
-                    justify-content: center;
-                    cursor: pointer;
-                    margin-left: 10px;
-                }
-            }
-
-            .pv-cartAside__Buttons {
-                display: flex;
-                flex-flow: column;
-                align-items: center;
-
-                @include media-breakpoint-down(lg) {
-                    flex-flow: row;
-                    justify-content: center;
-                    margin-top: 40px;
-                }
-
-                @include media-breakpoint-down(xs) {
-                    flex-flow: column;
-                    justify-content: center;
-                    margin-top: 30px;
-                }
-
-                .pv-cartAside__contBtn,
-                .pv-cartAside__buyBtn {
-                    width: 100%;
-                    height: 50px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-
-                    @include media-breakpoint-down(lg) {
-                        max-width: 300px;
-                        margin: 0 20px;
-                    }
-
-                    @include media-breakpoint-down(xs) {
-                        margin: 10px 0;
-                        max-width: 100%;
-                        font-size: 15px;
-                    }
-                }
-
-                .pv-cartAside__buyBtn {
-                    background-color: #979797;
-                }
-            }
-
-            .pv-cartAside__back {
-                margin-top: 20px;
-                width: 100%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                color: #000000;
-
-                img {
-                    width: 20px;
-                    margin-right: 10px;
-                }
-            }
-
-            .pv-main_btn {
-                margin: 15px 0;
-            }
+        @include media-breakpoint-down(xs) {
+          border-bottom: none;
         }
 
-        .pv-cartAside__auth {
-            display: flex;
-            align-items: flex-start;
-            margin-top: 30px;
-
-            @include media-breakpoint-down(lg) {
-                justify-content: center;
-            }
-
-            .pv-cartAside__authIcon {
-                width: 20px;
-            }
-
-            .pv-cartAside__authText {
-                margin-left: 10px;
-            }
+        .pv-cartAside__count {
+          @include media-breakpoint-down(lg) {
+            background-color: #fff;
+            margin-bottom: -1px;
+          }
         }
+
+        .pv-cartAside__priceInfo {
+          text-align: right;
+
+          @include media-breakpoint-down(lg) {
+            background-color: #fff;
+            margin-bottom: -1px;
+          }
+
+          .pv-cartAside__priceOld {
+            color: #999999;
+            font-family: "Roboto";
+            font-size: 15px;
+            font-weight: 700;
+            text-decoration: line-through;
+            text-decoration-color: #ff3f47;
+          }
+
+          .pv-cartAside__priceCur {
+            font-family: "Roboto";
+            font-size: 27px;
+            font-weight: 700;
+
+            span {
+              font-size: 21px;
+              font-weight: 700;
+            }
+          }
+        }
+      }
+
+      .pv-cartAside__bonusWrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 25px 0;
+
+        @include media-breakpoint-down(lg) {
+          border-bottom: 1px dotted #e0e7ee;
+        }
+
+        @include media-breakpoint-down(xs) {
+          border-bottom: none;
+          flex-wrap: wrap;
+        }
+      }
+
+      .pv-cartAside__bonusText {
+        line-height: 2;
+        margin-right: 10px;
+
+        @include media-breakpoint-down(lg) {
+          background-color: #fff;
+          margin-bottom: -1px;
+        }
+      }
+
+      .pv-cartAside__bonus {
+        display: flex;
+        color: #6d7278;
+        font-family: "Rubik";
+        font-size: 14px;
+        font-weight: 400;
+
+        @include media-breakpoint-down(lg) {
+          background-color: #fff;
+          margin-bottom: -1px;
+        }
+
+        span {
+          color: #0e974f;
+          font-weight: 500;
+          margin-right: 5px;
+        }
+
+        .pv-cartAside__bonusInfo {
+          color: #999999;
+          border: 1px solid #999999;
+          display: flex;
+          font-size: 10px;
+          line-height: 1;
+          border-radius: 50%;
+          width: 13px;
+          height: 13px;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          margin-left: 10px;
+          position: relative;
+
+          &:hover {
+            .pv-cartAside__bonusInfo__popap {
+              display: block;
+            }
+          }
+
+          .pv-cartAside__bonusInfo__popap {
+            display: none;
+            position: absolute;
+            padding: 10px;
+            width: 170px;
+            font-size: 12px;
+            background-color: #fff;
+            box-shadow: 0 0 4px #d9d9d9;
+            border: 1px solid #d9d9d9;
+            border-radius: 4px;
+            color: #000000;
+            line-height: 1.4;
+            bottom: 20px;
+          }
+        }
+      }
+
+      .pv-cartAside__Buttons {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+
+        @include media-breakpoint-down(lg) {
+          flex-flow: row;
+          justify-content: center;
+          margin-top: 40px;
+        }
+
+        @include media-breakpoint-down(xs) {
+          flex-flow: column;
+          justify-content: center;
+          margin-top: 30px;
+        }
+
+        .pv-cartAside__contBtn,
+        .pv-cartAside__buyBtn {
+          width: 100%;
+          height: 50px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          @include media-breakpoint-down(lg) {
+            max-width: 300px;
+            margin: 0 20px;
+          }
+
+          @include media-breakpoint-down(xs) {
+            margin: 10px 0;
+            max-width: 100%;
+            font-size: 15px;
+          }
+        }
+
+        .pv-cartAside__buyBtn {
+          background-color: #979797;
+        }
+      }
+
+      .pv-cartAside__back {
+        margin-top: 20px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #000000;
+
+        img {
+          width: 20px;
+          margin-right: 10px;
+        }
+      }
+
+      .pv-main_btn {
+        margin: 15px 0;
+      }
     }
 
-    .pv-cart__seeAlso {
-        margin-top: 45px;
+    .pv-cartAside__auth {
+      display: flex;
+      align-items: flex-start;
+      margin-top: 30px;
 
-        .pv-cart__seeAlsoTitle {
-            font-family: "Trebuchet MS";
-            font-size: 24px;
-        }
+      @include media-breakpoint-down(lg) {
+        justify-content: center;
+      }
+
+      .pv-cartAside__authIcon {
+        width: 20px;
+      }
+
+      .pv-cartAside__authText {
+        margin-left: 10px;
+      }
     }
+  }
+
+  .pv-cart__seeAlso {
+    margin-top: 45px;
+
+    .pv-cart__seeAlsoTitle {
+      font-family: "Trebuchet MS";
+      font-size: 24px;
+    }
+  }
 }
