@@ -69,8 +69,11 @@ body {
     font-size: 12px;
     color: #333;
     transition: all 0.3s ease-in-out;
+    position: absolute;
+    z-index: 0;
 
     &.show {
+        position: relative;
         margin-left: 0;
     }
 

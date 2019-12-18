@@ -1,20 +1,19 @@
 import "../../components/base/base";
 import "./styles.scss";
 
-$(function() {
-  var activeDeliveryRadio = "__1";
+$(function () {
   var assideTop = $(".pv-orderAside").offset().top;
   var assideHeight = $(".pv-orderAside").height();
   var footerTop = $(".pv-footer").offset().top;
   var container = $(".container");
 
-  $(window).resize(function() {
+  $(window).resize(function () {
     assideTop = $(".pv-orderAside").offset().top;
     assideHeight = $(".pv-orderAside").height();
     footerTop = $(".pv-footer").offset().top;
   });
 
-  $(window).scroll(function() {
+  $(window).scroll(function () {
     if (container.width() < 1140) return;
 
     var currentScroll = $(window).scrollTop();
@@ -51,14 +50,14 @@ $(function() {
     }
   });
 
-  $(document).on("click", ".pv-orderDelivery__radioBtn", function() {
+  $(document).on("click", ".pv-orderDelivery__radioBtn", function () {
     var active = $(this).data("var");
     if (!active) return;
 
     changeRadio("__" + active);
   });
 
-  $(document).on("click", ".pv-orderConfirmSale", function() {
+  $(document).on("click", ".pv-orderConfirmSale", function () {
     var form = $(this).parents(".pv-orderSale__form");
     var input = form.find(".pv-orderBlockInput");
     var val = form.find(".pv-orderSale__editVal");
@@ -69,23 +68,23 @@ $(function() {
     form.removeClass("active");
   });
 
-  $(document).on("click", ".pv-orderSale__cancel", function() {
+  $(document).on("click", ".pv-orderSale__cancel", function () {
     var form = $(this).parents(".pv-orderSale__form");
     form.addClass("active");
   });
 
-  $(document).on("click", ".pv-orderPayment__radioBtn", function() {
+  $(document).on("click", ".pv-orderPayment__radioBtn", function () {
     $(".pv-orderPayment__radioBtn").removeClass("active");
     $(this).addClass("active");
   });
 
-  $(document).on("click", ".pv-orderAside__rowsNav", function() {
+  $(document).on("click", ".pv-orderAside__rowsNav", function () {
     $(this)
       .parent(".pv-orderAside__box")
       .toggleClass("show");
   });
 
-  $(document).on("click", ".pv-deliverySelf__modalHead-listView", function() {
+  $(document).on("click", ".pv-deliverySelf__modalHead-listView", function () {
     var modal = $(".pv-deliverySelf__modal");
 
     if (modal.hasClass("list")) return;
@@ -94,7 +93,7 @@ $(function() {
     modal.addClass("list");
   });
 
-  $(document).on("click", ".pv-deliverySelf__modalHead-mapView", function() {
+  $(document).on("click", ".pv-deliverySelf__modalHead-mapView", function () {
     var modal = $(".pv-deliverySelf__modal");
 
     if (modal.hasClass("map")) return;

@@ -26,6 +26,7 @@ const common = merge([{
             'catalog': PATHS.source + '/pages/catalog/catalog.js',
             'cart': PATHS.source + '/pages/cart/cart.js',
             'order': PATHS.source + '/pages/order/order.js',
+            'auth': PATHS.source + '/pages/auth/auth.js',
             'optovikam-i-dileram': PATHS.source + '/pages/optovikam-i-dileram/optovikam-i-dileram.js',
         },
         output: {
@@ -77,6 +78,11 @@ const common = merge([{
                 filename: 'order.html',
                 chunks: ['order', 'common'],
                 template: PATHS.source + '/pages/order/order.pug'
+            }),
+            new HtmlWebpackPlugin({
+                filename: 'auth.html',
+                chunks: ['auth', 'common'],
+                template: PATHS.source + '/pages/auth/auth.pug'
             }),
             new HtmlWebpackPlugin({
                 filename: 'optovikam-i-dileram.html',

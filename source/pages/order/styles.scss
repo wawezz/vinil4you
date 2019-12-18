@@ -664,10 +664,11 @@
 
 #deliverySelfMap {
     .modal-dialog {
-        max-width: 90%;
+        width: 90%;
+        max-width: 1170px;
 
         @include media-breakpoint-down(xs) {
-            max-width: 100%;
+            width: 97%;
         }
     }
 

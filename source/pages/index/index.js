@@ -4,7 +4,6 @@ import "./styles.scss";
 import PerfectScrollbar from 'perfect-scrollbar';
 
 var carImage = 1;
-var carTimeout;
 
 $(function () {
 

@@ -52,13 +52,15 @@ $(function () {
 
   var pvBreadcrumb = document.querySelector('.pv-breadcrumb');
 
-  var ps = new PerfectScrollbar(pvBreadcrumb, {
-    wheelSpeed: 1,
-    wheelPropagation: true,
-    minScrollbarLength: 1,
-    useBothWheelAxes: true,
-    swipeEasing: true
-  });
+  if (pvBreadcrumb) {
+    var ps = new PerfectScrollbar(pvBreadcrumb, {
+      wheelSpeed: 1,
+      wheelPropagation: true,
+      minScrollbarLength: 1,
+      useBothWheelAxes: true,
+      swipeEasing: true
+    });
+  }
 
   customSelects();
 

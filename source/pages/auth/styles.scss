@@ -1,0 +1,126 @@
+@import "../../common/styles/styles";
+
+.pv-auth {
+  .pv-authTitle {
+    font-family: "Trebuchet MS";
+    font-size: 36px;
+    font-weight: 400;
+
+    @include media-breakpoint-down(sm) {
+      font-size: 35px;
+    }
+  }
+
+  .pv-authBody {
+    margin-top: 30px;
+
+    .pv-authBody__block {
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 40px;
+      }
+    }
+
+    .pv-authBody__title {
+      font-family: "Trebuchet MS";
+      font-size: 24px;
+      line-height: 1.4;
+    }
+
+    .pv-authBody__row {
+      display: flex;
+      flex-flow: column;
+      margin: 20px 0;
+
+      .pv-authBody__lable {
+        color: #333333;
+        margin-bottom: 10px;
+
+        &.req {
+          &:after {
+            content: "*";
+            color: #ed1c24;
+            font-weight: 400;
+          }
+        }
+      }
+
+      .pv-authBody__input {
+        margin-bottom: 20px;
+        background-color: #f1f3f6;
+        border-radius: 5px;
+        padding: 13px 16px;
+        color: #4a4a4a;
+      }
+
+      .pv-authBody__btn {
+        margin: 0;
+
+        @include media-breakpoint-down(sm) {
+          padding: 12px 30px;
+          font-size: 15px;
+        }
+      }
+
+      .pv-authBody__desc {
+        color: #333333;
+        font-size: 12px;
+        font-weight: 300;
+
+        a {
+          color: #333333;
+          text-decoration: underline;
+        }
+      }
+
+      .pv-authBody__link {
+        color: #0e974f;
+        font-size: 14px;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+      }
+
+      .pv-authBody__icon {
+        width: 20px;
+        margin-right: 10px;
+      }
+
+      .pv-authBody__social {
+        .pv-authBody__socialTitle {
+          color: #333333;
+          font-weight: 300;
+        }
+
+        .pv-authBody__socialIcons {
+          display: flex;
+          margin-top: 10px;
+
+          .pv-authBody__socialIcon {
+            margin-right: 10px;
+          }
+        }
+      }
+
+      .pv-authBody__text {
+        font-size: 16px;
+      }
+
+      .pv-authBody__btnAlt {
+        font-size: 16px;
+        font-weight: 500;
+        padding: 12px 20px;
+        text-transform: uppercase;
+        border-radius: 4px;
+        border: 1px solid #979797;
+        color: #979797;
+        text-align: center;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #979797;
+          color: #ffffff;
+        }
+      }
+    }
+  }
+}

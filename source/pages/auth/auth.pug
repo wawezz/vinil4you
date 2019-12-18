@@ -1,0 +1,48 @@
+extends ../../components/base/base
+block title
+    | Auth page
+block main
+    .container
+        .row
+            ul.col-12.pv-breadcrumb 
+                li.pv-breadcrumb__item 
+                    a(href="#").pv-breadcrumb__link Главная страница
+                li.pv-breadcrumb__item Корзина
+    .pv-auth
+        .container
+            .row
+                .col-12
+                    .pv-authTitle Оформление заказа
+            .row.pv-authBody
+                .col-12.col-md-6.pv-authBody__block
+                    .pv-authBody__title Вход или регистрация
+                    .pv-authBody__row
+                        lable.pv-authBody__lable.req По номеру телефона
+                        input(type="text" placeholder="+7")#phone-mask.pv-authBody__input
+                        .pv-main_btn.pv-authBody__btn получить код в СМС
+                    .pv-authBody__row
+                        .pv-authBody__desc Нажимая кнопку, я подтверждаю своё согласие на #[a(href="#") обработку персональных данных и регистрацию в бонусной программе Vinyl4You]
+                    .pv-authBody__row    
+                        a(href="#").pv-authBody__link Войти по номеру телефона или почте, используя пароль из SMS
+                    .pv-authBody__row                        
+                        .pv-authBody__social
+                            .pv-authBody__socialTitle Через аккаунты в социальной сети:
+                            .pv-authBody__socialIcons
+                                a(href="#").pv-authBody__socialIcon
+                                    img(src=require("./images/icon-vk_b.svg"))
+                                a(href="#").pv-authBody__socialIcon
+                                    img(src=require("./images/icon-fb_b.svg"))
+                                a(href="#").pv-authBody__socialIcon
+                                    img(src=require("./images/icon-tw_b.svg"))
+                                a(href="#").pv-authBody__socialIcon
+                                    img(src=require("./images/icon-ig_b.svg"))
+                .col-12.col-md-6.pv-authBody__block
+                    .pv-authBody__title Оформить заказ как гость
+                    .pv-authBody__row
+                        .pv-authBody__text Получить Бонусные рубли вы сможете при оформлении заказа как авторизованный пользователь.
+                    .pv-authBody__row
+                        .pv-authBody__btnAlt Продолжить без авторизации
+                    .pv-authBody__row
+                        a(href="#").pv-authBody__link
+                            img(src=require('./images/icon_in.svg')).pv-authBody__icon 
+                            | Вход для юр. лиц 
