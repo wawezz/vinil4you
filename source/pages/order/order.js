@@ -33,7 +33,7 @@ $(function () {
       }
     }
 
-    if (currentScroll >= footerTop) {
+    if (currentScroll - assideHeight >= footerTop) {
       $(".pv-orderAside__wrap")
         .data("scrolled", true)
         .css({
