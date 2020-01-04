@@ -109,18 +109,10 @@ $(function () {
         changeCarBg('kuzov_colors', 8);
     });
 
-    // $('.pv-mainSliderNav__itemImg_plenki').mouseleave(function () {
-    //     clearTimeout(carTimeout);
-    // });
-
     $('.pv-mainSliderNav__itemImg_plenkiTon').mouseenter(function () {
         if ($(".pv-car").is(":hidden")) return;
         changeCarBg('tonirovka', 6);
     });
-
-    // $('.pv-mainSliderNav__itemImg_plenkiTon').mouseleave(function () {
-    //     clearTimeout(carTimeout);
-    // });
 
     $('.pv-mainSliderNav__itemImg_rezina').mouseenter(function () {
         if ($(".pv-car").is(":hidden")) return;
@@ -196,10 +188,6 @@ function changeCarBg(path, num = 3) {
     if (!path) return;
     if (++carImage > num) carImage = 1;
     $(".pv-carImage").css('background-image', 'url(' + require("./images/lamba_send/" + path + "_" + carImage + ".png") + ')');
-
-    // carTimeout = setTimeout(() => {
-    //     changeCarBg(path, num);
-    // }, 1700);
 }
 
 function getProductsSliderSettings() {
